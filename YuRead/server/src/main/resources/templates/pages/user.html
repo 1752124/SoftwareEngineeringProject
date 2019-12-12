@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:include="header :: commonHeader"></head>
+
+<body>
+	<hr>
+	<form action="/sbDemo/index" method="post">
+		<span class="label label-info">用户姓名：</span><input type="text" name="name" th:value="${name}"><button type="submit" class="serch-btn">搜索</button>
+		<table class="table table-bordered table-hover table-condensed" style="width: 700px;" id="userTbl">
+			<thead class="biaotou">
+				<tr>
+					<th>#</th>
+					<th>患者姓名</th>
+					<th>年龄</th>
+					<th>头像</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tr th:each="user , userStat : ${userList}">
+				<td><span th:text="${userStat.count}"></span></td>
+				<td><span th:text="${user.name}"></span></td>
+				<td><span th:text="${user.age}"></span></td>
+				<td class="template-image"><img alt="加载中.." th:src="@{/upload/img/test.png}"
+					style="width: 100px; height:auto; border-radius: 100px"></img></td>
+				<td>
+					<button th:onclick="'edit('+${user.id}+')'">编辑</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<span class="label label-info">其他功能：</span>
+	<button th:onclick="'uploadUser()'" class="btn btn-mini btn-primary">批量上传用户</button>
+	<button th:onclick="'printPage()'" class="btn btn-mini btn-primary">打印预览</button>
+	<a href="javaScript:void(0)"
+		class="btn btn-mini btn-primary"
+		download="用户数据.xls"
+		onclick="return ExcellentExport.excel(this, 'userTbl', 'Sheet Name Here');">导出用户</a>
+</body>
+<script th:inline="javascript">
+	
+	$(document).ready(function () {
+		layer.photos({
+	          photos : ".template-image"
+	        })
+	});
+
+	function edit(id){
+		layer.msg('这里就不编辑了:  id = ' + id);
+	}
+	
+	function printPage(){
+		$('#userTbl').print();
+	}
+	
+	function uploadUser(){
+		var openurl = "/sbDemo/user/uploadUserPage";
+        var title = "Excel导入用户";
+        layer.open({
+            type: 2,
+            title: title,
+            shadeClose: true,
+            skin: 'layui-layer-lan',
+            shade: 0.2,
+            area: ['300px', '150px'],
+            content: openurl,
+        });
+	}
+	
+     
+</script>
+</html>
