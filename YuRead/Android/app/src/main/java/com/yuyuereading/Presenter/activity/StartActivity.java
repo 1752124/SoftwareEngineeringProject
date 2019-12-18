@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 
-import com.yuyuereading.Presenter.utils.PermissionsChecker;
+import com.yuyuereading.Presenter.PermissionsChecker;
 
 import com.yuyuereading.R;
 import cn.bmob.v3.Bmob;

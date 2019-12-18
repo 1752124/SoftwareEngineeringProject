@@ -85,6 +85,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/brief"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/book_summary"

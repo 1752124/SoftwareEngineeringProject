@@ -25,28 +25,31 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/finish_time"
+                    android:id="@+id/finishTime"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/bg_page_update" />
+                    android:background="@drawable/bg_page_update"
+                    android:gravity="center_horizontal|center_vertical" />
 
                 <TextView
-                    android:id="@+id/page_update"
+                    android:id="@+id/pageUpdate"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:background="@drawable/bg_page_update" />
+                    android:background="@drawable/bg_page_update"
+                    android:gravity="center" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/read_review"
+                android:id="@+id/readReview"
                 android:layout_width="255dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/bg_page_update" />
+                android:background="@drawable/bg_page_update"
+                android:gravity="center_vertical" />
         </LinearLayout>
 
     </LinearLayout>

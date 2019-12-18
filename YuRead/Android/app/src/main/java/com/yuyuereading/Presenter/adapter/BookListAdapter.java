@@ -54,7 +54,6 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
                 view = LayoutInflater.from(mContext).inflate(R.layout.seen_item, parent, false);
                 break;
         }
-
         return new ViewHolder(view);
     }
 
@@ -110,8 +109,6 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
                 break;
         }
     }
-
-
 
     @Override
     public int getItemCount() {

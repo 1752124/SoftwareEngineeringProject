@@ -22,27 +22,12 @@
 
             <include layout="@layout/book_info" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_margin="5dp"
-                android:text="@string/history"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_vertical" />
-
-            <RelativeLayout
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_comment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" />
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recycler_comment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-            </RelativeLayout>
         </LinearLayout>
 
     </ScrollView>
-
-
 </LinearLayout>

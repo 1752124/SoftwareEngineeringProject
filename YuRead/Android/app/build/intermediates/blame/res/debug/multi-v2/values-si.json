@@ -4,7 +4,17 @@
             "outputFile": "G:\\YuYueReading\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ASUS-PC\\.gradle\\caches\\transforms-2\\files-2.1\\629b45845e8326ad1cb2ab144243868e\\support-compat-27.1.1\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\ASUS-PC\\.gradle\\caches\\transforms-2\\files-2.1\\adad4bd0c01564976291c1fef5bcdf56\\appcompat-v7-27.1.1\\res\\values-si\\values-si.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,215,322,429,517,622,738,827,914,998,1107,1212,1310,1420,1519,1625,1784,1883",
+                        "endColumns": "109,106,106,87,104,115,88,86,83,108,104,97,109,98,105,158,98,81",
+                        "endOffsets": "210,317,424,512,617,733,822,909,993,1102,1207,1305,1415,1514,1620,1779,1878,1960"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ASUS-PC\\.gradle\\caches\\transforms-2\\files-2.1\\85861d118dbeba9bb1a18217f9f0ef86\\support-compat-27.1.1\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,16 +28,6 @@
                         "startOffsets": "1965",
                         "endColumns": "100",
                         "endOffsets": "2061"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ASUS-PC\\.gradle\\caches\\transforms-2\\files-2.1\\51d87e24816454419aefc791ae19cd42\\appcompat-v7-27.1.1\\res\\values-si\\values-si.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,322,429,517,622,738,827,914,998,1107,1212,1310,1420,1519,1625,1784,1883",
-                        "endColumns": "109,106,106,87,104,115,88,86,83,108,104,97,109,98,105,158,98,81",
-                        "endOffsets": "210,317,424,512,617,733,822,909,993,1102,1207,1305,1415,1514,1620,1779,1878,1960"
                     }
                 }
             ]

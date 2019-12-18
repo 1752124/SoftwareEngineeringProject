@@ -1,292 +1,296 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-69:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-69:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-69:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-69:12
-MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\44188ea091532aa1a7b598063f0b983b\materialsearchview-1.4.0\AndroidManifest.xml:2:1-13:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2bacd1265fecc816ca87b696f6bbdcab\design-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.ycl.tabview.library:tabviewlibrary:1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\61b2e677aede492e528b63e91d97042e\tabviewlibrary-1.0\AndroidManifest.xml:2:1-12:12
-MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:2:1-20:12
-MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d885212640e5da057c7233fa513dbfde\XRichText-1.1\AndroidManifest.xml:2:1-17:12
-MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:2:1-26:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\51d87e24816454419aefc791ae19cd42\appcompat-v7-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\a9dd72653b15b2c6d568f8376e87a4a1\support-v4-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\b00b7022bf5a984fb949f9c989cc2ae9\recyclerview-v7-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\bd568c27079633cb0e57551054131153\cardview-v7-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d745d53f7431f385602bd2c20da17580\constraint-layout-1.1.2\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f17014a230c64d76344430b23e6cfa8\glide-4.7.1\AndroidManifest.xml:2:1-13:12
-MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d3882c2896f94779b05ca0cc3cd584fc\SimpleRatingBar-1.4.1\AndroidManifest.xml:2:1-17:12
-MERGED from [com.contrarywind:Android-PickerView:4.1.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\79b52a1c046014db9b0f43d0d7e20420\Android-PickerView-4.1.3\AndroidManifest.xml:2:1-11:12
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:2:1-31:12
-MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\ef3c1d5f03bc52044eb761ec3acddbb1\bmob-sdk-3.6.3\AndroidManifest.xml:2:1-16:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\8c70bb265ac508f9e0b00196cc646ede\support-fragment-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\9e655073c60a948a946f6d7aaa1ba09b\animated-vector-drawable-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\525b781f264eaa6eb1fdc971ab3dbb99\support-core-ui-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\b6ddf9d2bcd6c16a181f2e18987ec130\support-core-utils-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c4b173747ca66ab4c67919da90363384\support-vector-drawable-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\3c5d7c4bce56afc4c8cba759b4632c54\support-media-compat-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c40ef338b8b4553262f9dcf1cafb7939\transition-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\629b45845e8326ad1cb2ab144243868e\support-compat-27.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\156a329535aa6e1731bcca39d01cb2ed\gifdecoder-4.7.1\AndroidManifest.xml:2:1-11:12
-MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\887b975aa1afc5f490e951b17dc7a7e0\wheelview-4.0.5\AndroidManifest.xml:2:1-17:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\51fc02638a127a35cd20e67e0e3f6c41\livedata-core-1.1.0\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\8cbae6c4a6d4b34e531371848b94893e\viewmodel-1.1.0\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\325ab8f7b9fef68825ec49ecd90052f7\runtime-1.1.0\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\fcaa4dc4385531343c92e625ebadc409\runtime-1.1.0\AndroidManifest.xml:17:1-22:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-69:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-69:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-69:12
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\08ccf4171f7225cdd7d7c2901c0cf52a\design-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.ycl.tabview.library:tabviewlibrary:1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\713f3b14d7cad7644bcb98a28bd01210\tabviewlibrary-1.0\AndroidManifest.xml:2:1-12:12
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:2:1-20:12
+MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c2c3ac53f966f6f5e99c7a9d4b225043\XRichText-1.1\AndroidManifest.xml:2:1-17:12
+MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:2:1-26:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\adad4bd0c01564976291c1fef5bcdf56\appcompat-v7-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\aed98a21cf683ff7ecc5dfc4410b2fdc\support-v4-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\99aa8d62443c4eae267c27cac40f2256\recyclerview-v7-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\03a079d4ab4e43037286022f4460b511\cardview-v7-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\100db2c01fcc94f2219cb33831c5bea0\constraint-layout-1.1.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f8afa720d89fed049b6a06c016bc0a81\glide-4.7.1\AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\005363ffe5f9792164b065ffe789b8e4\SimpleRatingBar-1.4.1\AndroidManifest.xml:2:1-17:12
+MERGED from [com.contrarywind:Android-PickerView:4.1.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\8822a20df77bc1e6318b47cb7d805522\Android-PickerView-4.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:2:1-31:12
+MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\284f691635ceafbe021e67949f6155ac\bmob-sdk-3.6.3\AndroidManifest.xml:2:1-16:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f7ccacb771192a684d00905e86eaf719\support-fragment-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\09fcfafba448a66ccee65e273cede7da\animated-vector-drawable-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\08225f48274723cd4ab414b32f6b1bdc\support-core-ui-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\fedef0e91b62b1095c50ace99f7fc9ba\support-core-utils-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e220c0cd914865a5ee960db96636fc88\support-vector-drawable-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2dabea1901d739c4ac9593181aab93d8\support-media-compat-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\0e9942ff46a67b86e8713a02f2d4b849\transition-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\85861d118dbeba9bb1a18217f9f0ef86\support-compat-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\41ea6820e53ccdb0bcbca2f9da5f9faf\gifdecoder-4.7.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\eb865ba7b99b7c358adeebd366c56ddd\wheelview-4.0.5\AndroidManifest.xml:2:1-17:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4c62813940b83b8642f3ebeab036b2e8\livedata-core-1.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\243cff0d8775c153b6fbf42c9c7ecd2d\viewmodel-1.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f7084ce08c2a1ef495ba5b37f30cc6e\runtime-1.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\72c4f7141536bc5ee9ff8e43e712e55e\runtime-1.1.0\AndroidManifest.xml:17:1-22:12
+INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-69:12
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
 		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-69:12
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
 		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:6:5-81
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:5:5-81
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:6:22-78
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:5:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:8:5-79
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:8:22-76
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:10:5-76
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:7:5-76
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:10:22-73
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:7:22-73
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:12:5-75
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:8:5-75
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:12:22-72
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:8:22-72
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:14:5-89
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:9:5-89
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:14:22-86
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:9:22-86
 uses-permission#android.permission.BLUETOOTH
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:16:5-68
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:10:5-68
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:16:22-65
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:10:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:17:5-74
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:11:5-74
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:17:22-71
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:11:22-71
 uses-permission#android.permission.INTERNET
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:19:5-67
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:12:5-67
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:12:5-67
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:12:5-67
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:12:5-67
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:12:5-67
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:19:22-64
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:12:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:21:5-79
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:11:5-79
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:11:5-79
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:13:5-79
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:11:5-79
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:21:22-76
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:13:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:23:5-76
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:14:5-76
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:23:22-73
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:14:22-73
 uses-permission#android.permission.WAKE_LOCK
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:25:5-68
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:15:5-68
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:25:22-65
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:15:22-65
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:27:5-81
-MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:11:5-81
-MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:11:5-81
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:13:5-81
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:13:5-81
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:16:5-81
+MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:11:5-81
+MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:11:5-81
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:13:5-81
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:27:22-78
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:16:22-78
 uses-permission#android.permission.CAMERA
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:29:5-65
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:17:5-65
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:29:22-62
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:17:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:31:5-80
-MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:12:5-80
-MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:12:5-80
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:14:5-80
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:14:5-80
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:18:5-80
+MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:12:5-80
+MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:12:5-80
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:14:5-80
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:14:5-80
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:31:22-77
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:18:22-77
 uses-permission#android.permission.CALL_PHONE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:33:5-69
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:19:5-69
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:33:22-66
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:19:22-66
 uses-permission#android.permission.VIBRATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:35:5-66
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:35:22-63
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:20:22-63
 application
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:37:5-67:19
-MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\44188ea091532aa1a7b598063f0b983b\materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
-MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\44188ea091532aa1a7b598063f0b983b\materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
-MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:11:5-18:19
-MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:11:5-18:19
-MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d885212640e5da057c7233fa513dbfde\XRichText-1.1\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d885212640e5da057c7233fa513dbfde\XRichText-1.1\AndroidManifest.xml:11:5-15:19
-MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:14:5-24:19
-MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:14:5-24:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d745d53f7431f385602bd2c20da17580\constraint-layout-1.1.2\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d745d53f7431f385602bd2c20da17580\constraint-layout-1.1.2\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f17014a230c64d76344430b23e6cfa8\glide-4.7.1\AndroidManifest.xml:11:5-20
-MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f17014a230c64d76344430b23e6cfa8\glide-4.7.1\AndroidManifest.xml:11:5-20
-MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d3882c2896f94779b05ca0cc3cd584fc\SimpleRatingBar-1.4.1\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d3882c2896f94779b05ca0cc3cd584fc\SimpleRatingBar-1.4.1\AndroidManifest.xml:11:5-15:19
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:17:5-29:19
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:17:5-29:19
-MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\ef3c1d5f03bc52044eb761ec3acddbb1\bmob-sdk-3.6.3\AndroidManifest.xml:11:5-14:19
-MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\ef3c1d5f03bc52044eb761ec3acddbb1\bmob-sdk-3.6.3\AndroidManifest.xml:11:5-14:19
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\156a329535aa6e1731bcca39d01cb2ed\gifdecoder-4.7.1\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\156a329535aa6e1731bcca39d01cb2ed\gifdecoder-4.7.1\AndroidManifest.xml:9:5-20
-MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\887b975aa1afc5f490e951b17dc7a7e0\wheelview-4.0.5\AndroidManifest.xml:11:5-15:19
-MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\887b975aa1afc5f490e951b17dc7a7e0\wheelview-4.0.5\AndroidManifest.xml:11:5-15:19
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:22:5-52:19
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:11:5-18:19
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:11:5-18:19
+MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c2c3ac53f966f6f5e99c7a9d4b225043\XRichText-1.1\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c2c3ac53f966f6f5e99c7a9d4b225043\XRichText-1.1\AndroidManifest.xml:11:5-15:19
+MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:14:5-24:19
+MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:14:5-24:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\100db2c01fcc94f2219cb33831c5bea0\constraint-layout-1.1.2\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\100db2c01fcc94f2219cb33831c5bea0\constraint-layout-1.1.2\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f8afa720d89fed049b6a06c016bc0a81\glide-4.7.1\AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f8afa720d89fed049b6a06c016bc0a81\glide-4.7.1\AndroidManifest.xml:11:5-20
+MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\005363ffe5f9792164b065ffe789b8e4\SimpleRatingBar-1.4.1\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\005363ffe5f9792164b065ffe789b8e4\SimpleRatingBar-1.4.1\AndroidManifest.xml:11:5-15:19
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:17:5-29:19
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:17:5-29:19
+MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\284f691635ceafbe021e67949f6155ac\bmob-sdk-3.6.3\AndroidManifest.xml:11:5-14:19
+MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\284f691635ceafbe021e67949f6155ac\bmob-sdk-3.6.3\AndroidManifest.xml:11:5-14:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\41ea6820e53ccdb0bcbca2f9da5f9faf\gifdecoder-4.7.1\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\41ea6820e53ccdb0bcbca2f9da5f9faf\gifdecoder-4.7.1\AndroidManifest.xml:9:5-20
+MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\eb865ba7b99b7c358adeebd366c56ddd\wheelview-4.0.5\AndroidManifest.xml:11:5-15:19
+MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\eb865ba7b99b7c358adeebd366c56ddd\wheelview-4.0.5\AndroidManifest.xml:11:5-15:19
 	android:supportsRtl
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:42:9-35
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:27:9-35
 	android:label
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:40:9-41
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:25:9-41
 	android:roundIcon
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:41:9-54
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:26:9-54
 	android:icon
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:39:9-43
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:24:9-43
 	android:allowBackup
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:38:9-35
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:23:9-35
 	android:theme
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:43:9-40
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:28:9-40
 activity#com.yuyuereading.Presenter.activity.MainActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:44:9-85
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:29:9-69
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:44:19-82
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:29:19-66
 activity#com.yuyuereading.Presenter.activity.LoginActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:45:9-86
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:30:9-70
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:45:19-83
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:30:19-67
 activity#com.yuyuereading.Presenter.activity.StartActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:46:9-52:20
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:31:9-37:20
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:46:19-83
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:31:19-67
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:47:13-51:29
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:48:17-69
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:48:25-66
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:50:17-77
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:50:27-74
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:35:27-74
 activity#com.yuyuereading.Presenter.activity.PermissionsActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:53:9-92
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:38:9-76
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:53:19-89
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:38:19-73
 activity#com.yuyuereading.Presenter.activity.BookInfoActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:54:9-89
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:39:9-73
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:54:19-86
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:39:19-70
 activity#com.yuyuereading.Presenter.activity.WantReadActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:55:9-89
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:40:9-73
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:55:19-86
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:40:19-70
 activity#com.yuyuereading.Presenter.activity.ReadingActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:56:9-88
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:41:9-72
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:56:19-85
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:41:19-69
 activity#com.yuyuereading.Presenter.activity.SeenActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:57:9-85
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:42:9-69
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:57:19-82
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:42:19-66
 activity#com.yuyuereading.Presenter.activity.ScanISBN
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:58:9-81
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:43:9-65
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:58:19-78
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:43:19-62
 activity#com.yuyuereading.Presenter.activity.UserInfoActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:59:9-89
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:44:9-73
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:59:19-86
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:44:19-70
+activity#com.yuyuereading.Presenter.activity.CommentActivity
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:45:9-71
+	android:name
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:45:19-69
 service#com.amap.api.location.APSService
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:61:9-68
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:47:9-68
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:61:18-65
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:47:18-65
 meta-data#com.amap.api.v2.apikey
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:63:9-65:64
+ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:49:9-51:64
 	android:value
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:65:13-61
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:51:13-61
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:64:13-50
+		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:50:13-50
 uses-sdk
 INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\44188ea091532aa1a7b598063f0b983b\materialsearchview-1.4.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\44188ea091532aa1a7b598063f0b983b\materialsearchview-1.4.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2bacd1265fecc816ca87b696f6bbdcab\design-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2bacd1265fecc816ca87b696f6bbdcab\design-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.ycl.tabview.library:tabviewlibrary:1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\61b2e677aede492e528b63e91d97042e\tabviewlibrary-1.0\AndroidManifest.xml:8:5-10:41
-MERGED from [com.ycl.tabview.library:tabviewlibrary:1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\61b2e677aede492e528b63e91d97042e\tabviewlibrary-1.0\AndroidManifest.xml:8:5-10:41
-MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d885212640e5da057c7233fa513dbfde\XRichText-1.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d885212640e5da057c7233fa513dbfde\XRichText-1.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\51d87e24816454419aefc791ae19cd42\appcompat-v7-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\51d87e24816454419aefc791ae19cd42\appcompat-v7-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\a9dd72653b15b2c6d568f8376e87a4a1\support-v4-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\a9dd72653b15b2c6d568f8376e87a4a1\support-v4-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\b00b7022bf5a984fb949f9c989cc2ae9\recyclerview-v7-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\b00b7022bf5a984fb949f9c989cc2ae9\recyclerview-v7-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\bd568c27079633cb0e57551054131153\cardview-v7-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\bd568c27079633cb0e57551054131153\cardview-v7-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d745d53f7431f385602bd2c20da17580\constraint-layout-1.1.2\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d745d53f7431f385602bd2c20da17580\constraint-layout-1.1.2\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f17014a230c64d76344430b23e6cfa8\glide-4.7.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f17014a230c64d76344430b23e6cfa8\glide-4.7.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d3882c2896f94779b05ca0cc3cd584fc\SimpleRatingBar-1.4.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d3882c2896f94779b05ca0cc3cd584fc\SimpleRatingBar-1.4.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.contrarywind:Android-PickerView:4.1.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\79b52a1c046014db9b0f43d0d7e20420\Android-PickerView-4.1.3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.contrarywind:Android-PickerView:4.1.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\79b52a1c046014db9b0f43d0d7e20420\Android-PickerView-4.1.3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\ef3c1d5f03bc52044eb761ec3acddbb1\bmob-sdk-3.6.3\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\ef3c1d5f03bc52044eb761ec3acddbb1\bmob-sdk-3.6.3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\8c70bb265ac508f9e0b00196cc646ede\support-fragment-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\8c70bb265ac508f9e0b00196cc646ede\support-fragment-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\9e655073c60a948a946f6d7aaa1ba09b\animated-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\9e655073c60a948a946f6d7aaa1ba09b\animated-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\525b781f264eaa6eb1fdc971ab3dbb99\support-core-ui-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\525b781f264eaa6eb1fdc971ab3dbb99\support-core-ui-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\b6ddf9d2bcd6c16a181f2e18987ec130\support-core-utils-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\b6ddf9d2bcd6c16a181f2e18987ec130\support-core-utils-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c4b173747ca66ab4c67919da90363384\support-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c4b173747ca66ab4c67919da90363384\support-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\3c5d7c4bce56afc4c8cba759b4632c54\support-media-compat-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\3c5d7c4bce56afc4c8cba759b4632c54\support-media-compat-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c40ef338b8b4553262f9dcf1cafb7939\transition-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c40ef338b8b4553262f9dcf1cafb7939\transition-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\629b45845e8326ad1cb2ab144243868e\support-compat-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\629b45845e8326ad1cb2ab144243868e\support-compat-27.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\156a329535aa6e1731bcca39d01cb2ed\gifdecoder-4.7.1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\156a329535aa6e1731bcca39d01cb2ed\gifdecoder-4.7.1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\887b975aa1afc5f490e951b17dc7a7e0\wheelview-4.0.5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\887b975aa1afc5f490e951b17dc7a7e0\wheelview-4.0.5\AndroidManifest.xml:7:5-9:41
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\51fc02638a127a35cd20e67e0e3f6c41\livedata-core-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\51fc02638a127a35cd20e67e0e3f6c41\livedata-core-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\8cbae6c4a6d4b34e531371848b94893e\viewmodel-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\8cbae6c4a6d4b34e531371848b94893e\viewmodel-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\325ab8f7b9fef68825ec49ecd90052f7\runtime-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\325ab8f7b9fef68825ec49ecd90052f7\runtime-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\fcaa4dc4385531343c92e625ebadc409\runtime-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\fcaa4dc4385531343c92e625ebadc409\runtime-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\08ccf4171f7225cdd7d7c2901c0cf52a\design-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\08ccf4171f7225cdd7d7c2901c0cf52a\design-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.ycl.tabview.library:tabviewlibrary:1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\713f3b14d7cad7644bcb98a28bd01210\tabviewlibrary-1.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.ycl.tabview.library:tabviewlibrary:1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\713f3b14d7cad7644bcb98a28bd01210\tabviewlibrary-1.0\AndroidManifest.xml:8:5-10:41
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c2c3ac53f966f6f5e99c7a9d4b225043\XRichText-1.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.sendtion:XRichText:1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c2c3ac53f966f6f5e99c7a9d4b225043\XRichText-1.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\adad4bd0c01564976291c1fef5bcdf56\appcompat-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\adad4bd0c01564976291c1fef5bcdf56\appcompat-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\aed98a21cf683ff7ecc5dfc4410b2fdc\support-v4-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\aed98a21cf683ff7ecc5dfc4410b2fdc\support-v4-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\99aa8d62443c4eae267c27cac40f2256\recyclerview-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\99aa8d62443c4eae267c27cac40f2256\recyclerview-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\03a079d4ab4e43037286022f4460b511\cardview-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\03a079d4ab4e43037286022f4460b511\cardview-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\100db2c01fcc94f2219cb33831c5bea0\constraint-layout-1.1.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\100db2c01fcc94f2219cb33831c5bea0\constraint-layout-1.1.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f8afa720d89fed049b6a06c016bc0a81\glide-4.7.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f8afa720d89fed049b6a06c016bc0a81\glide-4.7.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\005363ffe5f9792164b065ffe789b8e4\SimpleRatingBar-1.4.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.ome450901:SimpleRatingBar:1.4.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\005363ffe5f9792164b065ffe789b8e4\SimpleRatingBar-1.4.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.contrarywind:Android-PickerView:4.1.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\8822a20df77bc1e6318b47cb7d805522\Android-PickerView-4.1.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.contrarywind:Android-PickerView:4.1.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\8822a20df77bc1e6318b47cb7d805522\Android-PickerView-4.1.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\284f691635ceafbe021e67949f6155ac\bmob-sdk-3.6.3\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.bmob.android:bmob-sdk:3.6.3] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\284f691635ceafbe021e67949f6155ac\bmob-sdk-3.6.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f7ccacb771192a684d00905e86eaf719\support-fragment-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f7ccacb771192a684d00905e86eaf719\support-fragment-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\09fcfafba448a66ccee65e273cede7da\animated-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\09fcfafba448a66ccee65e273cede7da\animated-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\08225f48274723cd4ab414b32f6b1bdc\support-core-ui-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\08225f48274723cd4ab414b32f6b1bdc\support-core-ui-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\fedef0e91b62b1095c50ace99f7fc9ba\support-core-utils-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\fedef0e91b62b1095c50ace99f7fc9ba\support-core-utils-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e220c0cd914865a5ee960db96636fc88\support-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e220c0cd914865a5ee960db96636fc88\support-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2dabea1901d739c4ac9593181aab93d8\support-media-compat-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2dabea1901d739c4ac9593181aab93d8\support-media-compat-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\0e9942ff46a67b86e8713a02f2d4b849\transition-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\0e9942ff46a67b86e8713a02f2d4b849\transition-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\85861d118dbeba9bb1a18217f9f0ef86\support-compat-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\85861d118dbeba9bb1a18217f9f0ef86\support-compat-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\41ea6820e53ccdb0bcbca2f9da5f9faf\gifdecoder-4.7.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\41ea6820e53ccdb0bcbca2f9da5f9faf\gifdecoder-4.7.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\eb865ba7b99b7c358adeebd366c56ddd\wheelview-4.0.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\eb865ba7b99b7c358adeebd366c56ddd\wheelview-4.0.5\AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4c62813940b83b8642f3ebeab036b2e8\livedata-core-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4c62813940b83b8642f3ebeab036b2e8\livedata-core-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\243cff0d8775c153b6fbf42c9c7ecd2d\viewmodel-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\243cff0d8775c153b6fbf42c9c7ecd2d\viewmodel-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f7084ce08c2a1ef495ba5b37f30cc6e\runtime-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f7084ce08c2a1ef495ba5b37f30cc6e\runtime-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\72c4f7141536bc5ee9ff8e43e712e55e\runtime-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\72c4f7141536bc5ee9ff8e43e712e55e\runtime-1.1.0\AndroidManifest.xml:20:5-44
 INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -298,50 +302,50 @@ INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
 activity#com.uuzuche.lib_zxing.activity.CaptureActivity
-ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
+ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
 	android:screenOrientation
-		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:15:13-49
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:15:13-49
 	android:windowSoftInputMode
-		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:17:13-60
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:17:13-60
 	android:configChanges
-		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:14:13-63
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:14:13-63
 	android:theme
-		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:16:13-63
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:16:13-63
 	android:name
-		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\f678054189e738c712ce2ca2eb6d0965\zxing-library-2.2\AndroidManifest.xml:13:13-74
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:13:13-74
 activity#com.jhworks.library.ui.ImageSelectActivity
-ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:18:9-20:62
+ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:18:9-20:62
 	android:configChanges
-		ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:20:13-59
+		ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:20:13-59
 	android:name
-		ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:19:13-70
+		ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:19:13-70
 activity#com.jhworks.library.ui.ImageActivity
-ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:21:9-23:62
+ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:21:9-23:62
 	android:configChanges
-		ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:23:13-59
+		ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:23:13-59
 	android:name
-		ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\c194c643b0018cb6d603306131003d6c\ImageSelect-1.1.1\AndroidManifest.xml:22:13-64
+		ADDED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:22:13-64
 uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
-ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:15:5-83
+ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:15:5-83
 	android:name
-		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:15:22-80
+		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:15:22-80
 service#com.vector.update_app.service.DownloadService
-ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:18:9-81
+ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:18:9-81
 	android:name
-		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:18:18-78
+		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:18:18-78
 provider#com.vector.update_app.UpdateFileProvider
-ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:20:9-28:20
+ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:20:9-28:20
 	android:grantUriPermissions
-		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:24:13-47
+		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:24:13-47
 	android:authorities
-		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:22:13-64
+		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:22:13-64
 	android:exported
-		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:23:13-37
+		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:21:13-68
+		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:21:13-68
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:25:13-27:62
+ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:25:13-27:62
 	android:resource
-		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:27:17-59
+		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:27:17-59
 	android:name
-		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\2b6122543f95ec9d3c8ce17cda85c1a1\update-app-3.5.1\AndroidManifest.xml:26:17-67
+		ADDED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:26:17-67

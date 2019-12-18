@@ -1075,6 +1075,7 @@ id book_name
 id book_recommend
 id book_summary
 id bottom
+id brief
 id btnCancel
 id btnSubmit
 id btn_ok
@@ -1133,7 +1134,7 @@ id favicon
 id fill
 id fill_horizontal
 id fill_vertical
-id finish_time
+id finishTime
 id fixed
 id fl_zxing_container
 id footer
@@ -1206,7 +1207,7 @@ id options3
 id optionspicker
 id outmost_container
 id packed
-id page_update
+id pageUpdate
 id parallax
 id parent
 id parentPanel
@@ -1225,7 +1226,7 @@ id quit
 id radio
 id rating
 id readProgress
-id read_review
+id readReview
 id reading_adress_button
 id reading_adress_textview
 id reading_button
@@ -1412,6 +1413,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_book_info
+layout activity_comment
 layout activity_home
 layout activity_image
 layout activity_image_select
