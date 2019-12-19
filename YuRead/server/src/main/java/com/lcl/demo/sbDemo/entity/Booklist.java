@@ -5,26 +5,29 @@ import java.util.Date;
 public class Booklist {
     private Long id;
 
-    private String title;
-
     private String author;
+
+    private String title;
 
     private String image;
 
-    private Integer state;
+    private Byte type;
 
     private Date createTime;
 
     private Date updateTime;
 
-    public Booklist(Long id, String title, String author, String image, Integer state, Date createTime, Date updateTime) {
+    private String category;
+
+    public Booklist(Long id, String author, String title, String image, Byte type, Date createTime, Date updateTime, String category) {
         this.id = id;
-        this.title = title;
         this.author = author;
+        this.title = title;
         this.image = image;
-        this.state = state;
+        this.type = type;
         this.createTime = createTime;
         this.updateTime = updateTime;
+        this.category = category;
     }
 
     public Booklist() {
@@ -39,20 +42,20 @@ public class Booklist {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
-
     public String getAuthor() {
         return author;
     }
 
     public void setAuthor(String author) {
         this.author = author == null ? null : author.trim();
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 
     public String getImage() {
@@ -63,12 +66,12 @@ public class Booklist {
         this.image = image == null ? null : image.trim();
     }
 
-    public Integer getState() {
-        return state;
+    public Byte getType() {
+        return type;
     }
 
-    public void setState(Integer state) {
-        this.state = state;
+    public void setType(Byte type) {
+        this.type = type;
     }
 
     public Date getCreateTime() {
@@ -85,5 +88,13 @@ public class Booklist {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category == null ? null : category.trim();
     }
 }

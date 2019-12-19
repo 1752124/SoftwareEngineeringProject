@@ -1,19 +1,19 @@
 package com.lcl.demo.sbDemo.entity;
 
-public class NoteBookKey {
+public class ReadKey {
     private Long id;
-
-    private Long noteId;
 
     private Long bookId;
 
-    public NoteBookKey(Long id, Long noteId, Long bookId) {
+    private Long userId;
+
+    public ReadKey(Long id, Long bookId, Long userId) {
         this.id = id;
-        this.noteId = noteId;
         this.bookId = bookId;
+        this.userId = userId;
     }
 
-    public NoteBookKey() {
+    public ReadKey() {
         super();
     }
 
@@ -25,19 +25,19 @@ public class NoteBookKey {
         this.id = id;
     }
 
-    public Long getNoteId() {
-        return noteId;
-    }
-
-    public void setNoteId(Long noteId) {
-        this.noteId = noteId;
-    }
-
     public Long getBookId() {
         return bookId;
     }
 
     public void setBookId(Long bookId) {
         this.bookId = bookId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }

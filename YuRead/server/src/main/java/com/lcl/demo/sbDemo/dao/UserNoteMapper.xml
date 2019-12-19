@@ -1,36 +1,127 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lcl.demo.sbDemo.dao.UserNoteMapper" >
-  <resultMap id="BaseResultMap" type="com.lcl.demo.sbDemo.entity.UserNoteKey" >
-    <constructor >
-      <idArg column="user_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
-      <idArg column="note_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lcl.demo.sbDemo.dao.UserNoteMapper">
+  <resultMap id="BaseResultMap" type="com.lcl.demo.sbDemo.entity.UserNote">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <idArg column="user_id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <idArg column="note_id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
     </constructor>
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="com.lcl.demo.sbDemo.entity.UserNoteKey" >
+  <sql id="Base_Column_List">
+    id, user_id, note_id, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.lcl.demo.sbDemo.entity.UserNoteKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_note
+    where id = #{id,jdbcType=BIGINT}
+      and user_id = #{userId,jdbcType=BIGINT}
+      and note_id = #{noteId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.lcl.demo.sbDemo.entity.UserNoteKey">
+    delete from user_note
+    where id = #{id,jdbcType=BIGINT}
+      and user_id = #{userId,jdbcType=BIGINT}
+      and note_id = #{noteId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.lcl.demo.sbDemo.entity.UserNote">
+    insert into user_note (id, user_id, note_id, 
+      create_time, update_time)
+    values (#{id,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{noteId,jdbcType=BIGINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.lcl.demo.sbDemo.entity.UserNote">
+    insert into user_note
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="noteId != null">
+        note_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="noteId != null">
+        #{noteId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.lcl.demo.sbDemo.entity.UserNote">
+    update user_note
+    <set>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+      and user_id = #{userId,jdbcType=BIGINT}
+      and note_id = #{noteId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.lcl.demo.sbDemo.entity.UserNote">
+    update user_note
+    set create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+      and user_id = #{userId,jdbcType=BIGINT}
+      and note_id = #{noteId,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.lcl.demo.sbDemo.entity.UserNoteKey">
+    <constructor>
+      <idArg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <idArg column="note_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="com.lcl.demo.sbDemo.entity.UserNoteKey">
     delete from user_note
     where user_id = #{userId,jdbcType=INTEGER}
       and note_id = #{noteId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.lcl.demo.sbDemo.entity.UserNoteKey" >
+  <insert id="insert" parameterType="com.lcl.demo.sbDemo.entity.UserNoteKey">
     insert into user_note (user_id, note_id)
     values (#{userId,jdbcType=INTEGER}, #{noteId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.lcl.demo.sbDemo.entity.UserNoteKey" >
+  <insert id="insertSelective" parameterType="com.lcl.demo.sbDemo.entity.UserNoteKey">
     insert into user_note
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="userId != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
         user_id,
       </if>
-      <if test="noteId != null" >
+      <if test="noteId != null">
         note_id,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="userId != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
         #{userId,jdbcType=INTEGER},
       </if>
-      <if test="noteId != null" >
+      <if test="noteId != null">
         #{noteId,jdbcType=INTEGER},
       </if>
     </trim>

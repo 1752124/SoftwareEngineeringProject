@@ -1,11 +1,14 @@
 package com.lcl.demo.sbDemo.entity;
 
 public class UserNoteKey {
-    private Integer userId;
+    private Long id;
 
-    private Integer noteId;
+    private Long userId;
 
-    public UserNoteKey(Integer userId, Integer noteId) {
+    private Long noteId;
+
+    public UserNoteKey(Long id, Long userId, Long noteId) {
+        this.id = id;
         this.userId = userId;
         this.noteId = noteId;
     }
@@ -14,19 +17,27 @@ public class UserNoteKey {
         super();
     }
 
-    public Integer getUserId() {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
-    public Integer getNoteId() {
+    public Long getNoteId() {
         return noteId;
     }
 
-    public void setNoteId(Integer noteId) {
+    public void setNoteId(Long noteId) {
         this.noteId = noteId;
     }
 }

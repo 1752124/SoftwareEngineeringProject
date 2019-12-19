@@ -1,20 +1,17 @@
 package com.lcl.demo.sbDemo.dao;
 
 import com.lcl.demo.sbDemo.entity.User;
-import com.lcl.demo.sbDemo.entity.UserWithBLOBs;
 
 public interface UserMapper {
-    int deleteByPrimaryKey(String user);
+    int deleteByPrimaryKey(Integer userId);
 
-    int insert(UserWithBLOBs record);
+    int insert(User record);
 
-    int insertSelective(UserWithBLOBs record);
+    int insertSelective(User record);
 
-    UserWithBLOBs selectByPrimaryKey(String user);
+    User selectByPrimaryKey(Integer userId);
 
-    int updateByPrimaryKeySelective(UserWithBLOBs record);
-
-    int updateByPrimaryKeyWithBLOBs(UserWithBLOBs record);
+    int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
 }
