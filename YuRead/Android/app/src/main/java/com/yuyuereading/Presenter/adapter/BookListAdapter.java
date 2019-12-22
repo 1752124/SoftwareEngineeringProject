@@ -19,6 +19,7 @@ import com.yuyuereading.Model.bean.BookInfo;
 import com.yuyuereading.Presenter.activity.BookInfoActivity;
 import com.yuyuereading.Presenter.activity.ReadingActivity;
 import com.yuyuereading.Presenter.activity.SeenActivity;
+import com.yuyuereading.Presenter.activity.WantReadActivity;
 import com.yuyuereading.R;
 
 import java.util.List;
@@ -50,6 +51,9 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
             case "reading":
                 view = LayoutInflater.from(mContext).inflate(R.layout.reading_item, parent, false);
                 break;
+            case "recommend":
+                view = LayoutInflater.from(mContext).inflate(R.layout.book_list_item,parent,false);
+                break;
             default:
                 view = LayoutInflater.from(mContext).inflate(R.layout.seen_item, parent, false);
                 break;
@@ -65,10 +69,8 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
         Glide.with(mContext)
                 .load(bookInfo.getBook_image())
                 .into(holder.bookImage);
-        holder.publicDate.setText(bookInfo.getBook_publish_date());
         holder.authorName.setText(bookInfo.getBook_author());
-        holder.publicer.setText(bookInfo.getBook_publisher());
-        holder.simpleRatingBar.setRating(Float.parseFloat(bookInfo.getBook_rating())/2);
+        holder.publicName.setText(bookInfo.getBook_publisher());
         holder.mItemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,29 +85,44 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
 
         switch (mStatus) {
             case "want":
-                holder.rating.setText(bookInfo.getBook_rating()+" FROM豆瓣");
                 holder.button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(mContext, ReadingActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("bookInfo", bookInfo);
+                        intent.putExtras(bundle);
                         mContext.startActivity(intent);
                         //overridePendingTransition(R.anim.slide_right_in,R.anim.slide_left_out);
                     }
                 });
                 break;
             case "reading":
-                holder.rating.setText(bookInfo.getBook_rating());
                 holder.button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(mContext, SeenActivity.class);
                         mContext.startActivity(intent);
-                        //overridePendingTransition(R.anim.slide_right_in,R.anim.slide_left_out);
+                    }
+                });
+                break;
+            case "recommend":
+                holder.simpleRatingBar.setRating(Float.parseFloat(bookInfo.getBook_rating())/2);
+                holder.rating.setText(bookInfo.getBook_rating());
+                holder.button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(mContext, WantReadActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("bookName", bookInfo.getBook_name());
+                        intent.putExtras(bundle);
+                        mContext.startActivity(intent);
                     }
                 });
                 break;
             default:
                 holder.rating.setText(bookInfo.getBook_rating());
+                holder.simpleRatingBar.setRating(Float.parseFloat(bookInfo.getBook_rating())/2);
                 break;
         }
     }
@@ -121,7 +138,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
         View mItemView;
         ImageView bookImage;
         ScaleRatingBar simpleRatingBar;
-        TextView bookName,publicDate,rating,authorName,publicer;
+        TextView bookName,rating,authorName,publicName;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -129,11 +146,8 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
             cardView = (CardView) itemView;
             bookImage = itemView.findViewById(R.id.book_image);
             bookName = itemView.findViewById(R.id.book_name);
-            publicDate = itemView.findViewById(R.id.public_date);
-            rating = itemView.findViewById(R.id.rating);
             authorName = itemView.findViewById(R.id.author_name);
-            publicer = itemView.findViewById(R.id.public_name);
-            simpleRatingBar = itemView.findViewById(R.id.simpleRatingBar);
+            publicName = itemView.findViewById(R.id.public_name);
             switch (mStatus) {
                 case "want":
                     button = itemView.findViewById(R.id.button_reading);
@@ -141,10 +155,16 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
                 case "reading":
                     button = itemView.findViewById(R.id.button_seen);
                     break;
+                case "recommend":
+                    rating = itemView.findViewById(R.id.rating);
+                    simpleRatingBar = itemView.findViewById(R.id.simpleRatingBar);
+                    button=itemView.findViewById(R.id.button_add);
+                    break;
                 default:
+                    rating = itemView.findViewById(R.id.rating);
+                    simpleRatingBar = itemView.findViewById(R.id.simpleRatingBar);
                     break;
             }
         }
     }
-
 }

@@ -44,15 +44,15 @@ public class BookInfo extends BmobObject implements Serializable{
 
     }
 
-    public BookInfo(String book_image, String book_name, String book_publish_date
-            , String book_rating, String book_author, String book_publisher) {
+    public BookInfo(String book_image, String book_name, String book_publish_date,
+                    String book_rating, String book_author, String book_publisher,
+                    String book_summary) {
         this.book_image = book_image;
         this.book_name = book_name;
         this.book_publish_date = book_publish_date;
         this.book_rating = book_rating;
         this.book_author = book_author;
         this.book_publisher = book_publisher;
-        this.book_isbn13 = book_isbn13;
         this.book_summary = book_summary;
     }
 

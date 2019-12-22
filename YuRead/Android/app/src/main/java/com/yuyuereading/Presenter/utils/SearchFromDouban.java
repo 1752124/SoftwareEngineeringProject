@@ -18,19 +18,17 @@ public class SearchFromDouban {
      * 传入值：json字符串
      * 返回值：List<BookInfo>类
      */
-    public static List<BookInfo> parsingBookInfos(final String json) throws IOException {
-        JSONObject jsonObject = JSON.parseObject(json);
-        List<BookInfo> bookInfos = new ArrayList<BookInfo>();
-        int count = jsonObject.getInteger( "count");
-        int start =jsonObject.getInteger("start");
+    public static List<BookInfo> parsingBookInfos(final JSONArray jsonArray) throws IOException {
+        List<BookInfo> bookInfos = new ArrayList<>();
+//        int count = jsonObject.getInteger( "count");
+//        int start =jsonObject.getInteger("start");
         //int total =jsonObject.getInteger("total");
-        JSONArray books= jsonObject.getJSONArray("books");
-        for(i=start;i<count;i++){
+        //JSONArray books= jsonObject.getJSONArray("body");
+        for(i=0;i<jsonArray.size();i++){
             BookInfo bookInfo;
-            bookInfo= BookInfoGetFromDouban.parsingBookInfo(books.get(i).toString());
+            bookInfo= BookInfoGetFromDouban.parsingBookInfo(jsonArray.get(i).toString());
             bookInfos.add(bookInfo);
         }
-
         return bookInfos;
     }
 }

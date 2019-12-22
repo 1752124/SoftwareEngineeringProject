@@ -1,4 +1,4 @@
-#Wed Dec 18 10:28:19 CST 2019
-base.0=G\:\\YuYueReading\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Mon Dec 23 01:17:18 CST 2019
+base.0=C\:\\Users\\ASUS-PC\\Desktop\\ReadFun\\readFun\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

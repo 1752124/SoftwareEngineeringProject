@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\YuYueReading\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "outputFile": "C:\\Users\\ASUS-PC\\Desktop\\ReadFun\\readFun\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ASUS-PC\\.gradle\\caches\\transforms-2\\files-2.1\\e9e14696d2056fa537ebda712b4260a4\\ImageSelect-1.1.1\\res\\values-zh\\values-zh.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "G:\\YuYueReading\\app\\src\\main\\res\\values-zh\\strings-zh.xml",
+                    "source": "C:\\Users\\ASUS-PC\\Desktop\\ReadFun\\readFun\\app\\src\\main\\res\\values-zh\\strings-zh.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

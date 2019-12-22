@@ -37,23 +37,23 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int btn_ok = 0x7f090042;
-        public static final int invisible = 0x7f090091;
-        public static final int iv_close = 0x7f090094;
-        public static final int iv_top = 0x7f090095;
-        public static final int line = 0x7f090099;
-        public static final int ll_close = 0x7f09009f;
-        public static final int ll_top = 0x7f0900a0;
-        public static final int npb = 0x7f0900bc;
-        public static final int tv_ignore = 0x7f090150;
-        public static final int tv_title = 0x7f090151;
-        public static final int tv_update_info = 0x7f090152;
-        public static final int visible = 0x7f090161;
+        public static final int btn_ok = 0x7f090049;
+        public static final int invisible = 0x7f0900a0;
+        public static final int iv_close = 0x7f0900a4;
+        public static final int iv_top = 0x7f0900a5;
+        public static final int line = 0x7f0900a9;
+        public static final int ll_close = 0x7f0900af;
+        public static final int ll_top = 0x7f0900b0;
+        public static final int npb = 0x7f0900cc;
+        public static final int tv_ignore = 0x7f090162;
+        public static final int tv_title = 0x7f090163;
+        public static final int tv_update_info = 0x7f090164;
+        public static final int visible = 0x7f090173;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int lib_update_app_dialog = 0x7f0b0046;
+        public static final int lib_update_app_dialog = 0x7f0b004a;
     }
     public static final class mipmap {
         private mipmap() {}

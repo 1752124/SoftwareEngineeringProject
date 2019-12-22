@@ -27,7 +27,7 @@
                 <TextView
                     android:id="@+id/finishTime"
                     android:layout_width="88dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/bg_page_update"
@@ -36,7 +36,7 @@
                 <TextView
                     android:id="@+id/pageUpdate"
                     android:layout_width="88dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/bg_page_update"
                     android:gravity="center" />
@@ -44,8 +44,8 @@
 
             <TextView
                 android:id="@+id/readReview"
-                android:layout_width="255dp"
-                android:layout_height="38dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/bg_page_update"

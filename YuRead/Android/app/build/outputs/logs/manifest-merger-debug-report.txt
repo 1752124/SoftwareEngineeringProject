@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:1-57:12
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\08ccf4171f7225cdd7d7c2901c0cf52a\design-27.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.ycl.tabview.library:tabviewlibrary:1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\713f3b14d7cad7644bcb98a28bd01210\tabviewlibrary-1.0\AndroidManifest.xml:2:1-12:12
@@ -34,101 +34,101 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ASUS-PC\.gradl
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\243cff0d8775c153b6fbf42c9c7ecd2d\viewmodel-1.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f7084ce08c2a1ef495ba5b37f30cc6e\runtime-1.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\72c4f7141536bc5ee9ff8e43e712e55e\runtime-1.1.0\AndroidManifest.xml:17:1-22:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:1-57:12
 	package
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:3:5-31
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:3:5-31
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:1-57:12
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:1-54:12
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:1-57:12
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:5:5-81
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:5:5-81
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:5:22-78
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:5:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:6:5-79
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:7:5-76
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:7:5-76
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:7:22-73
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:7:22-73
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:8:5-75
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:8:5-75
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:8:22-72
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:8:22-72
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:9:5-89
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:9:5-89
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:9:22-86
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:9:22-86
 uses-permission#android.permission.BLUETOOTH
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:10:5-68
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:10:5-68
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:10:22-65
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:10:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:11:5-74
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:11:5-74
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:11:22-71
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:11:22-71
 uses-permission#android.permission.INTERNET
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:12:5-67
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:12:5-67
 MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:12:5-67
 MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:12:5-67
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:12:22-64
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:12:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:13:5-79
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:13:5-79
 MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:11:5-79
 MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:13:22-76
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:13:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:14:5-76
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:14:5-76
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:14:22-73
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:14:22-73
 uses-permission#android.permission.WAKE_LOCK
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:15:5-68
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:15:5-68
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:15:22-65
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:15:22-65
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:16:5-81
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:16:5-81
 MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:11:5-81
 MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:11:5-81
 MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:13:5-81
 MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:16:22-78
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:16:22-78
 uses-permission#android.permission.CAMERA
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:17:5-65
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:17:5-65
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:17:22-62
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:17:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:18:5-80
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:18:5-80
 MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:12:5-80
 MERGED from [com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:12:5-80
 MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:14:5-80
 MERGED from [com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:14:5-80
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:18:22-77
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:18:22-77
 uses-permission#android.permission.CALL_PHONE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:19:5-69
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:19:5-69
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:19:22-66
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:19:22-66
 uses-permission#android.permission.VIBRATE
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:20:5-66
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:20:22-63
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:20:22-63
 application
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:22:5-52:19
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:22:5-55:19
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:11:5-18:19
@@ -152,85 +152,101 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\ASUS-PC\.gradl
 MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\eb865ba7b99b7c358adeebd366c56ddd\wheelview-4.0.5\AndroidManifest.xml:11:5-15:19
 MERGED from [com.contrarywind:wheelview:4.0.5] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\eb865ba7b99b7c358adeebd366c56ddd\wheelview-4.0.5\AndroidManifest.xml:11:5-15:19
 	android:supportsRtl
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:27:9-35
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:27:9-35
 	android:label
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:25:9-41
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:25:9-41
 	android:roundIcon
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:26:9-54
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:26:9-54
 	android:icon
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:24:9-43
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:24:9-43
 	android:allowBackup
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:23:9-35
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:23:9-35
 	android:theme
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:28:9-40
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:28:9-40
 activity#com.yuyuereading.Presenter.activity.MainActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:29:9-69
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:29:9-69
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:29:19-66
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:29:19-66
 activity#com.yuyuereading.Presenter.activity.LoginActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:30:9-70
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:30:9-70
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:30:19-67
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:30:19-67
 activity#com.yuyuereading.Presenter.activity.StartActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:31:9-37:20
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:31:9-37:20
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:31:19-67
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:31:19-67
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:32:13-36:29
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:33:17-69
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:33:25-66
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:35:17-77
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:35:27-74
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:35:27-74
 activity#com.yuyuereading.Presenter.activity.PermissionsActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:38:9-76
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:38:9-76
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:38:19-73
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:38:19-73
 activity#com.yuyuereading.Presenter.activity.BookInfoActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:39:9-73
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:39:9-73
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:39:19-70
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:39:19-70
 activity#com.yuyuereading.Presenter.activity.WantReadActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:40:9-73
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:40:9-73
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:40:19-70
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:40:19-70
 activity#com.yuyuereading.Presenter.activity.ReadingActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:41:9-72
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:41:9-72
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:41:19-69
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:41:19-69
 activity#com.yuyuereading.Presenter.activity.SeenActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:42:9-69
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:42:9-69
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:42:19-66
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:42:19-66
 activity#com.yuyuereading.Presenter.activity.ScanISBN
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:43:9-65
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:43:9-65
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:43:19-62
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:43:19-62
 activity#com.yuyuereading.Presenter.activity.UserInfoActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:44:9-73
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:44:9-73
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:44:19-70
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:44:19-70
 activity#com.yuyuereading.Presenter.activity.CommentActivity
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:45:9-71
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:45:9-72
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:45:19-69
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:45:19-69
+activity#com.yuyuereading.Presenter.activity.ShakeActivity
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:46:9-70
+	android:name
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:46:19-67
+activity#com.yuyuereading.Presenter.activity.StatisticActivity
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:47:9-74
+	android:name
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:47:19-71
+activity#com.yuyuereading.Presenter.activity.BookListActivity
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:48:9-73
+	android:name
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:48:19-70
+activity#com.yuyuereading.Presenter.activity.AddBookActivity
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:49:9-72
+	android:name
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:49:19-69
 service#com.amap.api.location.APSService
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:47:9-68
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:50:9-68
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:47:18-65
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:50:18-65
 meta-data#com.amap.api.v2.apikey
-ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:49:9-51:64
+ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:52:9-54:64
 	android:value
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:51:13-61
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:54:13-61
 	android:name
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml:50:13-50
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:53:13-50
 uses-sdk
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\30a2388cfee88b374aa594be738d96c4\materialsearchview-1.4.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:27.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\08ccf4171f7225cdd7d7c2901c0cf52a\design-27.1.1\AndroidManifest.xml:20:5-44
@@ -291,16 +307,16 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\cach
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\4f7084ce08c2a1ef495ba5b37f30cc6e\runtime-1.1.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\72c4f7141536bc5ee9ff8e43e712e55e\runtime-1.1.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\72c4f7141536bc5ee9ff8e43e712e55e\runtime-1.1.0\AndroidManifest.xml:20:5-44
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-		ADDED from G:\YuYueReading\app\src\main\AndroidManifest.xml
-		INJECTED from G:\YuYueReading\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
 activity#com.uuzuche.lib_zxing.activity.CaptureActivity
 ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
 	android:screenOrientation

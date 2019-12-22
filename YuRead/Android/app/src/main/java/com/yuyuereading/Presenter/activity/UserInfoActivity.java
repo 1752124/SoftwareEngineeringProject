@@ -10,7 +10,6 @@ import com.yuyuereading.R;
 
 public class UserInfoActivity extends AppCompatActivity {
     Context context=UserInfoActivity.this;
-    Button userReturn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,16 +19,11 @@ public class UserInfoActivity extends AppCompatActivity {
     }
 
     private void onClick() {
-        userReturn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+
     }
 
     private void findView() {
-        userReturn=findViewById(R.id.user_info_return_button);
+
     }
 
     @Override

@@ -7,16 +7,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.yuyuereading.Model.bean.BookComment;
 import com.yuyuereading.R;
 
 public class CommentActivity extends AppCompatActivity {
-    Button returnButton;
+    Button returnButton,editCom,finishEdit,delete;
 
-    TextView title,finishTime,pageUpdate,readReview;
+    TextView title,finishTime,pageUpdate;
+
+    EditText readReview;
 
     ScrollView scrollView;
 
@@ -27,6 +31,8 @@ public class CommentActivity extends AppCompatActivity {
         initView();
         //从上一页面获取评论信息类，来填充控件
         getCommentInfo();
+        //设置readReview不可编辑
+        setNoEdit();
         //点击事件
         onClick();
     }
@@ -47,6 +53,14 @@ public class CommentActivity extends AppCompatActivity {
         finishTime=findViewById(R.id.finishTime);
         pageUpdate=findViewById(R.id.pageUpdate);
         readReview=findViewById(R.id.readReview);
+        editCom=findViewById(R.id.editCom);
+        finishEdit=findViewById(R.id.finishEdit);
+        delete=findViewById(R.id.delete);
+    }
+
+    private void setNoEdit(){
+        readReview.setFocusable(false);
+        readReview.setFocusableInTouchMode(false);
     }
 
     //监听事件
@@ -59,7 +73,32 @@ public class CommentActivity extends AppCompatActivity {
                 scrollView.scrollTo(0,0);
             }
         });
-
+        editCom.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                readReview.setFocusable(true);
+                readReview.setFocusableInTouchMode(true);
+                editCom.setVisibility(View.GONE);
+                delete.setVisibility(View.GONE);
+                finishEdit.setVisibility(View.VISIBLE);
+            }
+        });
+        delete.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //从数据库中删除记录
+                Toast.makeText(CommentActivity.this, "删除成功", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+        finishEdit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //保存数据入数据库
+                Toast.makeText(CommentActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

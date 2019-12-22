@@ -32,6 +32,7 @@ import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONArray;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
@@ -49,10 +50,15 @@ import com.yuyuereading.Presenter.fragment.WantFragment;
 import com.yuyuereading.Presenter.utils.BookInfoGetFromDouban;
 import com.yuyuereading.Presenter.utils.HttpUtils;
 import com.yuyuereading.Presenter.utils.SearchFromDouban;
+import com.yuyuereading.Presenter.utils.ShakeListener;
 import com.yuyuereading.R;
 import com.yuyuereading.View.CircleImageView;
 
+
+import com.alibaba.fastjson.JSONObject;
+
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements
     CircleImageView favicon;
     TextView nickname;
     private int REQUEST_CODE = 5;
+    private ShakeListener mShakeListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements
         onClick();
         displayList();
         display();
+        initShake();
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -112,6 +120,17 @@ public class MainActivity extends AppCompatActivity implements
         favicon = headerLayout.findViewById(R.id.favicon);
     }
 
+    private void initShake() {
+        mShakeListener=new ShakeListener(this);
+        mShakeListener.setOnShakeListener(new ShakeListener.OnShakeListenerCallBack() {
+            @Override
+            public void onShake() {
+                Intent intent = new Intent(mContext, ShakeActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
     //显示其他信息
     private void display() {
 
@@ -128,23 +147,26 @@ public class MainActivity extends AppCompatActivity implements
         searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                final ProgressDialog progress = new ProgressDialog(mContext);
-                progress.setMessage("正在搜索...");
-                progress.setCanceledOnTouchOutside(false);
-                progress.show();
+                //final ProgressDialog progress = new ProgressDialog(mContext);
+               // progress.setMessage("正在搜索...");
+               // progress.setCanceledOnTouchOutside(false);
+               // progress.show();
                 //Snackbar.make(findViewById(R.id.container), "Query: " + query, Snackbar.LENGTH_LONG).show();
-                HttpUtils.doGetAsy("https://api.douban.com/v2/book/search?q=" + query, new HttpUtils.CallBack() {
+                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/Book/search?keyword=" + query, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         try {
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(result);
-                            /*Intent intent = new Intent();
-                            intent.setClass(mContext, SearchActivity.class);
+                            JSONArray jsonArray=JSONArray.parseArray(result);
+                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
+                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
+                            Intent intent = new Intent();
+                            intent.setClass(mContext, BookListActivity.class);
+                            intent.putExtra("type","search");
                             Bundle bundle = new Bundle();
-                            bundle.putSerializable("bookInfo", (Serializable)bookInfos);
+                            bundle.putSerializable("bookInfos", (Serializable)bookInfos);
                             intent.putExtras(bundle);
-                            startActivity(intent);*/
-                            progress.dismiss();
+                            startActivity(intent);
+                           // progress.dismiss();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -265,6 +287,8 @@ public class MainActivity extends AppCompatActivity implements
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.nav_statistic) {
+            Intent intent=new Intent(mContext,StatisticActivity.class);
+            startActivity(intent);
             // Handle the camera action
         }else if (id == R.id.nav_update) {
 

@@ -1,5 +1,6 @@
 package com.yuyuereading.Presenter.fragment;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.yuyuereading.Presenter.activity.BookListActivity;
 import com.yuyuereading.R;
 
 
@@ -21,7 +23,12 @@ import com.yuyuereading.R;
  */
 public class HomeFragment extends Fragment {
     HomeFragment homeFragment;
-    Button homeReturn;
+
+    private View view;
+    private Button Allanbooklist;
+    private Button Oscarbooklist;
+    private Button Maobooklist;
+    private Button Nobelbooklist;
 
     private String mParam1;
     private String mParam2;
@@ -51,10 +58,53 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.activity_home, container, false);
+        view = inflater.inflate(R.layout.activity_home, container, false);
+        initView();
         return view;
     }
 
+    private void initView() {
+        Allanbooklist=view.findViewById(R.id.Allan_book_list);
+        Oscarbooklist=view.findViewById(R.id.Oscar_book_list);
+        Maobooklist=view.findViewById(R.id.Mao_book_list);
+        Nobelbooklist=view.findViewById(R.id.Nobel_book_list);
+
+        Allanbooklist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), BookListActivity.class);
+                intent.putExtra("type","allan");
+                startActivity(intent);
+            }
+        });
+
+        Oscarbooklist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),BookListActivity.class);
+                intent.putExtra("type","oscar");
+                startActivity(intent);
+            }
+        });
+
+        Maobooklist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),BookListActivity.class);
+                intent.putExtra("type","mao");
+                startActivity(intent);
+            }
+        });
+
+        Nobelbooklist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),BookListActivity.class);
+                intent.putExtra("type","nobel");
+                startActivity(intent);
+            }
+        });
+    }
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

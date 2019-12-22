@@ -7,7 +7,7 @@
     android:background="#ddd"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="com.yuyuereading.Presenter.activity.WantReadActivity">
+    tools:context=".Presenter.activity.WantReadActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -51,31 +51,11 @@
                 android:focusable="true"
                 android:focusableInTouchMode="true">
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:textSize="20sp"
-                    android:text="@string/douban_score"
-                    android:gravity="center_horizontal"
-                    android:textColor="@android:color/black"/>
-                <com.willy.ratingbar.ScaleRatingBar
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/bookRating"
+                    android:id="@+id/book_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srb_starWidth="50dp"
-                    app:srb_starHeight="50dp"
-                    app:srb_starPadding="0dp"
-                    app:srb_numStars="5"
-                    app:srb_stepSize="0.1"
-                    app:srb_rating="0"
-                    app:srb_isIndicator="true"
-                    app:srb_clickable="true"
-                    app:srb_scrollable="true"
-                    app:srb_clearRatingEnabled="true"
-                    app:srb_drawableEmpty="@mipmap/star_empty"
-                    app:srb_drawableFilled="@mipmap/star_full">
-                </com.willy.ratingbar.ScaleRatingBar>
+                    android:text="书名"
+                    android:textSize="24sp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -102,8 +82,6 @@
                         android:textColor="@android:color/darker_gray"
                         android:inputType="textMultiLine"
                         tools:ignore="LabelFor" />
-
-
 
                 </LinearLayout>
 
@@ -145,7 +123,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginBottom="30dp"
                     android:layout_height="50dp"
-                    android:background="#3ccf1b"
+                    android:background="@color/grgray"
                     android:text="完成记录"
                     android:textSize="16sp"
                     android:textColor="#fff"/>

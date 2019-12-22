@@ -42,8 +42,11 @@
         <activity android:name=".Presenter.activity.SeenActivity" />
         <activity android:name=".Presenter.activity.ScanISBN" />
         <activity android:name=".Presenter.activity.UserInfoActivity" />
-        <activity android:name=".Presenter.activity.CommentActivity"/>
-
+        <activity android:name=".Presenter.activity.CommentActivity" />
+        <activity android:name=".Presenter.activity.ShakeActivity" />
+        <activity android:name=".Presenter.activity.StatisticActivity" />
+        <activity android:name=".Presenter.activity.BookListActivity" />
+        <activity android:name=".Presenter.activity.AddBookActivity" />
         <service android:name="com.amap.api.location.APSService" />
 
         <meta-data

@@ -44,14 +44,14 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int center = 0x7f090048;
-        public static final int left = 0x7f090098;
-        public static final int right = 0x7f0900e8;
+        public static final int center = 0x7f090050;
+        public static final int left = 0x7f0900a8;
+        public static final int right = 0x7f0900f8;
     }
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f0f0031;
+        public static final int app_name = 0x7f0f0032;
     }
     public static final class styleable {
         private styleable() {}

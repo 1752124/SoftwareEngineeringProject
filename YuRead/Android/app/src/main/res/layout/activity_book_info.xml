@@ -7,27 +7,60 @@
     android:background="#eee"
     tools:context="com.yuyuereading.Presenter.activity.BookInfoActivity">
 
-    <include layout="@layout/bar_main_text" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <ScrollView
-        android:id="@+id/scrollView"
+        <include layout="@layout/bar_main_text" />
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="ScrollViewCount">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/book_info" />
+
+                <ImageView
+                    android:id="@+id/order"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/order" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="ScrollViewCount">
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <Button
+            android:id="@+id/update"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#FF9130"
+            android:text="@string/updateNote"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:visibility="visible" />
+    </LinearLayout>
 
-            <include layout="@layout/book_info" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_comment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-    </ScrollView>
 </LinearLayout>

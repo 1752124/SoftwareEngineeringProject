@@ -20,7 +20,7 @@
             android:layout_marginTop="30dp"
             android:text="@string/date"
             android:textColor="#000"
-            android:textSize="24sp " />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/textView"
@@ -121,7 +121,6 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="1dp"
@@ -142,8 +141,8 @@
             android:orientation="horizontal">
 
 
-            <TextView
-                android:id="@+id/textView8"
+            <Button
+                android:id="@+id/Allan_book_list"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -164,14 +163,14 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView9"
+            <Button
+                android:id="@+id/Oscar_book_list"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:background="#fff"
                 android:gravity="center"
-                android:text="2019奥斯卡获奖影片原著书单"
+                android:text="奥斯卡获奖影片原著书单"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -186,8 +185,8 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView10"
+            <Button
+                android:id="@+id/Mao_book_list"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -208,8 +207,8 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView11"
+            <Button
+                android:id="@+id/Nobel_book_list"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="#fff"
@@ -220,7 +219,6 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:gravity="center"

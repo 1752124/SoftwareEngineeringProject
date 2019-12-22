@@ -37,22 +37,15 @@ import cn.bmob.v3.BmobUser;
 public class ReadingActivity extends AppCompatActivity {
 
     Context context=ReadingActivity.this;
-    Button returnButton,addressButton,reading_button;
-    TextView addressText,classfy;
+    Button returnButton,reading_button;
+    TextView classfy;
     EditText read_notes,read_reason;
     String book_isbn,book_score,book_way;
     ScaleRatingBar bookRating;
     ReadInfo readInfo;
     private Spinner reading_way=null;
     Boolean bmob_if_hava_read_info = false;
-    //声明AMapLocationClient类对象
-    public AMapLocationClient mLocationClient = null;
-    //声明定位回调监听器
-    public AMapLocationListener mLocationListener;
-    //记录获取到的地址
-    private  String address;
-    //定义一个获取定位消息的类
-    LocationFromGaode getAddress;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -70,8 +63,8 @@ public class ReadingActivity extends AppCompatActivity {
     private void getInfoFromBookInfo() {
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("id_score");
-        book_isbn = bundle.getString("bookISBN");
-        book_score = bundle.getString("bookScore");
+        //book_isbn = bundle.getString("bookISBN");
+        //book_score = bundle.getString("book_rating");
     }
 
     private void initInfo() {
@@ -109,8 +102,6 @@ public class ReadingActivity extends AppCompatActivity {
         read_notes = findViewById(R.id.reading_note_text);
         read_reason = findViewById(R.id.reading_reason);
         reading_way=findViewById(R.id.reading_way);
-        addressText=findViewById(R.id.reading_adress_textview);
-        addressButton=findViewById(R.id.reading_adress_button);
         classfy=findViewById(R.id.reading_classfy);
         reading_button = findViewById(R.id.reading_button);
     }
@@ -126,42 +117,6 @@ public class ReadingActivity extends AppCompatActivity {
             }
         });
 
-        //点击进行定位
-        addressButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //实例化定位回调监听器
-                mLocationListener = new AMapLocationListener() {
-                    @Override
-                    public void onLocationChanged(AMapLocation amapLocation)
-                    {
-                        if (amapLocation!= null) {
-                            if (amapLocation.getErrorCode() == 0) {
-                                //可在其中解析amapLocation获取相应内容。
-                                String country=amapLocation.getCountry();//国家信息
-                                String province=amapLocation.getProvince();//省信息
-                                String city=amapLocation.getCity();//城市信息
-                                String block=amapLocation.getDistrict();//城区信息
-                                String street= amapLocation.getStreet();//街道信息
-                                String streetNumber=amapLocation.getStreetNum();//街道门牌号信息
-                                address=country+province+city+block+street+streetNumber;
-                                addressText.setText(address);
-                            } else {
-                                Toast.makeText(context,"定位失败",Toast.LENGTH_SHORT).show();
-                                addressText.setText("定位失败");
-                                //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
-                                Log.e("AmapError", "location Error, ErrCode:"
-                                        + amapLocation.getErrorCode() + ", errInfo:"
-                                        + amapLocation.getErrorInfo());
-                            }
-                        }
-                    }
-                };
-                //获取定位来触发监听器
-                new LocationFromGaode(context,mLocationListener).getLocation();
-            }
-        });
-
         //读书分类按钮
         classfy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -174,6 +129,7 @@ public class ReadingActivity extends AppCompatActivity {
         reading_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 /*final ProgressDialog progress = new ProgressDialog(context);
                 progress.setMessage("正在记录...");
                 progress.setCanceledOnTouchOutside(false);
@@ -197,7 +153,7 @@ public class ReadingActivity extends AppCompatActivity {
                 finish();*/
             }
         });
-  }
+    }
 
     //初始化分类picker
     private void classfyinit(){

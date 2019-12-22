@@ -1,8 +1,10 @@
 package com.yuyuereading.Presenter.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.yuyuereading.Model.bean.BookInfo;
+import com.yuyuereading.Presenter.activity.AddBookActivity;
 import com.yuyuereading.Presenter.adapter.BookListAdapter;
 import com.yuyuereading.R;
 
@@ -36,10 +39,12 @@ public class WantFragment extends Fragment {
 
     private RecyclerView recyclerView;
 
-    private BookInfo[] bookInfos = {new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社")};
+    private FloatingActionButton addBook;
+
+    private BookInfo[] bookInfos = {new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie"),
+            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie"),
+            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie"),
+            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie")};
 
     private List<BookInfo> bookInfoList = new ArrayList<>();
 
@@ -114,6 +119,7 @@ public class WantFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_want, container, false);
         recyclerView = view.findViewById(R.id.recycler_view);
+        addBook=view.findViewById(R.id.add_book);
         refresh = view.findViewById(R.id.refresh_want);
         //刷新控件颜色设置
         refresh.setColorSchemeResources(android.R.color.holo_blue_light,
@@ -192,5 +198,17 @@ public class WantFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        addBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AddBookActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

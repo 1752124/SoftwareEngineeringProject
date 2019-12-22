@@ -568,6 +568,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="aboutUs" translatable="false">       BookShare主要为大学生积压的实体书籍的流通与再利用创造机会，为喜欢读书并喜欢分享的大学生提供一个良好的图书共享平台，不仅可以帮助大学生分享出已经阅读完的书籍，还能够帮助大学生找到自己喜欢的书籍。在此平台中，大学生可以分享自己阅读过的好书，也可以通过平台找到自己感兴趣的书籍，以较方便的方式得到高质量的书籍，满足自己的读书需求。</string>
     <string name="about_us" translatable="false">关于我们</string>
+    <string name="add_book" translatable="false">想读</string>
     <string name="app_name">愉阅</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bmob_common_action_cancel">取消</string>
@@ -635,6 +636,7 @@
     <string name="pickerview_year">年</string>
     <string name="quit" translatable="false">退出</string>
     <string name="reading" translatable="false">在读</string>
+    <string name="readingText" translatable="false">在读</string>
     <string name="reason" translatable="false">原因：</string>
     <string name="scan" translatable="false">scan</string>
     <string name="sd_card">/sdcard</string>
@@ -647,6 +649,7 @@
     <string name="split" translatable="false">分隔图片</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="string_help_text" translatable="false">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="updateNote" translatable="false">更新进度</string>
     <string name="usernick" translatable="false">用户1</string>
     <string name="want_to_read" translatable="false">想读</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

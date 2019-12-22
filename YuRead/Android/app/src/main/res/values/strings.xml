@@ -37,6 +37,9 @@
     <string name="reason" translatable="false">原因：</string>
     <string name="date" translatable="false">2019年11月19日</string>
     <string name="day" translatable="false">星期一</string>
+    <string name="updateNote" translatable="false">更新进度</string>
+    <string name="add_book" translatable="false">想读</string>
+    <string name="readingText" translatable="false">在读</string>
 
 
 </resources>

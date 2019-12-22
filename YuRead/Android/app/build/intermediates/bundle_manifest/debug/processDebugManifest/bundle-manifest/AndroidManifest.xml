@@ -51,6 +51,10 @@
         <activity android:name="com.yuyuereading.Presenter.activity.ScanISBN" />
         <activity android:name="com.yuyuereading.Presenter.activity.UserInfoActivity" />
         <activity android:name="com.yuyuereading.Presenter.activity.CommentActivity" />
+        <activity android:name="com.yuyuereading.Presenter.activity.ShakeActivity" />
+        <activity android:name="com.yuyuereading.Presenter.activity.StatisticActivity" />
+        <activity android:name="com.yuyuereading.Presenter.activity.BookListActivity" />
+        <activity android:name="com.yuyuereading.Presenter.activity.AddBookActivity" />
 
         <service android:name="com.amap.api.location.APSService" />
 

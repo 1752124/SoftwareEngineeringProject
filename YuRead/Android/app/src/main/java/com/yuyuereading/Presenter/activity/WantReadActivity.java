@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.willy.ratingbar.ScaleRatingBar;
 import com.yuyuereading.Model.bean.ReadInfo;
@@ -34,6 +36,8 @@ public class WantReadActivity extends AppCompatActivity {
     ScaleRatingBar bookRating;
     EditText wantReason,wantHope;
     ReadInfo readInfo,readInfo2;
+    TextView book_name;
+    String bookName;
 
 
     @Override
@@ -85,6 +89,7 @@ public class WantReadActivity extends AppCompatActivity {
         wantButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*
                 final ProgressDialog progress = new ProgressDialog(context);
                 progress.setMessage("正在记录...");
                 progress.setCanceledOnTouchOutside(false);
@@ -102,7 +107,7 @@ public class WantReadActivity extends AppCompatActivity {
                 } else {
                     OperationReadInfo.updateReadInfo(readInfo2);
                     progress.dismiss();
-                }
+                }*/
                 finish();
             }
         });
@@ -110,10 +115,8 @@ public class WantReadActivity extends AppCompatActivity {
     }
 
     private void getInfoFromBookInfo() {
-        Intent intent = getIntent();
-        Bundle bundle = intent.getBundleExtra("id_score");
-        book_isbn = bundle.getString("bookISBN");
-        book_score = bundle.getString("bookScore");
+        Bundle bundle = getIntent().getExtras();
+        bookName=bundle.getString("bookName");
     }
 
 
@@ -124,8 +127,8 @@ public class WantReadActivity extends AppCompatActivity {
         bookRating =  findViewById(R.id.bookRating);
         wantReason = findViewById(R.id.want_read_reason);
         wantHope = findViewById(R.id.want_read_hope);
-        bookRating.setRating(Float.parseFloat(book_score)/2);
-
+        book_name=findViewById(R.id.book_name);
+        book_name.setText("书名："+bookName);
     }
     public void onBackPressed()
     {

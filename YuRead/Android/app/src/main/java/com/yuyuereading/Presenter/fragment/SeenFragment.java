@@ -35,10 +35,10 @@ public class SeenFragment extends Fragment {
 
     private RecyclerView recyclerView;
 
-    private BookInfo[] bookInfos = {new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社")};
+    private BookInfo[] bookInfos = {new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie"),
+            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie"),
+            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie"),
+            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie")};
 
     private List<BookInfo> bookInfoList = new ArrayList<>();
 
@@ -103,7 +103,6 @@ public class SeenFragment extends Fragment {
         //Toast.makeText(getContext(), "请加载数据", Toast.LENGTH_SHORT).show();
         adapter = new BookListAdapter(bookInfoList,"seen");
         recyclerView.setAdapter(adapter);
-
     }
 
     @Override
