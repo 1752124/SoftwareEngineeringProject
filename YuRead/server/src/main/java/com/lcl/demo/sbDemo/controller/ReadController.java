@@ -19,9 +19,9 @@ public class ReadController {
 
     @RequestMapping(value = "/books", method = RequestMethod.POST)
     @ResponseBody
-    public int addBook(@RequestParam Long userId, @RequestParam Long bookId, @RequestParam Integer state) {
+    public int addBook(@RequestParam Long userId, @RequestParam Long bookId, @RequestParam Integer state, @RequestParam String title, @RequestParam String author, @RequestParam String publisher) {
         //readingService =new readingServiceImpl();
-        int book = readService.insert(userId, bookId, state);
+        int book = readService.insert(userId, bookId, state, title, author, publisher);
         return book;
     }
 
@@ -43,16 +43,16 @@ public class ReadController {
 
     @RequestMapping(value = "/isbns", method = RequestMethod.GET)
     @ResponseBody
-    public Read isbns(@RequestParam Long id) {
+    public Read isbns(@RequestParam Long userId, @RequestParam Long bookId) {
         //readService =new readServiceImpl();
-        Read book = readService.getDataById(id);
+        Read book = readService.getDataById(userId, bookId);
         return book;
     }
 
     @RequestMapping(value = "/titles", method = RequestMethod.GET)
     @ResponseBody
-    public List<Read> titles(@RequestParam String keyword) {
-        List<Read> bookList = readService.selectByLikeTitle(keyword);
+    public List<Read> titles(@RequestParam Long userId, @RequestParam String keyword) {
+        List<Read> bookList = readService.selectByLikeTitle(userId, keyword);
         return bookList;
     }
 
