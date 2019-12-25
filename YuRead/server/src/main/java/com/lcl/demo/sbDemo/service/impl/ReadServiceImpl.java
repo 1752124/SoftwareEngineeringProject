@@ -16,8 +16,8 @@ public class ReadServiceImpl implements ReadService {
 
 
     @Override
-    public int insert(Long userId, Long bookId, Integer state) {
-        return readMapper.insert(userId, bookId, state);
+    public int insert(Long userId, Long bookId, Integer state, String title, String author, String publisher) {
+        return readMapper.insert(userId, bookId, state, title, author, publisher);
     }
 
     @Override
@@ -31,13 +31,13 @@ public class ReadServiceImpl implements ReadService {
     }
 
     @Override
-    public Read getDataById(Long id) {
-        return readMapper.selectByPrimaryKey(id);
+    public Read getDataById(Long userId, Long bookId) {
+        return readMapper.selectByPrimaryKey(userId, bookId);
     }
 
     @Override
-    public List<Read> selectByLikeTitle(String keyword) {
-        return readMapper.selectByLikeTitle(keyword);
+    public List<Read> selectByLikeTitle(Long userId, String keyword) {
+        return readMapper.selectByLikeTitle(userId, keyword);
     }
 
 
