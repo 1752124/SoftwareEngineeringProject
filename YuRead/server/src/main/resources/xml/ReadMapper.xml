@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lcl.demo.sbDemo.dao.ReadMapper" >
+  <resultMap id="BaseResultMap" type="com.lcl.demo.sbDemo.entity.Read" >
+    <constructor>
+      <idArg column="user_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <idArg column="book_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="state" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String"/>
+      <arg column="author" jdbcType="VARCHAR" javaType="java.lang.String"/>
+      <arg column="image" jdbcType="VARCHAR" javaType="java.lang.String"/>
+      <arg column="summary" jdbcType="VARCHAR" javaType="java.lang.String"/>
+      <arg column="publisher" jdbcType="VARCHAR" javaType="java.lang.String"/>
+      <arg column="ranking" jdbcType="VARCHAR" javaType="java.lang.String"/>
+      <arg column="category" jdbcType="VARCHAR" javaType="java.lang.String"/>
+      <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    user_id, book_id, state, title, author, image, publisher, summary, ranking, category, create_time, update_time
+  </sql>
+  <select id="select" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from reading
+    where user_id = #{userId,jdbcType=BIGINT}
+    and state= #{state,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List"/>
+    from reading
+    where book_id = #{bookId,jdbcType=BIGINT}
+  </select>
+  <select id="selectByLikeTitle" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List"/>
+    from reading
+    where title like concat('%',#{keyword},'%')
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.lcl.demo.sbDemo.entity.ReadKey" >
+    delete from reading
+    where id = #{id,jdbcType=BIGINT}
+      and book_id = #{bookId,jdbcType=BIGINT}
+      and user_id = #{userId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" >
+    insert into reading (user_id, book_id, state)
+    values (#{userId,jdbcType=BIGINT}, #{bookId,jdbcType=BIGINT}, #{state,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.lcl.demo.sbDemo.entity.Read" >
+    insert into reading
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="bookId != null" >
+        book_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="bookId != null" >
+        #{bookId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.lcl.demo.sbDemo.entity.Read" >
+    update reading
+    <set >
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+      and book_id = #{bookId,jdbcType=BIGINT}
+      and user_id = #{userId,jdbcType=BIGINT}
+  </update>
+  <update id="update" >
+    update reading
+    set state = #{state,jdbcType=INTEGER}
+    where book_id = #{bookId,jdbcType=BIGINT}
+      and user_id = #{userId,jdbcType=BIGINT}
+  </update>
+</mapper>
