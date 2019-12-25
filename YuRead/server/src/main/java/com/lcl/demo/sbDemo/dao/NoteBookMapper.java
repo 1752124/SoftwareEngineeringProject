@@ -2,7 +2,9 @@ package com.lcl.demo.sbDemo.dao;
 
 import com.lcl.demo.sbDemo.entity.NoteBook;
 import com.lcl.demo.sbDemo.entity.NoteBookKey;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface NoteBookMapper {
     int deleteByPrimaryKey(NoteBookKey key);
 

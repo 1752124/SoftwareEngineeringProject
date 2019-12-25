@@ -2,7 +2,9 @@ package com.lcl.demo.sbDemo.dao;
 
 import com.lcl.demo.sbDemo.entity.UserNote;
 import com.lcl.demo.sbDemo.entity.UserNoteKey;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface UserNoteMapper {
     int deleteByPrimaryKey(UserNoteKey key);
 

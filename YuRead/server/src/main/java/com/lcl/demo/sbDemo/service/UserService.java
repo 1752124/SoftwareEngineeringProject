@@ -1,10 +1,15 @@
 package com.lcl.demo.sbDemo.service;
 
+import com.lcl.demo.sbDemo.entity.User;
+
 import java.util.List;
-import java.util.Map;
 
 public interface UserService {
-	
-	List<Map<String, Object>> getDatas(String name);
-	Map<String, Object> getDataById(Integer id);
+
+	int insertDataById(Long id);
+
+	int updateName(Long id, String name);
+
+	int updatePortrait(Long id, String url);
+
 }

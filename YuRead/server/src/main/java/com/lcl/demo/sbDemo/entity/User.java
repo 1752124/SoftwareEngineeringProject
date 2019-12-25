@@ -3,29 +3,23 @@ package com.lcl.demo.sbDemo.entity;
 import java.util.Date;
 
 public class User {
-    private Integer userId;
+    private Long userId;
 
     private String name;
 
-    private Integer auth;
-
-    private String password;
+    private Byte auth;
 
     private String portrait;
-
-    private String email;
 
     private Date createTime;
 
     private Date updateTime;
 
-    public User(Integer userId, String name, Integer auth, String password, String portrait, String email, Date createTime, Date updateTime) {
+    public User(Long userId, String name, Byte auth, String portrait, Date createTime, Date updateTime) {
         this.userId = userId;
         this.name = name;
         this.auth = auth;
-        this.password = password;
         this.portrait = portrait;
-        this.email = email;
         this.createTime = createTime;
         this.updateTime = updateTime;
     }
@@ -34,11 +28,11 @@ public class User {
         super();
     }
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -50,20 +44,12 @@ public class User {
         this.name = name == null ? null : name.trim();
     }
 
-    public Integer getAuth() {
+    public Byte getAuth() {
         return auth;
     }
 
-    public void setAuth(Integer auth) {
+    public void setAuth(Byte auth) {
         this.auth = auth;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
     }
 
     public String getPortrait() {
@@ -72,14 +58,6 @@ public class User {
 
     public void setPortrait(String portrait) {
         this.portrait = portrait == null ? null : portrait.trim();
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
     }
 
     public Date getCreateTime() {

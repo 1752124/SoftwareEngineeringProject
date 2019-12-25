@@ -1,28 +1,18 @@
 package com.lcl.demo.sbDemo.entity;
 
 public class ReadKey {
-    private Long id;
-
-    private Long bookId;
 
     private Long userId;
 
-    public ReadKey(Long id, Long bookId, Long userId) {
-        this.id = id;
-        this.bookId = bookId;
+    private Long bookId;
+
+    public ReadKey(Long bookId, Long userId) {
         this.userId = userId;
+        this.bookId = bookId;
     }
 
     public ReadKey() {
         super();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Long getBookId() {
