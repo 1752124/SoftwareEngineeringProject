@@ -27,17 +27,19 @@
     where user_id = #{userId,jdbcType=BIGINT}
     and state= #{state,jdbcType=INTEGER}
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" >
     select
     <include refid="Base_Column_List"/>
     from reading
-    where book_id = #{bookId,jdbcType=BIGINT}
+    where user_id = #{userId,jdbcType=BIGINT}
+    and book_id = #{bookId,jdbcType=BIGINT}
   </select>
-  <select id="selectByLikeTitle" resultMap="BaseResultMap" parameterType="java.lang.String">
+  <select id="selectByLikeTitle" resultMap="BaseResultMap" >
     select
     <include refid="Base_Column_List"/>
     from reading
-    where title like concat('%',#{keyword},'%')
+    where user_id = #{userId,jdbcType=BIGINT}
+    and title like concat('%',#{keyword},'%')
   </select>
   <delete id="deleteByPrimaryKey" parameterType="com.lcl.demo.sbDemo.entity.ReadKey" >
     delete from reading
@@ -46,8 +48,8 @@
       and user_id = #{userId,jdbcType=BIGINT}
   </delete>
   <insert id="insert" >
-    insert into reading (user_id, book_id, state)
-    values (#{userId,jdbcType=BIGINT}, #{bookId,jdbcType=BIGINT}, #{state,jdbcType=INTEGER})
+    insert into reading (user_id, book_id, state, title, author, publisher)
+    values (#{userId,jdbcType=BIGINT}, #{bookId,jdbcType=BIGINT}, #{state,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{publisher,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lcl.demo.sbDemo.entity.Read" >
     insert into reading
