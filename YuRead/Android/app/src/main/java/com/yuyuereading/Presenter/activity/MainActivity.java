@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener, WantFragment.OnFragmentInteractionListener
         , ReadingFragment.OnFragmentInteractionListener, SeenFragment.OnFragmentInteractionListener {
 
-<<<<<<< HEAD:readFun/app/src/main/java/com/yuyuereading/presenter/activity/MainActivity.java
     Context mContext = MainActivity.this;
     private long exitTime = 0;
     Boolean bmob_if_hava_book_info = false;
@@ -80,16 +79,6 @@ public class MainActivity extends AppCompatActivity implements
     TextView nickname;
     private int REQUEST_CODE = 5;
     private ShakeListener mShakeListener;
-=======
-    private final Context mContext = MainActivity.this;
-    private long exitTime = 0;
-    private Boolean bmob_if_have_book_info = false;
-    private Toolbar toolbar;
-    private DrawerLayout drawer;
-    private MaterialSearchView searchView;
-    private final int REQUEST_CODE = 5;
->>>>>>> 4ae29219907a0901289f648a0c1078a699362f22:readFun/app/src/main/java/com/yuyuereading/activity/MainActivity.java
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

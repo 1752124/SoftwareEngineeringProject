@@ -11,11 +11,7 @@ public class AMUtils {
     /**
      * 手机号正则表达式
      **/
-<<<<<<< HEAD:readFun/app/src/main/java/com/yuyuereading/presenter/utils/AMUtils.java
     public final static String MOBLIE_PHONE_PATTERN = "^((13[0-9])|(15[0-9])|(18[0-9])|(14[7])|(17[0|3|6|7|8]))\\d{8}$";
-=======
-    private final static String MOBILE_PHONE_PATTERN = "^((13[0-9])|(15[0-9])|(18[0-9])|(14[7])|(17[0|3|6|7|8]))\\d{8}$";
->>>>>>> 4ae29219907a0901289f648a0c1078a699362f22:readFun/app/src/main/java/com/yuyuereading/utils/AMUtils.java
 
     /**
      * 通过正则验证是否是合法手机号码

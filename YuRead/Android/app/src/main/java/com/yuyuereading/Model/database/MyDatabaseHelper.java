@@ -16,16 +16,11 @@ import java.util.Map;
 
 
 
-<<<<<<< HEAD
 public class MyDatabaseHelper extends SQLiteOpenHelper {
     //指定数据库的名字和版本号
     final String book_info_listview="create table book_info_listview(_id integer primary key autoincrement,icon BLOB,usernick TEXT,rate INTEGER,comment TEXT,data TEXT)";//book_info中用户评论信息的缓存数据库,_id为主码
     final String book_info_bookinformation="create table book_info_bookinformation(_id integer primary key autoincrement,book BLOB,bookName TEXT,rate INTEGER,bookScore TEXT,bookWriter TEXT,bookPressName TEXT,bookPressData TEXT,bookISBN TEXT,bookcontext TEXT)";//book_info中图书信息的缓存数据库，表的信息与BookInfoComment类相对应
     private BitmapBytes bb;//Bitmap和byte格式相互转化的类
-=======
-class MyDatabaseHelper extends SQLiteOpenHelper {
-    private final BitmapBytes bb;//Bitmap和byte格式相互转化的类
->>>>>>> 4ae29219907a0901289f648a0c1078a699362f22
     public MyDatabaseHelper(Context context, String name,int version) {
         super(context, name, null, version);
         bb=new BitmapBytes();

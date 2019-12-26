@@ -35,21 +35,10 @@ import cn.bmob.v3.listener.QueryListener;
 
 public class LoginActivity extends AppCompatActivity {
 
-<<<<<<< HEAD:readFun/app/src/main/java/com/yuyuereading/presenter/activity/LoginActivity.java
     Context mContext = LoginActivity.this;
     EditText phoneNumber,verification;
     Button delete,getverification,loginButton;
     MyCountTimer timer;
-=======
-    private final Context mContext = LoginActivity.this;
-    private EditText phoneNumber;
-    private EditText verification;
-    private Button delete;
-    private Button getverification;
-    private Button loginButton;
-    private MyCountTimer timer;
->>>>>>> 4ae29219907a0901289f648a0c1078a699362f22:readFun/app/src/main/java/com/yuyuereading/activity/LoginActivity.java
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -222,11 +211,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-
-<<<<<<< HEAD:readFun/app/src/main/java/com/yuyuereading/presenter/activity/LoginActivity.java
     protected void onDestroy() {
         super.onDestroy();
     };
-=======
->>>>>>> 4ae29219907a0901289f648a0c1078a699362f22:readFun/app/src/main/java/com/yuyuereading/activity/LoginActivity.java
 }
