@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.adapter;
+package com.yuyuereading.presenter.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,11 +15,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.willy.ratingbar.ScaleRatingBar;
-import com.yuyuereading.Model.bean.BookInfo;
-import com.yuyuereading.Presenter.activity.BookInfoActivity;
-import com.yuyuereading.Presenter.activity.ReadingActivity;
-import com.yuyuereading.Presenter.activity.SeenActivity;
-import com.yuyuereading.Presenter.activity.WantReadActivity;
+import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.presenter.activity.BookInfoActivity;
+import com.yuyuereading.presenter.activity.ReadingActivity;
+import com.yuyuereading.presenter.activity.SeenActivity;
+import com.yuyuereading.presenter.activity.WantReadActivity;
 import com.yuyuereading.R;
 
 import java.util.List;

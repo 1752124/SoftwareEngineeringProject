@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.activity;
+package com.yuyuereading.presenter.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,15 +9,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
-import com.yuyuereading.Model.bean.BookInfo;
-import com.yuyuereading.Presenter.adapter.BookListAdapter;
-import com.yuyuereading.Presenter.utils.ShakeListener;
+import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.presenter.adapter.BookListAdapter;
+import com.yuyuereading.presenter.utils.ShakeListener;
 import com.yuyuereading.R;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class BookListActivity extends AppCompatActivity {
     private Context mContext = BookListActivity.this;

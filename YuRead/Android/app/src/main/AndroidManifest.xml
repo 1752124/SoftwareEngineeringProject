@@ -26,27 +26,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Presenter.activity.MainActivity" />
-        <activity android:name=".Presenter.activity.LoginActivity" />
-        <activity android:name=".Presenter.activity.StartActivity">
+        <activity android:name=".presenter.activity.MainActivity" />
+        <activity android:name=".presenter.activity.LoginActivity" />
+        <activity android:name=".presenter.activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Presenter.activity.PermissionsActivity" />
-        <activity android:name=".Presenter.activity.BookInfoActivity" />
-        <activity android:name=".Presenter.activity.WantReadActivity" />
-        <activity android:name=".Presenter.activity.ReadingActivity" />
-        <activity android:name=".Presenter.activity.SeenActivity" />
-        <activity android:name=".Presenter.activity.ScanISBN" />
-        <activity android:name=".Presenter.activity.UserInfoActivity" />
-        <activity android:name=".Presenter.activity.CommentActivity" />
-        <activity android:name=".Presenter.activity.ShakeActivity" />
-        <activity android:name=".Presenter.activity.StatisticActivity" />
-        <activity android:name=".Presenter.activity.BookListActivity" />
-        <activity android:name=".Presenter.activity.AddBookActivity" />
+        <activity android:name=".presenter.activity.PermissionsActivity" />
+        <activity android:name=".presenter.activity.BookInfoActivity" />
+        <activity android:name=".presenter.activity.WantReadActivity" />
+        <activity android:name=".presenter.activity.ReadingActivity" />
+        <activity android:name=".presenter.activity.SeenActivity" />
+        <activity android:name=".presenter.activity.ScanISBN" />
+        <activity android:name=".presenter.activity.UserInfoActivity" />
+        <activity android:name=".presenter.activity.CommentActivity" />
+        <activity android:name=".presenter.activity.ShakeActivity" />
+        <activity android:name=".presenter.activity.StatisticActivity" />
+        <activity android:name=".presenter.activity.BookListActivity" />
+        <activity android:name=".presenter.activity.AddBookActivity" />
         <service android:name="com.amap.api.location.APSService" />
 
         <meta-data

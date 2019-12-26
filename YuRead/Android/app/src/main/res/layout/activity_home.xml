@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ddd"
     android:orientation="vertical"
-    tools:context="com.yuyuereading.Presenter.activity.LoginActivity">
+    tools:context="com.yuyuereading.presenter.activity.LoginActivity">
 
     <LinearLayout
         android:id="@+id/loginText"
@@ -14,24 +14,14 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginTop="30dp"
-            android:text="@string/date"
             android:textColor="#000"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_weight="1"
-            android:text="@string/day"
-            android:textColor="#000"
-            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout

@@ -1,4 +1,4 @@
-package com.yuyuereading.Model.database;
+package com.yuyuereading.model.database;
 
 /**
  * 对WantRead列表进行操作

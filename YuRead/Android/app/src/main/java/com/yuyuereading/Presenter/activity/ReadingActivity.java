@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.activity;
+package com.yuyuereading.presenter.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,19 +14,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.amap.api.location.AMapLocation;
-import com.amap.api.location.AMapLocationClient;
-import com.amap.api.location.AMapLocationListener;
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.willy.ratingbar.ScaleRatingBar;
-import com.yuyuereading.Model.bean.ReadInfo;
-import com.yuyuereading.Model.bean._User;
-import com.yuyuereading.Model.database.OperationReadInfo;
-import com.yuyuereading.Presenter.utils.LocationFromGaode;
+import com.yuyuereading.model.bean.ReadInfo;
+import com.yuyuereading.model.bean._User;
+import com.yuyuereading.model.database.OperationReadInfo;
 import com.yuyuereading.R;
 
 import java.util.ArrayList;

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    tools:context="com.yuyuereading.Presenter.activity.MainActivity">
+    tools:context="com.yuyuereading.presenter.activity.MainActivity">
 
     <include
         layout="@layout/app_bar_home_page"

@@ -1,8 +1,8 @@
-package com.yuyuereading.Presenter.utils;
+package com.yuyuereading.presenter.utils;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.yuyuereading.Model.bean.BookInfo;
+import com.yuyuereading.model.bean.BookInfo;
 
 import java.io.IOException;
 

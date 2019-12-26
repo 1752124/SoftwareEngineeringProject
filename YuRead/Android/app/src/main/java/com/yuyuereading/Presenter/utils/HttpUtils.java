@@ -1,6 +1,4 @@
-package com.yuyuereading.Presenter.utils;
-
-import org.apache.http.client.methods.HttpPut;
+package com.yuyuereading.presenter.utils;
 
 import java.io.IOException;
 
@@ -93,7 +91,7 @@ public class HttpUtils {
      * @param json      请求参数以JSON串的格式传递
      * @return
      */
-    public static String doPost(String urlStr, String json) throws IOException {
+    private static String doPost(String urlStr, String json) throws IOException {
         OkHttpClient client = new OkHttpClient();
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
@@ -111,7 +109,7 @@ public class HttpUtils {
      * @param urlStr    url字符串
      * @return
      */
-    public static String doGet(String urlStr) throws IOException {
+    private static String doGet(String urlStr) throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(urlStr)

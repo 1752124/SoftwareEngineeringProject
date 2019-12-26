@@ -1,10 +1,8 @@
-package com.yuyuereading.Presenter.activity;
+package com.yuyuereading.presenter.activity;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
 
 import com.yuyuereading.R;
 

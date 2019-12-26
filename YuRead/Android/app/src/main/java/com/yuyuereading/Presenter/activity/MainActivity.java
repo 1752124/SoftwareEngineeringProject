@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.activity;
+package com.yuyuereading.presenter.activity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -40,23 +40,21 @@ import com.uuzuche.lib_zxing.activity.CodeUtils;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 import com.ycl.tabview.library.TabView;
 import com.ycl.tabview.library.TabViewChild;
-import com.yuyuereading.Model.bean.BookInfo;
-import com.yuyuereading.Model.bean._User;
-import com.yuyuereading.Model.database.OperationBookInfo;
-import com.yuyuereading.Presenter.fragment.HomeFragment;
-import com.yuyuereading.Presenter.fragment.ReadingFragment;
-import com.yuyuereading.Presenter.fragment.SeenFragment;
-import com.yuyuereading.Presenter.fragment.UserFragment;
-import com.yuyuereading.Presenter.fragment.WantFragment;
-import com.yuyuereading.Presenter.utils.BookInfoGetFromDouban;
-import com.yuyuereading.Presenter.utils.HttpUtils;
-import com.yuyuereading.Presenter.utils.SearchFromDouban;
-import com.yuyuereading.Presenter.utils.ShakeListener;
+import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.model.bean._User;
+import com.yuyuereading.model.database.OperationBookInfo;
+import com.yuyuereading.presenter.fragment.HomeFragment;
+import com.yuyuereading.presenter.fragment.ReadingFragment;
+import com.yuyuereading.presenter.fragment.SeenFragment;
+import com.yuyuereading.presenter.fragment.UserFragment;
+import com.yuyuereading.presenter.fragment.WantFragment;
+import com.yuyuereading.presenter.utils.BookInfoGetFromDouban;
+import com.yuyuereading.presenter.utils.HttpUtils;
+import com.yuyuereading.presenter.utils.SearchFromDouban;
+import com.yuyuereading.presenter.utils.ShakeListener;
 import com.yuyuereading.R;
-import com.yuyuereading.View.CircleImageView;
+import com.yuyuereading.view.CircleImageView;
 
-
-import com.alibaba.fastjson.JSONObject;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -69,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener, WantFragment.OnFragmentInteractionListener
         , ReadingFragment.OnFragmentInteractionListener, SeenFragment.OnFragmentInteractionListener {
 
+<<<<<<< HEAD:readFun/app/src/main/java/com/yuyuereading/presenter/activity/MainActivity.java
     Context mContext = MainActivity.this;
     private long exitTime = 0;
     Boolean bmob_if_hava_book_info = false;
@@ -81,6 +80,15 @@ public class MainActivity extends AppCompatActivity implements
     TextView nickname;
     private int REQUEST_CODE = 5;
     private ShakeListener mShakeListener;
+=======
+    private final Context mContext = MainActivity.this;
+    private long exitTime = 0;
+    private Boolean bmob_if_have_book_info = false;
+    private Toolbar toolbar;
+    private DrawerLayout drawer;
+    private MaterialSearchView searchView;
+    private final int REQUEST_CODE = 5;
+>>>>>>> 4ae29219907a0901289f648a0c1078a699362f22:readFun/app/src/main/java/com/yuyuereading/activity/MainActivity.java
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,8 +102,6 @@ public class MainActivity extends AppCompatActivity implements
 
         initView();
         onClick();
-        displayList();
-        display();
         initShake();
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -130,16 +136,6 @@ public class MainActivity extends AppCompatActivity implements
                 startActivity(intent);
             }
         });
-    }
-
-    //显示其他信息
-    private void display() {
-
-    }
-
-    //显示列表
-    private void displayList() {
-
     }
 
     //点击事件
@@ -325,11 +321,6 @@ public class MainActivity extends AppCompatActivity implements
         return true;
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
-
     //处理二维码扫描结果
     @Override
     protected void onActivityResult(final int requestCode, int resultCode, Intent data) {
@@ -401,5 +392,10 @@ public class MainActivity extends AppCompatActivity implements
                 }
             }
         }
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.yuyuereading.Presenter.activity.StartActivity">
+    tools:context="com.yuyuereading.presenter.activity.StartActivity">
 
 
     <ImageView

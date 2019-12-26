@@ -1,4 +1,4 @@
-package com.yuyuereading.Model.database;
+package com.yuyuereading.model.database;
 
 import android.annotation.SuppressLint;
 import android.os.Handler;
@@ -7,9 +7,9 @@ import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
-import com.yuyuereading.Model.bean.BookInfo;
-import com.yuyuereading.Model.bean.ReadInfo;
-import com.yuyuereading.Model.bean._User;
+import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.model.bean.ReadInfo;
+import com.yuyuereading.model.bean._User;
 
 import java.util.ArrayList;
 import java.util.List;

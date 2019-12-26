@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter;
+package com.yuyuereading.presenter;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

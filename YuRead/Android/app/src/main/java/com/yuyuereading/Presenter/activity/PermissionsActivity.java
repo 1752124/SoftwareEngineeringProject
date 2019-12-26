@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.activity;
+package com.yuyuereading.presenter.activity;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -12,7 +12,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
-import com.yuyuereading.Presenter.PermissionsChecker;
+import com.yuyuereading.presenter.PermissionsChecker;
 
 import com.yuyuereading.R;
 

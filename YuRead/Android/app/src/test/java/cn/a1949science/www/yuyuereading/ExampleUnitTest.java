@@ -1,4 +1,4 @@
-package cn.a1949science.www.bookrecord;
+package cn.a1949science.www.yuyuereading;
 
 import org.junit.Test;
 

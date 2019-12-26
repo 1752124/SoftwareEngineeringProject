@@ -1,4 +1,4 @@
-package com.yuyuereading.View;
+package com.yuyuereading.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.fragment;
+package com.yuyuereading.presenter.fragment;
 
 import android.content.Context;
 import android.net.Uri;
@@ -11,8 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.yuyuereading.Model.bean.BookInfo;
-import com.yuyuereading.Presenter.adapter.BookListAdapter;
+import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.presenter.adapter.BookListAdapter;
 import com.yuyuereading.R;
 
 import java.util.ArrayList;

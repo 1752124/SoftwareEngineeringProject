@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.adapter;
+package com.yuyuereading.presenter.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.yuyuereading.Model.bean.BookComment;
-import com.yuyuereading.Presenter.activity.CommentActivity;
+import com.yuyuereading.model.bean.BookComment;
+import com.yuyuereading.presenter.activity.CommentActivity;
 import com.yuyuereading.R;
 
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.List;
 public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.ViewHolder>{
     private Context mContext;
 
-    private List<BookComment> mBookCommentList;
+    private final List<BookComment> mBookCommentList;
 
     //构造方法
     public CommentListAdapter(List<BookComment> bookCommentList) {
@@ -64,10 +64,12 @@ public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        CardView cardView;
-        View mItemView;
-        TextView read_review,page_update,finish_time;
-        public ViewHolder(View itemView) {
+        final CardView cardView;
+        final View mItemView;
+        final TextView read_review;
+        final TextView page_update;
+        final TextView finish_time;
+        ViewHolder(View itemView) {
             super(itemView);
             mItemView = itemView;
             cardView = (CardView) itemView;

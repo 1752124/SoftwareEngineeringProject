@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.activity;
+package com.yuyuereading.presenter.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

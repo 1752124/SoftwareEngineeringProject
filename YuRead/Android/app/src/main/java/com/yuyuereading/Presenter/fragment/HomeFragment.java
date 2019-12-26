@@ -1,15 +1,17 @@
-package com.yuyuereading.Presenter.fragment;
+package com.yuyuereading.presenter.fragment;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
-import com.yuyuereading.Presenter.activity.BookListActivity;
+import com.yuyuereading.presenter.activity.BookListActivity;
 import com.yuyuereading.R;
 
 
@@ -104,6 +106,40 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        TextView date=view.findViewById(R.id.date);
+
+        Time t=new Time();
+        t.setToNow(); // 取得系统时间。
+        int year=t.year;
+        int month = t.month+1;
+        int day = t.monthDay;
+        int weekDay=t.weekDay;
+        String weekDayZh;
+        switch (weekDay){
+            case 1:
+                weekDayZh="一";
+                break;
+            case 2:
+                weekDayZh="二";
+                break;
+            case 3:
+                weekDayZh="三";
+                break;
+            case 4:
+                weekDayZh="四";
+                break;
+            case 5:
+                weekDayZh="五";
+                break;
+            case 6:
+                weekDayZh="六";
+                break;
+            default:
+                weekDayZh="日";
+                break;
+        }
+        date.setText(year+"年"+month+"月"+day+"日   星期"+weekDayZh);
     }
     /**
      * This interface must be implemented by activities that contain this

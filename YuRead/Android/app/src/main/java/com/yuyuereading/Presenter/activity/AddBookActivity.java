@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.activity;
+package com.yuyuereading.presenter.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,10 +13,18 @@ import android.widget.Toast;
 import com.yuyuereading.R;
 
 public class AddBookActivity extends AppCompatActivity {
-    Button finishEdit,returnButton;
-    TextView book_name,author_name,isbn,public_name,title;
-    EditText input_book_name,input_author_name,input_isbn,input_public_name;
-    ScrollView scrollView;
+    private Button finishEdit;
+    private Button returnButton;
+    private TextView book_name;
+    private TextView author_name;
+    private TextView isbn;
+    private TextView public_name;
+    private TextView title;
+    private EditText input_book_name;
+    private EditText input_author_name;
+    private EditText input_isbn;
+    private EditText input_public_name;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

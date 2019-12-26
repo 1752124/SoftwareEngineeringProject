@@ -9,7 +9,7 @@
     android:orientation="horizontal"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <com.yuyuereading.View.CircleImageView
+    <com.yuyuereading.view.CircleImageView
         android:id="@+id/favicon"
         android:layout_width="60dp"
         android:layout_height="60dp"

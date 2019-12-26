@@ -7,7 +7,7 @@
     android:background="#ddd"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="com.yuyuereading.Presenter.activity.UserInfoActivity">
+    tools:context="com.yuyuereading.presenter.activity.UserInfoActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:background="@android:color/white">
-                <com.yuyuereading.View.CircleImageView
+                <com.yuyuereading.view.CircleImageView
                     android:id="@+id/user_info_icon"
                     android:layout_width="70dp"
                     android:layout_height="70dp"

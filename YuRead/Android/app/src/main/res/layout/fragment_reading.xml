@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.yuyuereading.Presenter.fragment.ReadingFragment">
+    tools:context="com.yuyuereading.presenter.fragment.ReadingFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

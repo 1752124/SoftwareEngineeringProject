@@ -1,11 +1,11 @@
-package com.yuyuereading.Model.database;
+package com.yuyuereading.model.database;
 
 import android.annotation.SuppressLint;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import com.yuyuereading.Model.bean.BookInfo;
+import com.yuyuereading.model.bean.BookInfo;
 
 import java.util.List;
 

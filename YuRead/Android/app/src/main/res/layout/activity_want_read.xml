@@ -7,7 +7,7 @@
     android:background="#ddd"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".Presenter.activity.WantReadActivity">
+    tools:context=".presenter.activity.WantReadActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"

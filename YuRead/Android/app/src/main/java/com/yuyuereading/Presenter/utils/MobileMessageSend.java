@@ -1,4 +1,4 @@
-package com.yuyuereading.Presenter.utils;
+package com.yuyuereading.presenter.utils;
 
 import com.alibaba.fastjson.JSON;
 

@@ -1,31 +1,25 @@
-package com.yuyuereading.Presenter.activity;
+package com.yuyuereading.presenter.activity;
 
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.willy.ratingbar.ScaleRatingBar;
-import com.yuyuereading.Model.bean.ReadInfo;
-import com.yuyuereading.Model.bean._User;
-import com.yuyuereading.Model.database.OperationReadInfo;
+import com.yuyuereading.model.bean.ReadInfo;
+import com.yuyuereading.model.bean._User;
+import com.yuyuereading.model.database.OperationReadInfo;
 import com.yuyuereading.R;
 
-import java.util.Date;
 import java.util.List;
 
 import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.datatype.BmobDate;
 
 public class WantReadActivity extends AppCompatActivity {
 

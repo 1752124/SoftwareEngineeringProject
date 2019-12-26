@@ -1,4 +1,4 @@
-package com.yuyuereading.Model.bean;
+package com.yuyuereading.model.bean;
 
 import cn.bmob.v3.BmobUser;
 
