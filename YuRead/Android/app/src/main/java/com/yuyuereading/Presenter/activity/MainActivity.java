@@ -15,6 +15,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -152,7 +153,8 @@ public class MainActivity extends AppCompatActivity implements
                // progress.setCanceledOnTouchOutside(false);
                // progress.show();
                 //Snackbar.make(findViewById(R.id.container), "Query: " + query, Snackbar.LENGTH_LONG).show();
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/Book/search?keyword=" + query, new HttpUtils.CallBack() {
+                long userID=1;
+                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/titles?userid="+userID+"&keyword=" + query, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         try {
@@ -302,6 +304,7 @@ public class MainActivity extends AppCompatActivity implements
                         }
                     })
                     .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                        @RequiresApi(api = Build.VERSION_CODES.ECLAIR)
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             BmobUser.logOut();
