@@ -19,40 +19,40 @@ public class ReadController {
 
     @RequestMapping(value = "/books", method = RequestMethod.POST)
     @ResponseBody
-    public int addBook(@RequestParam Long userId, @RequestParam Long bookId, @RequestParam Integer state, @RequestParam String title, @RequestParam String author, @RequestParam String publisher) {
+    public int addBook(@RequestParam Long userid, @RequestParam Long bookid, @RequestParam Integer state, @RequestParam String title, @RequestParam String author, @RequestParam String publisher) {
         //readingService =new readingServiceImpl();
-        int book = readService.insert(userId, bookId, state, title, author, publisher);
+        int book = readService.insert(userid, bookid, state, title, author, publisher);
         return book;
     }
 
     @RequestMapping(value = "/lists", method = RequestMethod.POST)
     @ResponseBody
-    public int changeBook(@RequestParam Long userId, @RequestParam Long bookId, @RequestParam Integer state) {
-        //readingService =new readingServiceImpl();
-        int book = readService.update(userId, bookId, state);
+    public int changeBook(@RequestParam Long userid, @RequestParam Long bookid, @RequestParam Integer state) {
+        //        //readingService =new readingServiceImpl();
+        int book = readService.update(userid, bookid, state);
         return book;
     }
 
     @RequestMapping(value = "/shelves", method = RequestMethod.GET)
     @ResponseBody
-    public List<Read> showBooks(@RequestParam Long userId, @RequestParam Integer state) {
+    public List<Read> showBooks(@RequestParam Long userid, @RequestParam Integer state) {
         //readingService =new readingServiceImpl();
-        List<Read> bookList = readService.select(userId, state);
+        List<Read> bookList = readService.select(userid, state);
         return bookList;
     }
 
     @RequestMapping(value = "/isbns", method = RequestMethod.GET)
     @ResponseBody
-    public Read isbns(@RequestParam Long userId, @RequestParam Long bookId) {
+    public Read isbns(@RequestParam Long userid, @RequestParam Long bookid) {
         //readService =new readServiceImpl();
-        Read book = readService.getDataById(userId, bookId);
+        Read book = readService.getDataById(userid, bookid);
         return book;
     }
 
     @RequestMapping(value = "/titles", method = RequestMethod.GET)
     @ResponseBody
-    public List<Read> titles(@RequestParam Long userId, @RequestParam String keyword) {
-        List<Read> bookList = readService.selectByLikeTitle(userId, keyword);
+    public List<Read> titles(@RequestParam Long userid, @RequestParam String keyword) {
+        List<Read> bookList = readService.selectByLikeTitle(userid, keyword);
         return bookList;
     }
 

@@ -37,6 +37,4 @@ public class UserController {
         int portrait = userService.updatePortrait(id, url);
         return portrait;
     }
-
-
 }

@@ -19,17 +19,17 @@ public class NoteController {
 
     @RequestMapping(value = "/notes", method = RequestMethod.POST)
     @ResponseBody
-    public int addNote(@RequestParam Long userId, @RequestParam Long bookId, @RequestParam Integer beginPage, @RequestParam Integer endPage, @RequestParam String content) {
+    public int addNote(@RequestParam Long userid, @RequestParam Long bookid, @RequestParam Integer beginpage, @RequestParam Integer endpage, @RequestParam String content) {
         //noteService =new NoteServiceImpl();
-        int note = noteService.insert(userId, bookId, beginPage, endPage, content);
+        int note = noteService.insert(userid, bookid, beginpage, endpage, content);
         return note;
     }
 
     @RequestMapping(value = "/lists", method = RequestMethod.GET)
     @ResponseBody
-    public List<Note> showNote(@RequestParam Long userId, @RequestParam Long bookId) {
+    public List<Note> showNote(@RequestParam Long userid, @RequestParam Long bookid) {
         //noteService =new NoteServiceImpl();
-        List<Note> noteList = noteService.select(userId, bookId);
+        List<Note> noteList = noteService.select(userid, bookid);
         return noteList;
     }
 
