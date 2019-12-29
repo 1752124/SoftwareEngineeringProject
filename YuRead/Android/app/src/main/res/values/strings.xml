@@ -40,6 +40,13 @@
     <string name="updateNote" translatable="false">更新进度</string>
     <string name="add_book" translatable="false">想读</string>
     <string name="readingText" translatable="false">在读</string>
+    <string name="number" translatable="false">0</string>
+    <string name="start" translatable="false">start</string>
+    <string name="stop" translatable="false">stop</string>
+    <string name="pause" translatable="false">pause</string>
+    <string name="resume" translatable="false">resume</string>
+
+
 
 
 </resources>
