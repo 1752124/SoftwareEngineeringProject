@@ -1115,7 +1115,6 @@ id coordinator
 id cover
 id custom
 id customPanel
-id date
 id day
 id decode
 id decode_failed
@@ -1344,6 +1343,7 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textView
 id textView2
 id textView3
 id textView4

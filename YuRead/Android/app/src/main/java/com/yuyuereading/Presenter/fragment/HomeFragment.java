@@ -11,16 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.alibaba.fastjson.JSONArray;
-import com.yuyuereading.model.bean.BookInfo;
 import com.yuyuereading.presenter.activity.BookListActivity;
 import com.yuyuereading.R;
-import com.yuyuereading.presenter.utils.HttpUtils;
-import com.yuyuereading.presenter.utils.SearchFromDouban;
-
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.List;
 
 
 /**
@@ -82,116 +74,36 @@ public class HomeFragment extends Fragment {
         Allanbooklist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                byte type=1;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/books?type="+ type, new HttpUtils.CallBack() {
-                    @Override
-                    public void onRequestComplete(String result) {
-                        try {
-                            JSONArray jsonArray=JSONArray.parseArray(result);
-                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
-                            Intent intent = new Intent(getActivity(), BookListActivity.class);
-                            intent.putExtra("type","search");
-                            Bundle bundle = new Bundle();
-                            bundle.putSerializable("bookInfos", (Serializable)bookInfos);
-                            intent.putExtras(bundle);
-                            startActivity(intent);
-                            // progress.dismiss();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-//                Intent intent=new Intent(getActivity(), BookListActivity.class);
-//                intent.putExtra("type","allan");
-//                startActivity(intent);
+                Intent intent=new Intent(getActivity(), BookListActivity.class);
+                intent.putExtra("type","allan");
+                startActivity(intent);
             }
         });
 
         Oscarbooklist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                byte type=2;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/books?type="+ type, new HttpUtils.CallBack() {
-                    @Override
-                    public void onRequestComplete(String result) {
-                        try {
-                            JSONArray jsonArray=JSONArray.parseArray(result);
-                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
-                            Intent intent = new Intent(getActivity(), BookListActivity.class);
-                            intent.putExtra("type","search");
-                            Bundle bundle = new Bundle();
-                            bundle.putSerializable("bookInfos", (Serializable)bookInfos);
-                            intent.putExtras(bundle);
-                            startActivity(intent);
-                            // progress.dismiss();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-                /*Intent intent=new Intent(getActivity(),BookListActivity.class);
+                Intent intent=new Intent(getActivity(),BookListActivity.class);
                 intent.putExtra("type","oscar");
-                startActivity(intent);*/
+                startActivity(intent);
             }
         });
 
         Maobooklist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                byte type=3;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/books?type="+ type, new HttpUtils.CallBack() {
-                    @Override
-                    public void onRequestComplete(String result) {
-                        try {
-                            JSONArray jsonArray=JSONArray.parseArray(result);
-                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
-                            Intent intent = new Intent(getActivity(), BookListActivity.class);
-                            intent.putExtra("type","search");
-                            Bundle bundle = new Bundle();
-                            bundle.putSerializable("bookInfos", (Serializable)bookInfos);
-                            intent.putExtras(bundle);
-                            startActivity(intent);
-                            // progress.dismiss();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-               /* Intent intent=new Intent(getActivity(),BookListActivity.class);
+                Intent intent=new Intent(getActivity(),BookListActivity.class);
                 intent.putExtra("type","mao");
-                startActivity(intent);*/
+                startActivity(intent);
             }
         });
 
         Nobelbooklist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                byte type=4;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/books?type="+ type, new HttpUtils.CallBack() {
-                    @Override
-                    public void onRequestComplete(String result) {
-                        try {
-                            JSONArray jsonArray=JSONArray.parseArray(result);
-                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
-                            Intent intent = new Intent(getActivity(), BookListActivity.class);
-                            intent.putExtra("type","search");
-                            Bundle bundle = new Bundle();
-                            bundle.putSerializable("bookInfos", (Serializable)bookInfos);
-                            intent.putExtras(bundle);
-                            startActivity(intent);
-                            // progress.dismiss();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-                /*Intent intent=new Intent(getActivity(),BookListActivity.class);
+                Intent intent=new Intent(getActivity(),BookListActivity.class);
                 intent.putExtra("type","nobel");
-                startActivity(intent);*/
+                startActivity(intent);
             }
         });
 
