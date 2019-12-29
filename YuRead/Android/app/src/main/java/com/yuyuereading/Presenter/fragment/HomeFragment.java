@@ -2,7 +2,9 @@ package com.yuyuereading.presenter.fragment;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.text.format.Time;
 import android.view.LayoutInflater;
@@ -65,6 +67,7 @@ public class HomeFragment extends Fragment {
         return fragment;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
@@ -73,6 +76,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     private void initView() {
         Allanbooklist=view.findViewById(R.id.Allan_book_list);
         Oscarbooklist=view.findViewById(R.id.Oscar_book_list);
