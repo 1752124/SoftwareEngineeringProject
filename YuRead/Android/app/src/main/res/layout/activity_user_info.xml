@@ -28,167 +28,117 @@
                     android:id="@+id/user_info_icon"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:src="@mipmap/bookdemo"
                     app:civ_border_width="1dp"
                     app:civ_border_color="#000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:id="@+id/nickname"
+                    android:textSize="20sp"
+                    android:text="暖倾心"
+                    android:layout_marginStart="20dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="120dp"
+                    android:src="@drawable/recom_btn_bg"/>
 
             </RelativeLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@android:color/white"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:src="@mipmap/name"
-                    />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
                 <TextView
+                    android:id="@+id/sum_read"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="姓名"
-                    android:layout_marginLeft="15dp"
-                    />
+                    android:paddingLeft="20dp"
+                    android:text="总阅读量"
+                    android:textSize="20sp"/>
+
                 <TextView
-                    android:id="@+id/user_info_name"
+                    android:id="@+id/sum_day"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="300dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@android:color/white"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:src="@mipmap/school"/>
+                    android:text="阅读天数"
+                    android:paddingLeft="20dp"
+                    android:layout_toRightOf="@id/sum_read"
+                    android:textSize="20sp"/>
+
                 <TextView
+                    android:id="@+id/seen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="学校"
-                    android:layout_marginLeft="15dp"/>
+                    android:paddingLeft="20dp"
+                    android:layout_toRightOf="@id/sum_day"
+                    android:text="已读完"
+                    android:textSize="20sp"/>
+
                 <TextView
-                    android:id="@+id/user_info_school"
+                    android:id="@+id/record"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="300dp"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@android:color/white"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:src="@mipmap/major"/>
+                    android:paddingLeft="20dp"
+                    android:text="记录书摘"
+                    android:layout_toRightOf="@+id/seen"
+                    android:textSize="20sp"/>
+
                 <TextView
+                    android:id="@+id/sum_book"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="专业"
-                    android:layout_marginLeft="15dp"/>
+                    android:text="0本"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="40dp"
+                    android:layout_below="@+id/sum_read"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
                 <TextView
-                    android:id="@+id/user_info_major"
+                    android:id="@+id/sum_days"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="300dp"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@android:color/white"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:src="@mipmap/telephone"/>
+                    android:paddingLeft="70dp"
+                    android:text="0天"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/sum_day"
+                    android:layout_toRightOf="@+id/sum_book"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+
+
                 <TextView
+                    android:id="@+id/seen_book"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="联系方式"
-                    android:layout_marginLeft="15dp"/>
+                    android:paddingLeft="60dp"
+                    android:text="0本"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/sum_days"
+                    android:layout_below="@+id/seen"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
                 <TextView
-                    android:id="@+id/user_info_telephone"
+                    android:id="@+id/sum_record"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="300dp"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@android:color/white"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:src="@mipmap/state"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="状态"
-                    android:layout_marginLeft="15dp"/>
-                <TextView
-                    android:id="@+id/user_info_state"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="300dp"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@android:color/white"
-                android:gravity="center_vertical"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="10dp"
-                >
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="编辑"
-                    android:textColor="#fff"
-                    android:textSize="20sp"
-                    android:background="@android:color/holo_blue_bright"/>
-            </LinearLayout>
+                    android:text="0条"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/seen_book"
+                    android:layout_below="@+id/record"
+                    android:paddingLeft="60dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
