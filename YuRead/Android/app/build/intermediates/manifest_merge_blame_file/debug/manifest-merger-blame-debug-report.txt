@@ -6,191 +6,192 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
-8-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+8-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="27" />
-9-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml
+9-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml
 10    <!-- 用于进行网络定位 -->
 11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
-11-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:5:5-81
-11-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:5:22-78
+11-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:5:5-81
+11-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:5:22-78
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-12-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:6:5-79
-12-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:6:22-76
+12-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:6:5-79
+12-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于读取手机当前的状态 -->
-13-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:7:5-76
-13-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:7:22-73
+13-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:7:5-76
+13-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:7:22-73
 14    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于申请调用A-GPS模块 -->
-14-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:8:5-75
-14-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:8:22-72
+14-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:8:5-75
+14-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:8:22-72
 15    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于申请获取蓝牙信息进行室内定位 -->
-15-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:9:5-89
-15-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:9:22-86
+15-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:9:5-89
+15-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:9:22-86
 16    <uses-permission android:name="android.permission.BLUETOOTH" />
-16-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:10:5-68
-16-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:10:22-65
+16-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:10:5-68
+16-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:10:22-65
 17    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 允许联网 -->
-17-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:11:5-74
-17-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:11:22-71
+17-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:11:5-74
+17-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:11:22-71
 18    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
-18-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:12:5-67
-18-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:12:22-64
+18-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:12:5-67
+18-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:12:22-64
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取wifi网络状态的信息 -->
-19-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:13:5-79
-19-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:13:22-76
+19-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:13:5-79
+19-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:13:22-76
 20    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
-20-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:14:5-76
-20-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:14:22-73
+20-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:14:5-76
+20-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:14:22-73
 21    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 获取sd卡写的权限，用于文件上传和下载 -->
-21-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:15:5-68
-21-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:15:22-65
+21-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:15:5-68
+21-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:15:22-65
 22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许读使用拍照 -->
-22-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:16:5-81
-22-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:16:22-78
+22-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:16:5-81
+22-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:16:22-78
 23    <uses-permission android:name="android.permission.CAMERA" /> <!-- 加入外部存储设备的权限 -->
-23-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:17:5-65
-23-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:17:22-62
+23-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:17:5-65
+23-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:17:22-62
 24    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许打电话 -->
-24-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:18:5-80
-24-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:18:22-77
+24-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:18:5-80
+24-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:18:22-77
 25    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 允许振动 -->
-25-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:19:5-69
-25-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:19:22-66
+25-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:19:5-69
+25-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:19:22-66
 26    <uses-permission android:name="android.permission.VIBRATE" />
-26-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:20:5-66
-26-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:20:22-63
+26-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:20:5-66
+26-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:20:22-63
 27    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-27-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:15:5-83
-27-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:15:22-80
+27-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:15:5-83
+27-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:15:22-80
 28
 29    <application
-29-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:22:5-55:19
+29-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:22:5-55:19
 30        android:allowBackup="true"
-30-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:23:9-35
+30-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:23:9-35
 31        android:debuggable="true"
 32        android:icon="@mipmap/ic_launcher"
-32-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:24:9-43
+32-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:24:9-43
 33        android:label="@string/app_name"
-33-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:25:9-41
+33-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:25:9-41
 34        android:roundIcon="@mipmap/ic_launcher_round"
-34-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:26:9-54
+34-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:26:9-54
 35        android:supportsRtl="true"
-35-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:27:9-35
-36        android:theme="@style/AppTheme" >
-36-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:28:9-40
-37        <activity android:name="com.yuyuereading.Presenter.activity.MainActivity" />
-37-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:29:9-69
-37-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:29:19-66
-38        <activity android:name="com.yuyuereading.Presenter.activity.LoginActivity" />
-38-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:30:9-70
-38-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:30:19-67
-39        <activity android:name="com.yuyuereading.Presenter.activity.StartActivity" >
-39-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:31:9-37:20
-39-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:31:19-67
-40            <intent-filter>
-40-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:32:13-36:29
-41                <action android:name="android.intent.action.MAIN" />
-41-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:33:17-69
-41-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:33:25-66
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:35:17-77
-43-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:35:27-74
-44            </intent-filter>
-45        </activity>
-46        <activity android:name="com.yuyuereading.Presenter.activity.PermissionsActivity" />
-46-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:38:9-76
-46-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:38:19-73
-47        <activity android:name="com.yuyuereading.Presenter.activity.BookInfoActivity" />
-47-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:39:9-73
-47-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:39:19-70
-48        <activity android:name="com.yuyuereading.Presenter.activity.WantReadActivity" />
-48-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:40:9-73
-48-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:40:19-70
-49        <activity android:name="com.yuyuereading.Presenter.activity.ReadingActivity" />
-49-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:41:9-72
-49-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:41:19-69
-50        <activity android:name="com.yuyuereading.Presenter.activity.SeenActivity" />
-50-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:42:9-69
-50-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:42:19-66
-51        <activity android:name="com.yuyuereading.Presenter.activity.ScanISBN" />
-51-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:43:9-65
-51-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:43:19-62
-52        <activity android:name="com.yuyuereading.Presenter.activity.UserInfoActivity" />
-52-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:44:9-73
-52-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:44:19-70
-53        <activity android:name="com.yuyuereading.Presenter.activity.CommentActivity" />
-53-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:45:9-72
-53-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:45:19-69
-54        <activity android:name="com.yuyuereading.Presenter.activity.ShakeActivity" />
-54-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:46:9-70
-54-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:46:19-67
-55        <activity android:name="com.yuyuereading.Presenter.activity.StatisticActivity" />
-55-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:47:9-74
-55-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:47:19-71
-56        <activity android:name="com.yuyuereading.Presenter.activity.BookListActivity" />
-56-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:48:9-73
-56-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:48:19-70
-57        <activity android:name="com.yuyuereading.Presenter.activity.AddBookActivity" />
-57-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:49:9-72
-57-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:49:19-69
-58
-59        <service android:name="com.amap.api.location.APSService" />
-59-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:50:9-68
-59-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:50:18-65
-60
-61        <meta-data
-61-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:52:9-54:64
-62            android:name="com.amap.api.v2.apikey"
-62-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:53:13-50
-63            android:value="914bc3115d9eb1dcddca2317585d71f6" />
-63-->C:\Users\ASUS-PC\Desktop\ReadFun\readFun\app\src\main\AndroidManifest.xml:54:13-61
-64
-65        <activity
-65-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
-66            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
-66-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:13:13-74
-67            android:configChanges="orientation|keyboardHidden"
-67-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:14:13-63
-68            android:screenOrientation="portrait"
-68-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:15:13-49
-69            android:theme="@style/Theme.AppCompat.NoActionBar"
-69-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:16:13-63
-70            android:windowSoftInputMode="stateAlwaysHidden" />
-70-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:17:13-60
-71        <activity
-71-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:18:9-20:62
-72            android:name="com.jhworks.library.ui.ImageSelectActivity"
-72-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:19:13-70
-73            android:configChanges="orientation|screenSize" />
-73-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:20:13-59
-74        <activity
-74-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:21:9-23:62
-75            android:name="com.jhworks.library.ui.ImageActivity"
-75-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:22:13-64
-76            android:configChanges="orientation|screenSize" />
-76-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:23:13-59
-77
-78        <service android:name="com.vector.update_app.service.DownloadService" />
-78-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:18:9-81
-78-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:18:18-78
-79
-80        <provider
-80-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:20:9-28:20
-81            android:name="com.vector.update_app.UpdateFileProvider"
-81-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:21:13-68
-82            android:authorities="com.yuyuereading.fileProvider"
-82-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:22:13-64
-83            android:exported="false"
-83-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:23:13-37
-84            android:grantUriPermissions="true" >
-84-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:24:13-47
-85            <meta-data
-85-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:25:13-27:62
-86                android:name="android.support.FILE_PROVIDER_PATHS"
-86-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:26:17-67
-87                android:resource="@xml/new_app_file_paths" />
-87-->[com.qianwen:update-app:3.5.1] C:\Users\ASUS-PC\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:27:17-59
-88        </provider>
-89    </application>
-90
-91</manifest>
+35-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:27:9-35
+36        android:testOnly="true"
+37        android:theme="@style/AppTheme" >
+37-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:28:9-40
+38        <activity android:name="com.yuyuereading.presenter.activity.MainActivity" />
+38-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:29:9-69
+38-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:29:19-66
+39        <activity android:name="com.yuyuereading.presenter.activity.LoginActivity" />
+39-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:30:9-70
+39-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:30:19-67
+40        <activity android:name="com.yuyuereading.presenter.activity.StartActivity" >
+40-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:31:9-37:20
+40-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:31:19-67
+41            <intent-filter>
+41-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:32:13-36:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:33:17-69
+42-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:33:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:35:17-77
+44-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:35:27-74
+45            </intent-filter>
+46        </activity>
+47        <activity android:name="com.yuyuereading.presenter.activity.PermissionsActivity" />
+47-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:38:9-76
+47-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:38:19-73
+48        <activity android:name="com.yuyuereading.presenter.activity.BookInfoActivity" />
+48-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:39:9-73
+48-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:39:19-70
+49        <activity android:name="com.yuyuereading.presenter.activity.WantReadActivity" />
+49-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:40:9-73
+49-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:40:19-70
+50        <activity android:name="com.yuyuereading.presenter.activity.ReadingActivity" />
+50-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:41:9-72
+50-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:41:19-69
+51        <activity android:name="com.yuyuereading.presenter.activity.SeenActivity" />
+51-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:42:9-69
+51-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:42:19-66
+52        <activity android:name="com.yuyuereading.presenter.activity.ScanISBN" />
+52-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:43:9-65
+52-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:43:19-62
+53        <activity android:name="com.yuyuereading.presenter.activity.UserInfoActivity" />
+53-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:44:9-73
+53-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:44:19-70
+54        <activity android:name="com.yuyuereading.presenter.activity.CommentActivity" />
+54-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:45:9-72
+54-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:45:19-69
+55        <activity android:name="com.yuyuereading.presenter.activity.ShakeActivity" />
+55-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:46:9-70
+55-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:46:19-67
+56        <activity android:name="com.yuyuereading.presenter.activity.StatisticActivity" />
+56-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:47:9-74
+56-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:47:19-71
+57        <activity android:name="com.yuyuereading.presenter.activity.BookListActivity" />
+57-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:48:9-73
+57-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:48:19-70
+58        <activity android:name="com.yuyuereading.presenter.activity.AddBookActivity" />
+58-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:49:9-72
+58-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:49:19-69
+59
+60        <service android:name="com.amap.api.location.APSService" />
+60-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:50:9-68
+60-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:50:18-65
+61
+62        <meta-data
+62-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:52:9-54:64
+63            android:name="com.amap.api.v2.apikey"
+63-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:53:13-50
+64            android:value="914bc3115d9eb1dcddca2317585d71f6" />
+64-->D:\Documents\GitHub\SoftwareEngineeringProject\YuRead\Android\app\src\main\AndroidManifest.xml:54:13-61
+65
+66        <activity
+66-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
+67            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
+67-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:13:13-74
+68            android:configChanges="orientation|keyboardHidden"
+68-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:14:13-63
+69            android:screenOrientation="portrait"
+69-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:15:13-49
+70            android:theme="@style/Theme.AppCompat.NoActionBar"
+70-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:16:13-63
+71            android:windowSoftInputMode="stateAlwaysHidden" />
+71-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d40244fe60365bb9c043a46478d87cd4\zxing-library-2.2\AndroidManifest.xml:17:13-60
+72        <activity
+72-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:18:9-20:62
+73            android:name="com.jhworks.library.ui.ImageSelectActivity"
+73-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:19:13-70
+74            android:configChanges="orientation|screenSize" />
+74-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:20:13-59
+75        <activity
+75-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:21:9-23:62
+76            android:name="com.jhworks.library.ui.ImageActivity"
+76-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:22:13-64
+77            android:configChanges="orientation|screenSize" />
+77-->[com.jhworks.library:ImageSelect:1.1.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\e9e14696d2056fa537ebda712b4260a4\ImageSelect-1.1.1\AndroidManifest.xml:23:13-59
+78
+79        <service android:name="com.vector.update_app.service.DownloadService" />
+79-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:18:9-81
+79-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:18:18-78
+80
+81        <provider
+81-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:20:9-28:20
+82            android:name="com.vector.update_app.UpdateFileProvider"
+82-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:21:13-68
+83            android:authorities="com.yuyuereading.fileProvider"
+83-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:22:13-64
+84            android:exported="false"
+84-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:23:13-37
+85            android:grantUriPermissions="true" >
+85-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:24:13-47
+86            <meta-data
+86-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:25:13-27:62
+87                android:name="android.support.FILE_PROVIDER_PATHS"
+87-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:26:17-67
+88                android:resource="@xml/new_app_file_paths" />
+88-->[com.qianwen:update-app:3.5.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\6b5a8d900d675170dd0c56d4a43b63d4\update-app-3.5.1\AndroidManifest.xml:27:17-59
+89        </provider>
+90    </application>
+91
+92</manifest>

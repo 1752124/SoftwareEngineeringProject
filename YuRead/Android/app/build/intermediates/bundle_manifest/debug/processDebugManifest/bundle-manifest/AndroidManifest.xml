@@ -33,28 +33,29 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.yuyuereading.Presenter.activity.MainActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.LoginActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.StartActivity" >
+        <activity android:name="com.yuyuereading.presenter.activity.MainActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.LoginActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.StartActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.yuyuereading.Presenter.activity.PermissionsActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.BookInfoActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.WantReadActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.ReadingActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.SeenActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.ScanISBN" />
-        <activity android:name="com.yuyuereading.Presenter.activity.UserInfoActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.CommentActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.ShakeActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.StatisticActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.BookListActivity" />
-        <activity android:name="com.yuyuereading.Presenter.activity.AddBookActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.PermissionsActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.BookInfoActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.WantReadActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.ReadingActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.SeenActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.ScanISBN" />
+        <activity android:name="com.yuyuereading.presenter.activity.UserInfoActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.CommentActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.ShakeActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.StatisticActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.BookListActivity" />
+        <activity android:name="com.yuyuereading.presenter.activity.AddBookActivity" />
 
         <service android:name="com.amap.api.location.APSService" />
 
