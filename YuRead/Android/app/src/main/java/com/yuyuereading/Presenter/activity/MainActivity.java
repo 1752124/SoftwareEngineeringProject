@@ -277,6 +277,9 @@ public class MainActivity extends AppCompatActivity implements
             Intent intent=new Intent(mContext,StatisticActivity.class);
             startActivity(intent);
             // Handle the camera action
+        }else if (id == R.id.nav_plan) {
+            Intent intent=new Intent(mContext,PlanActivity.class);
+            startActivity(intent);
         }else if (id == R.id.nav_update) {
 
         }else if (id == R.id.nav_quit) {
