@@ -38,13 +38,13 @@ public final class R {
         private id() {}
 
         public static final int btn_ok = 0x7f090049;
-        public static final int invisible = 0x7f0900a0;
-        public static final int iv_close = 0x7f0900a4;
-        public static final int iv_top = 0x7f0900a5;
-        public static final int line = 0x7f0900a9;
-        public static final int ll_close = 0x7f0900af;
-        public static final int ll_top = 0x7f0900b0;
-        public static final int npb = 0x7f0900cc;
+        public static final int invisible = 0x7f0900a1;
+        public static final int iv_close = 0x7f0900a5;
+        public static final int iv_top = 0x7f0900a6;
+        public static final int line = 0x7f0900aa;
+        public static final int ll_close = 0x7f0900b0;
+        public static final int ll_top = 0x7f0900b1;
+        public static final int npb = 0x7f0900cd;
         public static final int tv_ignore = 0x7f090162;
         public static final int tv_title = 0x7f090163;
         public static final int tv_update_info = 0x7f090164;

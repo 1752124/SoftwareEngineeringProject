@@ -34,7 +34,8 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="right"
-                    android:src="@drawable/order" />
+                    android:src="@drawable/order"
+                    android:contentDescription="TODO" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_comment"
