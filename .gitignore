@@ -1,9 +1,9 @@
 *.iml
 /YuRead/Android/.gradle
-/YuRead/Android//local.properties
-/YuRead/Android//.idea/workspace.xml
-/YuRead/Android//.idea/libraries
+/YuRead/Android/local.properties
+/YuRead/Android/.idea/workspace.xml
+/YuRead/Android/.idea/libraries
 /YuRead/Android/.DS_Store
-/YuRead/Android//build
-/YuRead/Android//captures
+/YuRead/Android/build
+/YuRead/Android/captures
 /YuRead/Android/.externalNativeBuild
