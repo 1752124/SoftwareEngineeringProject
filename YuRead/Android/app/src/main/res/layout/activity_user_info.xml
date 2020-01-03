@@ -7,7 +7,7 @@
     android:background="#ddd"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="com.yuyuereading.presenter.activity.UserInfoActivity">
+    tools:context="com.yuyuereading.presenter.fragment.UserFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,9 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@android:color/white">
+                android:layout_marginLeft="10dp">
                 <com.yuyuereading.view.CircleImageView
                     android:id="@+id/user_info_icon"
                     android:layout_width="70dp"
@@ -36,109 +34,122 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
-                    android:paddingLeft="60dp"
+                    android:layout_toRightOf="@id/user_info_icon"
                     android:textColor="#000"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:id="@+id/nickname"
                     android:textSize="20sp"
-                    android:text="暖倾心"
-                    android:layout_marginStart="20dp"/>
+                    android:text="@string/setNickname"
+                    android:layout_marginStart="10dp"/>
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/nickname"
                     android:src="@drawable/recom_btn_bg"/>
-
             </RelativeLayout>
+
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
                 <TextView
                     android:id="@+id/sum_read"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
                     android:text="总阅读量"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/sum_day"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="阅读天数"
-                    android:paddingLeft="20dp"
                     android:layout_toRightOf="@id/sum_read"
-                    android:textSize="20sp"/>
+                    android:paddingLeft="20dp"
+                    android:text="阅读天数"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/seen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
                     android:layout_toRightOf="@id/sum_day"
-                    android:text="已读完"
-                    android:textSize="20sp"/>
+                    android:paddingLeft="20dp"
+                    android:text="已经读完"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/record"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/seen"
                     android:paddingLeft="20dp"
                     android:text="记录书摘"
-                    android:layout_toRightOf="@+id/seen"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/sum_book"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0本"
-                    android:layout_marginTop="10dp"
-                    android:paddingLeft="40dp"
                     android:layout_below="@+id/sum_read"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="18dp"
+                    android:text="0本"
                     android:textColor="@color/black"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/sum_days"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/sum_day"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/sum_book"
                     android:paddingLeft="70dp"
                     android:text="0天"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@+id/sum_day"
-                    android:layout_toRightOf="@+id/sum_book"
                     android:textColor="@color/black"
-                    android:textSize="20sp"/>
-
+                    android:textSize="20sp" />
 
 
                 <TextView
                     android:id="@+id/seen_book"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="60dp"
-                    android:text="0本"
+                    android:layout_below="@+id/seen"
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/sum_days"
-                    android:layout_below="@+id/seen"
+                    android:paddingLeft="70dp"
+                    android:text="0本"
                     android:textColor="@color/black"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/sum_record"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0条"
+                    android:layout_below="@+id/record"
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/seen_book"
-                    android:layout_below="@+id/record"
-                    android:paddingLeft="60dp"
+                    android:paddingLeft="70dp"
+                    android:text="0条"
                     android:textColor="@color/black"
-                    android:textSize="20sp"/>
-
-
+                    android:textSize="20sp" />
             </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="100dp">
+
+                <CircularStatisticsView2
+                    android:id="@+id/cs_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"/>
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

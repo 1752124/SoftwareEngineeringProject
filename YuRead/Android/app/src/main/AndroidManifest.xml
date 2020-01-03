@@ -46,6 +46,7 @@
         <activity android:name=".presenter.activity.ShakeActivity" />
         <activity android:name=".presenter.activity.StatisticActivity" />
         <activity android:name=".presenter.activity.PlanActivity" />
+        <activity android:name=".presenter.activity.NicknameActivity" />
         <activity android:name=".presenter.activity.BookListActivity" />
         <activity android:name=".presenter.activity.AddBookActivity" />
         <service android:name="com.amap.api.location.APSService" />

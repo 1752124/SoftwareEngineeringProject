@@ -52,9 +52,9 @@
         android:id="@+id/mytextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:padding="100dp"
+        android:padding="40dp"
         android:gravity="center"
+        android:textSize="80dp"
         android:text="@string/number" />
 
     <LinearLayout
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FF9130"
-            android:layout_marginLeft="30px"
+            android:layout_marginLeft="50dp"
             android:text="@string/pause" />
     </LinearLayout>
 
