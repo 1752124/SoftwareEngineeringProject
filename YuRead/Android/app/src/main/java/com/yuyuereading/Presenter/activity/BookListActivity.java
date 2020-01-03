@@ -60,12 +60,8 @@ public class BookListActivity extends AppCompatActivity {
     }
 
     private void getBookInfo(){
-        switch (type){
-            default:
-                searchBookList=(ArrayList<BookInfo>)getIntent().getSerializableExtra("bookInfos");
-                bookInfoList.addAll(searchBookList);
-                break;
-        }
+        searchBookList=(ArrayList<BookInfo>)getIntent().getSerializableExtra("bookInfos");
+        bookInfoList.addAll(searchBookList);
     }
 
     private void initShake(){

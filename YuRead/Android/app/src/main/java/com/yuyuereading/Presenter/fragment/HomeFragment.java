@@ -92,7 +92,6 @@ public class HomeFragment extends Fragment {
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
                             List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
                             Intent intent = new Intent(getActivity(), BookListActivity.class);
                             intent.putExtra("type","search");
@@ -100,7 +99,6 @@ public class HomeFragment extends Fragment {
                             bundle.putSerializable("bookInfos", (Serializable)bookInfos);
                             intent.putExtras(bundle);
                             startActivity(intent);
-                            // progress.dismiss();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -118,7 +116,6 @@ public class HomeFragment extends Fragment {
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
                             List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
                             Intent intent = new Intent(getActivity(), BookListActivity.class);
                             intent.putExtra("type","search");
@@ -126,7 +123,6 @@ public class HomeFragment extends Fragment {
                             bundle.putSerializable("bookInfos", (Serializable)bookInfos);
                             intent.putExtras(bundle);
                             startActivity(intent);
-                            // progress.dismiss();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -144,7 +140,6 @@ public class HomeFragment extends Fragment {
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
                             List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
                             Intent intent = new Intent(getActivity(), BookListActivity.class);
                             intent.putExtra("type","search");
@@ -152,7 +147,6 @@ public class HomeFragment extends Fragment {
                             bundle.putSerializable("bookInfos", (Serializable)bookInfos);
                             intent.putExtras(bundle);
                             startActivity(intent);
-                            // progress.dismiss();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -170,7 +164,6 @@ public class HomeFragment extends Fragment {
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
                             List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
                             Intent intent = new Intent(getActivity(), BookListActivity.class);
                             intent.putExtra("type","search");
@@ -178,7 +171,6 @@ public class HomeFragment extends Fragment {
                             bundle.putSerializable("bookInfos", (Serializable)bookInfos);
                             intent.putExtras(bundle);
                             startActivity(intent);
-                            // progress.dismiss();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
