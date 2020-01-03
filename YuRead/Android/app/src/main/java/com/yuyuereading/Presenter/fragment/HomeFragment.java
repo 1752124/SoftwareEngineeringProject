@@ -87,7 +87,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 byte type=1;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/books?type="+ type, new HttpUtils.CallBack() {
+                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/booklists?type="+ type, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         try {
@@ -106,9 +106,6 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 });
-                /*Intent intent=new Intent(getActivity(), BookListActivity.class);
-                intent.putExtra("type","allan");
-                startActivity(intent);*/
             }
         });
 
@@ -116,7 +113,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 byte type=2;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/books?type="+ type, new HttpUtils.CallBack() {
+                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/booklists?type="+ type, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         try {
@@ -135,9 +132,6 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 });
-                /*Intent intent=new Intent(getActivity(),BookListActivity.class);
-                intent.putExtra("type","oscar");
-                startActivity(intent);*/
             }
         });
 
@@ -145,7 +139,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 byte type=3;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/books?type="+ type, new HttpUtils.CallBack() {
+                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/booklists?type="+ type, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         try {
@@ -164,9 +158,6 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 });
-                /*Intent intent=new Intent(getActivity(),BookListActivity.class);
-                intent.putExtra("type","mao");
-                startActivity(intent);*/
             }
         });
 
@@ -174,7 +165,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 byte type=4;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/books?type="+ type, new HttpUtils.CallBack() {
+                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/booklist-management/booklists?type="+ type, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         try {
@@ -193,9 +184,6 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 });
-               /* Intent intent=new Intent(getActivity(),BookListActivity.class);
-                intent.putExtra("type","nobel");
-                startActivity(intent);*/
             }
         });
 
