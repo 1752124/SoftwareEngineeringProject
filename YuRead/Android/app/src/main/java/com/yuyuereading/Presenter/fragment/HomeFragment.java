@@ -92,7 +92,7 @@ public class HomeFragment extends Fragment {
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
+                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfo(jsonArray);
                             Intent intent = new Intent(getActivity(), BookListActivity.class);
                             intent.putExtra("type","search");
                             Bundle bundle = new Bundle();
@@ -116,7 +116,7 @@ public class HomeFragment extends Fragment {
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
+                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfo(jsonArray);
                             Intent intent = new Intent(getActivity(), BookListActivity.class);
                             intent.putExtra("type","search");
                             Bundle bundle = new Bundle();
@@ -140,7 +140,7 @@ public class HomeFragment extends Fragment {
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
+                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfo(jsonArray);
                             Intent intent = new Intent(getActivity(), BookListActivity.class);
                             intent.putExtra("type","search");
                             Bundle bundle = new Bundle();
@@ -164,7 +164,7 @@ public class HomeFragment extends Fragment {
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
+                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfo(jsonArray);
                             Intent intent = new Intent(getActivity(), BookListActivity.class);
                             intent.putExtra("type","search");
                             Bundle bundle = new Bundle();

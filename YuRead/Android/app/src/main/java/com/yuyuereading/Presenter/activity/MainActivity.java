@@ -48,7 +48,7 @@ import com.yuyuereading.presenter.fragment.ReadingFragment;
 import com.yuyuereading.presenter.fragment.SeenFragment;
 import com.yuyuereading.presenter.fragment.UserFragment;
 import com.yuyuereading.presenter.fragment.WantFragment;
-import com.yuyuereading.presenter.utils.BookInfoGetFromDouban;
+import com.yuyuereading.presenter.utils.BookInfoGetFromDouBan;
 import com.yuyuereading.presenter.utils.HttpUtils;
 import com.yuyuereading.presenter.utils.SearchFromDouban;
 import com.yuyuereading.presenter.utils.ShakeListener;
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
+                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfo(jsonArray);
                             Intent intent = new Intent();
                             intent.setClass(mContext, BookListActivity.class);
                             intent.putExtra("type","search");
@@ -326,12 +326,12 @@ public class MainActivity extends AppCompatActivity implements
                     progress.show();
 
 
-                    HttpUtils.doGetAsy("https://api.douban.com/v2/book/isbn/" + isbn, new HttpUtils.CallBack() {
+                    HttpUtils.doGetAsy("https://api.douban.com/v2/book/isbn/" + isbn+"?apikey=0df993c66c0c636e29ecbb5344252a4a", new HttpUtils.CallBack() {
                         @Override
                         public void onRequestComplete(String result) {
                             try {
                                 //把豆瓣返回的数据解析成BookInfo类
-                                final BookInfo bookInfo = BookInfoGetFromDouban.parsingBookInfo(result);
+                                final BookInfo bookInfo = BookInfoGetFromDouBan.parsingBookInfo(result);
                                 Looper.prepare();
                                 //定义传给数据库操作类的handler
                                 @SuppressLint("HandlerLeak")

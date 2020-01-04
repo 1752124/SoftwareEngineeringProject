@@ -24,7 +24,6 @@ import com.yuyuereading.presenter.utils.SearchFromDouban;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 
 /**
@@ -97,13 +96,13 @@ public class ReadingFragment extends Fragment {
             public void onRequestComplete(String result) {
                 try {
                     JSONArray jsonArray=JSONArray.parseArray(result);
-                    bookInfoList = SearchFromDouban.parsingBookInfos(jsonArray);
+                    bookInfoList = SearchFromDouban.parsingBookInfo(jsonArray);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         });
-        adapter = new BookListAdapter(bookInfoList,"seen");
+        adapter = new BookListAdapter(bookInfoList,"reading");
         recyclerView.setAdapter(adapter);
     }
 

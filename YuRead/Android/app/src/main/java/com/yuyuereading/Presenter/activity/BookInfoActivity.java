@@ -19,13 +19,18 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONArray;
 import com.bumptech.glide.Glide;
 import com.yuyuereading.model.bean.BookComment;
 import com.yuyuereading.model.bean.BookInfo;
 import com.yuyuereading.presenter.adapter.CommentListAdapter;
+import com.yuyuereading.presenter.utils.HttpUtils;
+import com.yuyuereading.presenter.utils.NoteGetFromDB;
+import com.yuyuereading.presenter.utils.SearchFromDouban;
 import com.yuyuereading.presenter.utils.ShakeListener;
 import com.yuyuereading.R;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,16 +42,7 @@ public class BookInfoActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
 
-    private final BookComment[] bookComments = {
-            new BookComment("1.20","1-20","    无"),
-            new BookComment("1.23","21-50","    《芳华》涵盖了严歌苓的青春与成长期，她在四十余年后回望这段经历，笔端蕴含了饱满的情感。青春荷尔蒙冲动下的少男少女的懵懂激情，由激情犯下的过错，由过错生出的懊悔，还有那个特殊的时代背景，种种，构成了《芳华》对一段历史、一群人以及潮流更替、境遇变迁的复杂感怀。"),
-            new BookComment("1.24","51-87","    无"),
-            new BookComment("1.25","88-125","    无"),
-            new BookComment("1.28","126-142","    无"),
-            new BookComment("1.30","143-180","    无")
-    };
-
-    private final List<BookComment> bookCommentList = new ArrayList<>();
+    private List<BookComment> bookCommentList = new ArrayList<>();
 
     private String book_ISBN;
 
@@ -57,12 +53,11 @@ public class BookInfoActivity extends AppCompatActivity {
     private TextView bookWriter;
     private TextView bookISBN;
     private TextView book_summary;
-    private TextView title;
-    private TextView brief;
+    TextView title;
+    TextView brief;
     private TextView haveReadDay;
 
     private ImageView bookImage;
-    private ImageView order;
 
     private ScrollView scrollView;
 
@@ -84,9 +79,30 @@ public class BookInfoActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(mContext);
         recyclerView.setLayoutManager(mLayoutManager);
         //获取评论信息
-        initList();
         addDate();
+        refreshList();
         initShake();
+    }
+
+    //刷新事件
+    private void refreshList() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        addDate();
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+            }
+        }).start();
     }
 
     @SuppressLint("SetTextI18n")
@@ -118,18 +134,23 @@ public class BookInfoActivity extends AppCompatActivity {
         readProgress=findViewById(R.id.readProgress);
         recyclerView.setNestedScrollingEnabled(false);
         update=findViewById(R.id.update);
-        order=findViewById(R.id.order);
-    }
-
-    //获取评论信息
-    private void initList() {
-        bookCommentList.clear();
-        for (int i = 0; i < bookComments.length;i++) {
-            bookCommentList.add(bookComments[i]);}
     }
 
     //向评论adapter中添加数据
     private void addDate() {
+        long userID=1;
+        long bookID=Long.parseLong(book_ISBN);
+        HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/note-management/notes?userid="+userID+"&bookid="+bookID,new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result) {
+                try {
+                    JSONArray jsonArray=JSONArray.parseArray(result);
+                    bookCommentList = NoteGetFromDB.parsingBookCom(jsonArray);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
         adapter = new CommentListAdapter(bookCommentList);
         recyclerView.setAdapter(adapter);
     }
@@ -157,29 +178,7 @@ public class BookInfoActivity extends AppCompatActivity {
               finish();
             }
         });
-        order.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeList();
-                adapter.notifyDataSetChanged();
-            }
-        });
-    }
-
-    private void changeList() {
-        if(bookCommentList.get(0)==bookComments[0]) {
-            bookCommentList.clear();
-            for (int i = bookComments.length - 1; i >= 0; i--) {
-                bookCommentList.add(bookComments[i]);
-            }
-        }else {
-            bookCommentList.clear();
-            for (int i = 0; i < bookComments.length;i++) {
-                bookCommentList.add(bookComments[i]);}
-        }
-    }
-
-
+}
     public void onBackPressed() {
         finish();
     }

@@ -9,6 +9,10 @@ public class BookComment implements Serializable {
 
     private String finish_time;
 
+    public BookComment(){
+
+    }
+
     public BookComment(String finish_time,String page_update,String read_review)
     {
        this.read_review=read_review;
@@ -34,4 +38,6 @@ public class BookComment implements Serializable {
     public String getPage_update() {
         return page_update;
     }
+
+    public void setPage_update(String page_update){this.page_update=page_update;}
 }

@@ -66,9 +66,9 @@ public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.
     class ViewHolder extends RecyclerView.ViewHolder {
         final CardView cardView;
         final View mItemView;
-        final TextView read_review;
-        final TextView page_update;
-        final TextView finish_time;
+        TextView read_review;
+        TextView page_update;
+        TextView finish_time;
         ViewHolder(View itemView) {
             super(itemView);
             mItemView = itemView;

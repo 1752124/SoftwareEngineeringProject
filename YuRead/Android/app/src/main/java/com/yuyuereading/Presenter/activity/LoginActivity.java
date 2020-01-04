@@ -170,28 +170,6 @@ public class LoginActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    //把用户数据写入到数据库中
-    private void addDataToMysql(final String phoneNumber, final long time) {
-        //把两个参数存到服务器中，返回userId
-        //创建一个Map对象
-        Map<String,String> map = new HashMap<>();
-        map.put("user_phone_number", phoneNumber);
-        //转成JSON数据
-        final String json = JSON.toJSONString(map,true);
-        HttpUtils.doPostAsy(getString(R.string.LoginInterface), json, new HttpUtils.CallBack() {
-            @Override
-            public void onRequestComplete(final String result) {
-                JSONObject jsonObject = JSON.parseObject(result.trim());
-                final String userId = jsonObject.getString("user_id");
-                addDataToLocal(userId, phoneNumber, time + (long)30 * 24 * 60 * 60 * 1000);
-                Intent intent = new Intent(mContext,MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-    }
-
-
     //按钮效果
     private class MyCountTimer extends CountDownTimer {
 

@@ -11,15 +11,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yuyuereading.R;
+import com.yuyuereading.presenter.utils.HttpUtils;
 
 public class AddBookActivity extends AppCompatActivity {
     private Button finishEdit;
     private Button returnButton;
-    private TextView book_name;
-    private TextView author_name;
-    private TextView isbn;
-    private TextView public_name;
-    private TextView title;
+    TextView book_name;
+    TextView author_name;
+    TextView isbn;
+    TextView public_name;
+    TextView title;
     private EditText input_book_name;
     private EditText input_author_name;
     private EditText input_isbn;
@@ -64,8 +65,7 @@ public class AddBookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //保存数据入数据库
-
-                Toast.makeText(AddBookActivity.this, "录入成功", Toast.LENGTH_SHORT).show();
+                addBook();
                 finish();
             }
         });
@@ -73,6 +73,28 @@ public class AddBookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+    }
+
+    private void addBook(){
+        long userId=1;
+        int state=1;
+//        String title= input_book_name.getText().toString();
+//        String author=input_author_name.getText().toString();
+//        String publicName= input_public_name.getText().toString();
+//        long isbn=Long.parseLong(input_isbn.getText().toString());
+        String title= "12345";
+        String author="324";
+        String publicName="24142";
+        long isbn=12354;
+
+        String request="userid="+userId+"&bookid="+isbn+"&state="+state+"&title="+title
+                +"&author="+author+"&publisher="+publicName;
+        HttpUtils.doPostAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/books?",request, new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result){
+                Toast.makeText(AddBookActivity.this, "录入成功", Toast.LENGTH_SHORT).show();
             }
         });
     }

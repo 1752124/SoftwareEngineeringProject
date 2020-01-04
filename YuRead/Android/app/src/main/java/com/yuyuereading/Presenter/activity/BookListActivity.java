@@ -19,15 +19,15 @@ import java.util.Arrays;
 
 public class BookListActivity extends AppCompatActivity {
     private Context mContext = BookListActivity.this;
-    private ShakeListener mShakeListener;
+    ShakeListener mShakeListener;
     private RecyclerView bookListView;
     private Button back;
     private ArrayList<BookInfo> bookInfoList = new ArrayList<>();
-    private BookListAdapter adapter;
-    private String type;
-    private LinearLayoutManager mLayoutManager;
+    BookListAdapter adapter;
+    String type;
+    LinearLayoutManager mLayoutManager;
 
-    private ArrayList<BookInfo> searchBookList;
+    ArrayList<BookInfo> searchBookList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

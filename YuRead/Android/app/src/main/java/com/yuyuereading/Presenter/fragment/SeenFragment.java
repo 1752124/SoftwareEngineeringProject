@@ -96,7 +96,7 @@ public class SeenFragment extends Fragment {
             public void onRequestComplete(String result) {
                 try {
                     JSONArray jsonArray=JSONArray.parseArray(result);
-                    bookInfoList = SearchFromDouban.parsingBookInfos(jsonArray);
+                    bookInfoList = SearchFromDouban.parsingBookInfo(jsonArray);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
