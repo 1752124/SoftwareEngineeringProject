@@ -1,7 +1,5 @@
 package com.yuyuereading.presenter.utils;
-
 import java.io.IOException;
-
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -91,7 +89,7 @@ public class HttpUtils {
      * @param json      请求参数以JSON串的格式传递
      * @return
      */
-    private static String doPost(String urlStr, String json) throws IOException {
+    public static String doPost(String urlStr, String json) throws IOException {
         OkHttpClient client = new OkHttpClient();
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
@@ -99,9 +97,9 @@ public class HttpUtils {
                 .post(body)
                 .build();
         Response response = client.newCall(request).execute();
+        assert response.body() != null;
         return response.body().string();
     }
-
 
     /**
      * get请求
@@ -109,10 +107,34 @@ public class HttpUtils {
      * @param urlStr    url字符串
      * @return
      */
-    private static String doGet(String urlStr) throws IOException {
+    public static String doGet(String urlStr) throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(urlStr)
+                .build();
+        Response response = client.newCall(request).execute();
+        assert response.body() != null;
+        return response.body().string();
+    }
+
+    public static String doPut(String urlStr, String json) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(urlStr)
+                .put(body)
+                .build();
+        Response response = client.newCall(request).execute();
+        assert response.body() != null;
+        return response.body().string();
+    }
+
+    public static String doDelete(String urlStr,String json)throws IOException{
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(urlStr)
+                .delete(body)
                 .build();
         Response response = client.newCall(request).execute();
         assert response.body() != null;

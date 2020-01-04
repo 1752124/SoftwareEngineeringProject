@@ -10,8 +10,12 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONObject;
 import com.yuyuereading.R;
 import com.yuyuereading.presenter.utils.HttpUtils;
+
+import java.io.IOException;
+import java.util.LinkedHashMap;
 
 public class AddBookActivity extends AppCompatActivity {
     private Button finishEdit;
@@ -80,22 +84,32 @@ public class AddBookActivity extends AppCompatActivity {
     private void addBook(){
         long userId=1;
         int state=1;
-//        String title= input_book_name.getText().toString();
-//        String author=input_author_name.getText().toString();
-//        String publicName= input_public_name.getText().toString();
-//        long isbn=Long.parseLong(input_isbn.getText().toString());
-        String title= "12345";
-        String author="324";
-        String publicName="24142";
-        long isbn=12354;
+        String title= input_book_name.getText().toString();
+        String author=input_author_name.getText().toString();
+        String publicName= input_public_name.getText().toString();
+        long isbn=Long.parseLong(input_isbn.getText().toString());
+//        String title= "12345";
+//        String author="324";
+//        String publicName="24142";
+//        long isbn=12354;
 
-        String request="userid="+userId+"&bookid="+isbn+"&state="+state+"&title="+title
-                +"&author="+author+"&publisher="+publicName;
-        HttpUtils.doPostAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/books?",request, new HttpUtils.CallBack() {
+        JSONObject reqjson = new JSONObject(new LinkedHashMap());
+        reqjson.put("userid",userId);
+        reqjson.put("bookid",isbn);
+        reqjson.put("state",state);
+        reqjson.put("title",title);
+        reqjson.put("author",author);
+        reqjson.put("publisher",publicName);
+        final String request = reqjson.toString();
+        new Thread(new Runnable(){
             @Override
-            public void onRequestComplete(String result){
-                Toast.makeText(AddBookActivity.this, "录入成功", Toast.LENGTH_SHORT).show();
+            public void run() {
+                try {
+                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/read-management/books",request);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-        });
+        }).start();
     }
 }
