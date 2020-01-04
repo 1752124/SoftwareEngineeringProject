@@ -13,11 +13,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alibaba.fastjson.JSONArray;
 import com.yuyuereading.model.bean.BookInfo;
 import com.yuyuereading.presenter.activity.AddBookActivity;
 import com.yuyuereading.presenter.adapter.BookListAdapter;
 import com.yuyuereading.R;
+import com.yuyuereading.presenter.utils.HttpUtils;
+import com.yuyuereading.presenter.utils.SearchFromDouban;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -38,11 +42,6 @@ public class ReadingFragment extends Fragment {
     private RecyclerView recyclerView;
 
     private FloatingActionButton addBook;
-
-    private BookInfo[] bookInfos = {new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2019-11-17","8.1","严歌苓","人民文学出版社","jianjie"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2019-11-17","8.1","严歌苓","人民文学出版社","jianjie"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2019-11-17","8.1","严歌苓","人民文学出版社","jianjie"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2019-11-17","8.1","严歌苓","人民文学出版社","jianjie")};
 
     private List<BookInfo> bookInfoList = new ArrayList<>();
 
@@ -88,19 +87,23 @@ public class ReadingFragment extends Fragment {
         }
     }
 
-    //获取图书信息
-    private void initList() {
-        bookInfoList.clear();
-        for (int i = 0; i < 10;i++) {
-            Random random = new Random();
-            int index = random.nextInt(bookInfos.length);
-            bookInfoList.add(bookInfos[index]);
-        }
-    }
 
     //adapter中添加数据
     private void addDate() {
-        adapter = new BookListAdapter(bookInfoList,"reading");
+        long userID=1;
+        int state=2;
+        HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/states?userid="+userID+"&state="+state,new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result) {
+                try {
+                    JSONArray jsonArray=JSONArray.parseArray(result);
+                    bookInfoList = SearchFromDouban.parsingBookInfos(jsonArray);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        adapter = new BookListAdapter(bookInfoList,"seen");
         recyclerView.setAdapter(adapter);
     }
 
@@ -124,8 +127,8 @@ public class ReadingFragment extends Fragment {
         });
         mLayoutManager = new LinearLayoutManager(this.getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
-        initList();
         addDate();
+        refreshList();
         return view;
     }
 
@@ -142,7 +145,6 @@ public class ReadingFragment extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        initList();
                         addDate();
                         adapter.notifyDataSetChanged();
                         refresh.setRefreshing(false);

@@ -133,18 +133,12 @@ public class MainActivity extends AppCompatActivity implements
         searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                //final ProgressDialog progress = new ProgressDialog(mContext);
-               // progress.setMessage("正在搜索...");
-               // progress.setCanceledOnTouchOutside(false);
-               // progress.show();
-                //Snackbar.make(findViewById(R.id.container), "Query: " + query, Snackbar.LENGTH_LONG).show();
                 long userID=1;
                 HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/titles?userid="+userID+"&keyword=" + query, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
-                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
                             List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
                             Intent intent = new Intent();
                             intent.setClass(mContext, BookListActivity.class);
@@ -153,7 +147,6 @@ public class MainActivity extends AppCompatActivity implements
                             bundle.putSerializable("bookInfos", (Serializable)bookInfos);
                             intent.putExtras(bundle);
                             startActivity(intent);
-                           // progress.dismiss();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
