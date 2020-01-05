@@ -10,7 +10,15 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
 import com.yuyuereading.R;
+import com.yuyuereading.model.bean._User;
+import com.yuyuereading.presenter.utils.HttpUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import cn.bmob.v3.BmobUser;
 
 public class NicknameActivity extends AppCompatActivity {
     private Button finishEdit;
@@ -32,7 +40,6 @@ public class NicknameActivity extends AppCompatActivity {
         scrollView = findViewById(R.id.scrollView);
         title=findViewById(R.id.title);
         returnButton=findViewById(R.id.nickname_return);
-        nickname = findViewById(R.id.nickname);
         finishEdit=findViewById(R.id.editCom);
     }
 
@@ -50,9 +57,29 @@ public class NicknameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //保存数据入数据库
-
-                Toast.makeText(NicknameActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
-                finish();
+                final String name=nickname.getText().toString();
+                _User bmobUser = BmobUser.getCurrentUser(_User.class);
+                long userID= Long.parseLong(bmobUser.getUsername());
+                Map<String,String> map = new HashMap<>();
+                map.put("name", name);
+                //转成JSON数据
+                final String json = JSON.toJSONString(map,true);
+                HttpUtils.doPutAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/names?id="+userID+"&name="+name, json,new HttpUtils.CallBack() {
+                    @Override
+                    public void onRequestComplete(final String result) {
+                        final int sus= Integer.parseInt(result);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if(sus==1){
+                                    nickname.setText(name);
+                                    Toast.makeText(NicknameActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }
+                            }
+                        });
+                    }
+                });
             }
         });
         returnButton.setOnClickListener(new View.OnClickListener() {

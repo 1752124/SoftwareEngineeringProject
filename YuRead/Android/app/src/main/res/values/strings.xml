@@ -23,7 +23,7 @@
     <string name="seen" translatable="false">读过</string>
     <string name="book_summary" translatable="false">内容简介</string>
     <string name="split" translatable="false">分隔图片</string>
-    <string name="LoginInterface" translatable="false">http://139.199.123.55:8080/book/Login.jsp</string>
+    <string name="LoginInterface" translatable="false">http://139.196.36.97:8080/sbDemo/v1/user-management/users</string>
     <string name="login" translatable="false">登录</string>
     <string name="code" translatable="false">验证码</string>
     <string name="code_hide" translatable="false">请输入验证码</string>

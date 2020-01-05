@@ -1,29 +1,34 @@
 package com.yuyuereading.presenter.fragment;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.yuyuereading.R;
+import com.yuyuereading.model.bean._User;
+import com.yuyuereading.presenter.utils.HttpUtils;
+
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Path;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.yuyuereading.R;
-import com.yuyuereading.presenter.activity.AddBookActivity;
-import com.yuyuereading.presenter.activity.BookListActivity;
+import com.alibaba.fastjson.JSONObject;
 import com.yuyuereading.presenter.activity.NicknameActivity;
-import com.yuyuereading.presenter.activity.UserInfoActivity;
 import com.yuyuereading.view.CircleImageView;
 
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.List;
+
+import cn.bmob.v3.BmobUser;
 
 public class UserFragment extends Fragment {
     UserFragment userFragment;
@@ -31,13 +36,20 @@ public class UserFragment extends Fragment {
     private View view;
     private CircleImageView portrait;
     private TextView nickname;
+    //private String name="qiqi";
     private TextView sumBook;
     private TextView sumDay;
     private TextView sumSeen;
     private TextView sumRecord;
     private String mParam1;
     private String mParam2;
-    private static final float mStartAngle = -90;
+    private String name;
+    private UserFragment.OnFragmentInteractionListener mListener;
+
+    public UserFragment() {
+        // Required empty public constructor
+    }
+ /*   private static final float mStartAngle = -90;
     private int mRingColor = Color.parseColor("#F05A4A");
     private int mSectorColor = Color.parseColor("#29AB91");
     private float mEndAngle = mStartAngle;
@@ -53,7 +65,7 @@ public class UserFragment extends Fragment {
     private float mInnerRadius;
     private Paint mPaint;
     private Paint mTextPaint;
-    private Path mPath;
+    private Path mPath;*/
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -80,32 +92,17 @@ public class UserFragment extends Fragment {
     @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState){
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_user_info, container, false);
         //initView();
         //getData();
-        sumBook=view.findViewById(R.id.sum_book);
-        sumDay=view.findViewById(R.id.sum_days);
-        sumSeen=view.findViewById(R.id.seen_book);
-        sumRecord=view.findViewById(R.id.sum_record);
-        nickname=view.findViewById(R.id.nickname);
-        portrait=view.findViewById(R.id.user_info_icon);
-       /* nickname.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), NicknameActivity.class);
-                startActivity(intent);
-               *//* Bundle bundle = new Bundle();
-                bundle.putSerializable("nickname", (Serializable) nickname);
-                intent.putExtras(bundle);*//*
-            }
-        });*/
-        portrait.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"点击事件", Toast.LENGTH_SHORT).show();
-            }
-        });
+        sumBook = view.findViewById(R.id.sum_book);
+        sumDay = view.findViewById(R.id.sum_days);
+        sumSeen = view.findViewById(R.id.seen_book);
+        sumRecord = view.findViewById(R.id.sum_record);
+        nickname = view.findViewById(R.id.nickname);
+        portrait = view.findViewById(R.id.user_info_icon);
+        nickname.setText(name);
         sumBook.setText("13本");
         sumDay.setText("86天");
         sumSeen.setText("8本");
@@ -113,21 +110,23 @@ public class UserFragment extends Fragment {
         return view;
     }
 
-    /*@RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
-    private void initView() {
-        sumBook=view.findViewById(R.id.sum_book);
-        sumDay=view.findViewById(R.id.sum_days);
-        sumSeen=view.findViewById(R.id.seen_book);
-        sumRecord=view.findViewById(R.id.sum_record);
-        nickname=view.findViewById(R.id.nickname);
-        portrait=view.findViewById(R.id.user_info_icon);
-    }*/
-/*    private void getData() {
-        sumBook.setText("13本");
-        sumRecord.setText("50条");
-        sumDay.setText("86天");
-        sumSeen.setText("8本");
-    }*/
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof UserFragment.OnFragmentInteractionListener) {
+            mListener = (UserFragment.OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
@@ -141,6 +140,12 @@ public class UserFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), NicknameActivity.class);
                 startActivity(intent);
+            }
+        });
+        portrait.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "点击事件", Toast.LENGTH_SHORT).show();
             }
         });
     }

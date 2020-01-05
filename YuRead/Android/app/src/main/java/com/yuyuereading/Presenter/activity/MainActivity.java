@@ -8,6 +8,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,15 +28,18 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
@@ -57,15 +63,22 @@ import com.yuyuereading.view.CircleImageView;
 
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.Serializable;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobUser;
 
+import static com.yuyuereading.R.layout.activity_user_info;
+
+
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener, WantFragment.OnFragmentInteractionListener
-        , ReadingFragment.OnFragmentInteractionListener, SeenFragment.OnFragmentInteractionListener {
+        , ReadingFragment.OnFragmentInteractionListener, SeenFragment.OnFragmentInteractionListener
+        ,UserFragment.OnFragmentInteractionListener{
 
     Context mContext = MainActivity.this;
     private long exitTime = 0;
@@ -77,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements
     MaterialSearchView searchView;
     CircleImageView favicon;
     TextView nickname;
+    String name;
     private int REQUEST_CODE = 5;
     private ShakeListener mShakeListener;
     @Override
@@ -111,9 +125,44 @@ public class MainActivity extends AppCompatActivity implements
 
         });
         nickname = headerLayout.findViewById(R.id.nickname);
-        _User bmobUser = BmobUser.getCurrentUser(_User.class);
-        nickname.setText(bmobUser.getUsername());
         favicon = headerLayout.findViewById(R.id.favicon);
+        final _User bmobUser = BmobUser.getCurrentUser(_User.class);
+        long phoneNumber= Long.parseLong(bmobUser.getUsername());
+        HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/users?id="+phoneNumber, new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result) {
+                JSONObject jsonObject = JSONObject.parseObject(result);
+                name = jsonObject.getString("name");
+                final Bitmap portrait = getBitmap(jsonObject.getString("portrait"));
+                bmobUser.setPortrait(portrait);
+                bmobUser.setName(name);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        nickname.setText(name);
+                        favicon.setImageBitmap(portrait);
+                    }
+                });
+            }
+
+            private Bitmap getBitmap(String path) {
+                try {
+                    URL url = new URL(path);
+                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    conn.setConnectTimeout(5000);
+                    conn.setRequestMethod("GET");
+                    if (conn.getResponseCode() == 200) {
+                        InputStream inputStream = conn.getInputStream();
+                        Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                        return bitmap;
+                    }
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        });
     }
 
     private void initShake() {

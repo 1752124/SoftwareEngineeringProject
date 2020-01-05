@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
     Context mContext = LoginActivity.this;
     EditText phoneNumber,verification;
+    TextView nickname;
     Button delete,getverification,loginButton;
     MyCountTimer timer;
     @Override
@@ -54,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         verification= findViewById(R.id.verification);
         delete= findViewById(R.id.phoneNumberDelete);
         getverification= findViewById(R.id.VerificationButton);
+        nickname=findViewById(R.id.nickname);
         loginButton= findViewById(R.id.loginButton);
     }
 
@@ -98,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
                     progress.setMessage("正在登录中...");
                     progress.setCanceledOnTouchOutside(false);
                     progress.show();
-
+                    addDataToMysql(Long.valueOf(phoneNumber.getText().toString()));
                     //验证验证码是否正确
                     BmobUser.signOrLoginByMobilePhone(phoneNumber.getText().toString(), verification.getText().toString(), new LogInListener<_User>() {
 
@@ -106,7 +109,8 @@ public class LoginActivity extends AppCompatActivity {
                         public void done(_User user, BmobException e) {
                             if(user!=null){
                                 //Toast.makeText(mContext, "用户登陆成功！", Toast.LENGTH_SHORT).show();
-                                addDataToLocal(user.getObjectId(), phoneNumber.getText().toString(),  System.currentTimeMillis() + (long)30 * 24 * 60 * 60 * 1000);
+                                addDataToMysql(Long.valueOf(phoneNumber.getText().toString()));
+                                //addDataToLocal(user.getObjectId(), phoneNumber.getText().toString(),  System.currentTimeMillis() + (long)30 * 24 * 60 * 60 * 1000);
                                 progress.dismiss();
                                 Intent intent = new Intent(mContext, MainActivity.class);
                                 startActivity(intent);
@@ -170,23 +174,37 @@ public class LoginActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    //把用户数据写入到数据库中
-    private void addDataToMysql(final String phoneNumber, final long time) {
+    //把用户数据写入到数据库和本地
+    private void addDataToMysql(final Long phoneNumber) {
         //把两个参数存到服务器中，返回userId
         //创建一个Map对象
-        Map<String,String> map = new HashMap<>();
-        map.put("user_phone_number", phoneNumber);
+        Map<String,Long> map = new HashMap<>();
+        map.put("id", phoneNumber);
         //转成JSON数据
         final String json = JSON.toJSONString(map,true);
-        HttpUtils.doPostAsy(getString(R.string.LoginInterface), json, new HttpUtils.CallBack() {
+        HttpUtils.doPostAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/users?id="+phoneNumber, json, new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(final String result) {
-                JSONObject jsonObject = JSON.parseObject(result.trim());
-                final String userId = jsonObject.getString("user_id");
-                addDataToLocal(userId, phoneNumber, time + (long)30 * 24 * 60 * 60 * 1000);
-                Intent intent = new Intent(mContext,MainActivity.class);
-                startActivity(intent);
-                finish();
+                final int user= Integer.parseInt(result);
+                if(user==1){
+                    Intent intent = new Intent(mContext, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+               // finish();
+            }
+        });
+        HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/users?id="+phoneNumber, new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result) {
+                JSONObject jsonObject = JSONObject.parseObject(result);
+                final String name = jsonObject.getString("name");
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        nickname.setText(name);
+                    }
+                });
             }
         });
     }

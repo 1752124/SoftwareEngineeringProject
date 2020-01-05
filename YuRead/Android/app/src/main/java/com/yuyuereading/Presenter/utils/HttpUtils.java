@@ -59,6 +59,30 @@ public class HttpUtils {
         }).start();
     }
 
+    /**
+     * 异步put请求
+     *
+     * @param urlStr    url字符串
+     * @param json      请求参数
+     * @param callBack  以接口对象为参数
+     */
+    public static void doPutAsy(final String urlStr, final String json, final CallBack callBack) {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String result = null;
+                try {
+                    result = doPut(urlStr,json);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (callBack != null) {
+                    callBack.onRequestComplete(result);
+                }
+            }
+        }).start();
+    }
 
     /**
      * 异步post请求
@@ -116,6 +140,24 @@ public class HttpUtils {
                 .build();
         Response response = client.newCall(request).execute();
         assert response.body() != null;
+        return response.body().string();
+    }
+
+    /**
+     * 向指定url发送put方式的请求
+     *
+     * @param urlStr    url字符串
+     * @param json      请求参数以JSON串的格式传递
+     * @return
+     */
+    private static String doPut(String urlStr, String json) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(urlStr)
+                .put(body)
+                .build();
+        Response response = client.newCall(request).execute();
         return response.body().string();
     }
 }
