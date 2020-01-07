@@ -140,18 +140,17 @@
                     android:textColor="@color/black"
                     android:textSize="20sp" />
             </RelativeLayout>
-            <!--    <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingTop="100dp">
+            <com.yuyuereading.view.AnnularChartView
+                android:id="@+id/annularChartView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="70dp"
+                android:layout_gravity="center"
+                android:text="Hello World!"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                    <CircularStatisticsView2
-                        android:id="@+id/cs_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"/>
-
-                </LinearLayout>-->
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

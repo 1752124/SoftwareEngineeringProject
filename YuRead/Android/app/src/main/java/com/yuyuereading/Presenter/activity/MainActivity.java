@@ -106,12 +106,19 @@ public class MainActivity extends AppCompatActivity implements
         initView();
         onClick();
         initShake();
-
+        getData();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+    }
+    public void onResume() {
+        super.onResume();
+        getData();
+    }
+
+    private void getData() {
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         headerLayout = navigationView.getHeaderView(0);
@@ -320,13 +327,10 @@ public class MainActivity extends AppCompatActivity implements
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_statistic) {
-            Intent intent=new Intent(mContext,StatisticActivity.class);
-            startActivity(intent);
-            // Handle the camera action
-        }else if (id == R.id.nav_plan) {
+        if (id == R.id.nav_plan) {
             Intent intent=new Intent(mContext,PlanActivity.class);
             startActivity(intent);
+            // Handle the camera action
         }else if (id == R.id.nav_update) {
 
         }else if (id == R.id.nav_quit) {

@@ -3,10 +3,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_statistic"
-            android:icon="@drawable/booklist"
-            android:title="阅读统计" />
-        <item
             android:id="@+id/nav_plan"
             android:icon="@drawable/advice"
             android:title="计划阅读" />

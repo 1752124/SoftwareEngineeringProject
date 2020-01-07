@@ -56,6 +56,10 @@ public class UserFragment extends Fragment {
     private TextView sumSeen;
     private TextView sumRecord;
     private String name;
+    private int sum_book;
+    private int sum_day;
+    private int sum_seen;
+    private int sum_record;
 
     private String mParam1;
     private String mParam2;
@@ -88,8 +92,12 @@ public class UserFragment extends Fragment {
                              Bundle savedInstanceState){
         view = inflater.inflate(R.layout.activity_user_info, container, false);
         initView();
-        getData();
         return view;
+    }
+
+    public void onResume() {
+        super.onResume();
+        getData();
     }
 
     private void getData() {
@@ -97,7 +105,7 @@ public class UserFragment extends Fragment {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(0);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -136,6 +144,27 @@ public class UserFragment extends Fragment {
                         return null;
                     }
                 });
+               /* long userID=2;
+                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/statistic-management/statistics?userid="+userID, new HttpUtils.CallBack(){
+                    @Override
+                    public void onRequestComplete(String result) {
+                        JSONObject jsonObject = JSONObject.parseObject(result);
+                        sum_book = Integer.parseInt(jsonObject.getString("sum_book"));
+                        sum_day = Integer.parseInt(jsonObject.getString("sum_day"));
+                        sum_seen = Integer.parseInt(jsonObject.getString("sum_read"));
+                        sum_record = Integer.parseInt(jsonObject.getString("sum_note"));
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                initView();
+                                sumBook.setText(sum_book+"本");
+                                sumDay.setText(sum_day+"天");
+                                sumSeen.setText(sum_seen+"本");
+                                sumRecord.setText(sum_record+"条");
+                            }
+                        });
+                    }
+                });*/
             }
         }).start();
     }

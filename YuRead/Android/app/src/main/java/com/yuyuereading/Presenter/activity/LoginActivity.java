@@ -101,14 +101,12 @@ public class LoginActivity extends AppCompatActivity {
                     progress.setMessage("正在登录中...");
                     progress.setCanceledOnTouchOutside(false);
                     progress.show();
-                    addDataToMysql(Long.valueOf(phoneNumber.getText().toString()));
                     //验证验证码是否正确
                     BmobUser.signOrLoginByMobilePhone(phoneNumber.getText().toString(), verification.getText().toString(), new LogInListener<_User>() {
 
                         @Override
                         public void done(_User user, BmobException e) {
                             if(user!=null){
-                                //Toast.makeText(mContext, "用户登陆成功！", Toast.LENGTH_SHORT).show();
                                 addDataToMysql(Long.valueOf(phoneNumber.getText().toString()));
                                 //addDataToLocal(user.getObjectId(), phoneNumber.getText().toString(),  System.currentTimeMillis() + (long)30 * 24 * 60 * 60 * 1000);
                                 progress.dismiss();
@@ -174,7 +172,7 @@ public class LoginActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    //把用户数据写入到数据库和本地
+    //把用户数据写入到数据库
     private void addDataToMysql(final Long phoneNumber) {
         //把两个参数存到服务器中，返回userId
         //创建一个Map对象
@@ -186,25 +184,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onRequestComplete(final String result) {
                 final int user= Integer.parseInt(result);
-                if(user==1){
+                /*if(user==1){
                     Intent intent = new Intent(mContext, MainActivity.class);
                     startActivity(intent);
-                    finish();
-                }
-               // finish();
-            }
-        });
-        HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/users?id="+phoneNumber, new HttpUtils.CallBack() {
-            @Override
-            public void onRequestComplete(String result) {
-                JSONObject jsonObject = JSONObject.parseObject(result);
-                final String name = jsonObject.getString("name");
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        nickname.setText(name);
-                    }
-                });
+                }*/
             }
         });
     }
