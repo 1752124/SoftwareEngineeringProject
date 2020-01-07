@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#eee"
-    tools:context="com.yuyuereading.presenter.activity.BookInfoActivity">
+    tools:context="com.yuyuereading.presenter.activity.NicknameActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

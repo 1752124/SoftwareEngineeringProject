@@ -18,7 +18,7 @@ public class _User extends BmobUser {
         portrait=image;
     }
     public void setName(String username){
-        name="七七";
+        name=username;
     }
 //    username: 用户的用户名（必需）。
 //    password: 用户的密码（必需）。

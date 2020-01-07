@@ -1,71 +1,64 @@
 package com.yuyuereading.presenter.fragment;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.yuyuereading.R;
-import com.yuyuereading.model.bean._User;
-import com.yuyuereading.presenter.utils.HttpUtils;
-
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.model.bean._User;
+import com.yuyuereading.presenter.activity.BookListActivity;
+import com.yuyuereading.R;
 import com.yuyuereading.presenter.activity.NicknameActivity;
+import com.yuyuereading.presenter.activity.PortraitActivity;
+import com.yuyuereading.presenter.utils.HttpUtils;
+import com.yuyuereading.presenter.utils.SearchFromDouban;
 import com.yuyuereading.view.CircleImageView;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.Serializable;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.List;
 
 import cn.bmob.v3.BmobUser;
 
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link UserFragment.OnFragmentInteractionListener} interface
+ * to handle interaction events.
+ * Use the {@link UserFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
 public class UserFragment extends Fragment {
     UserFragment userFragment;
 
     private View view;
     private CircleImageView portrait;
     private TextView nickname;
-    //private String name="qiqi";
     private TextView sumBook;
     private TextView sumDay;
     private TextView sumSeen;
     private TextView sumRecord;
+    private String name;
+
     private String mParam1;
     private String mParam2;
-    private String name;
-    private UserFragment.OnFragmentInteractionListener mListener;
-
-    public UserFragment() {
-        // Required empty public constructor
-    }
- /*   private static final float mStartAngle = -90;
-    private int mRingColor = Color.parseColor("#F05A4A");
-    private int mSectorColor = Color.parseColor("#29AB91");
-    private float mEndAngle = mStartAngle;
-    private float mSweepAngle = 0;
-    private float mCircleWidth = 0;
-    private float mDotRadius = 6f;
-    private float mTextSize = 23.5f;
-    private String reminderText = "剩余";
-    private String progressText = "已读";
-    private float centerX;
-    private float centerY;
-    private float mOuterRadius;
-    private float mInnerRadius;
-    private Paint mPaint;
-    private Paint mTextPaint;
-    private Path mPath;*/
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -92,39 +85,69 @@ public class UserFragment extends Fragment {
     @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_user_info, container, false);
-        //initView();
-        //getData();
+                             Bundle savedInstanceState){
+        view = inflater.inflate(R.layout.activity_user_info, container, false);
+        initView();
+        getData();
+        return view;
+    }
+
+    private void getData() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                final _User bmobUser = BmobUser.getCurrentUser(_User.class);
+                long phoneNumber= Long.parseLong(bmobUser.getUsername());
+                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/users?id="+phoneNumber, new HttpUtils.CallBack() {
+                    @Override
+                    public void onRequestComplete(String result) {
+                        JSONObject jsonObject = JSONObject.parseObject(result);
+                        name = jsonObject.getString("name");
+                        final Bitmap image = getBitmap(jsonObject.getString("portrait"));
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                initView();
+                                nickname.setText(name);
+                                portrait.setImageBitmap(image);
+                            }
+                        });
+                    }
+                    private Bitmap getBitmap(String path) {
+                        try {
+                            URL url = new URL(path);
+                            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                            conn.setConnectTimeout(5000);
+                            conn.setRequestMethod("GET");
+                            if (conn.getResponseCode() == 200) {
+                                InputStream inputStream = conn.getInputStream();
+                                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                                return bitmap;
+                            }
+                        } catch (IOException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                        return null;
+                    }
+                });
+            }
+        }).start();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
+    private void initView() {
         sumBook = view.findViewById(R.id.sum_book);
         sumDay = view.findViewById(R.id.sum_days);
         sumSeen = view.findViewById(R.id.seen_book);
         sumRecord = view.findViewById(R.id.sum_record);
         nickname = view.findViewById(R.id.nickname);
         portrait = view.findViewById(R.id.user_info_icon);
-        nickname.setText(name);
-        sumBook.setText("13本");
-        sumDay.setText("86天");
-        sumSeen.setText("8本");
-        sumRecord.setText("50条");
-        return view;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof UserFragment.OnFragmentInteractionListener) {
-            mListener = (UserFragment.OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
     }
 
     public interface OnFragmentInteractionListener {
@@ -145,7 +168,7 @@ public class UserFragment extends Fragment {
         portrait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "点击事件", Toast.LENGTH_SHORT).show();
+
             }
         });
     }

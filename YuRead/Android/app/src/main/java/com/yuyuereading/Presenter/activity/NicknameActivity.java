@@ -25,6 +25,7 @@ public class NicknameActivity extends AppCompatActivity {
     private Button returnButton;
     private TextView title;
     private EditText nickname;
+    private String name;
     private ScrollView scrollView;
 
     @Override
@@ -41,6 +42,7 @@ public class NicknameActivity extends AppCompatActivity {
         title=findViewById(R.id.title);
         returnButton=findViewById(R.id.nickname_return);
         finishEdit=findViewById(R.id.editCom);
+        nickname=findViewById(R.id.nickname);
     }
 
     //监听事件
@@ -57,7 +59,7 @@ public class NicknameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //保存数据入数据库
-                final String name=nickname.getText().toString();
+                name=nickname.getText().toString();
                 _User bmobUser = BmobUser.getCurrentUser(_User.class);
                 long userID= Long.parseLong(bmobUser.getUsername());
                 Map<String,String> map = new HashMap<>();
@@ -72,7 +74,6 @@ public class NicknameActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 if(sus==1){
-                                    nickname.setText(name);
                                     Toast.makeText(NicknameActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
                                     finish();
                                 }

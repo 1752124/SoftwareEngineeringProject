@@ -134,8 +134,6 @@ public class MainActivity extends AppCompatActivity implements
                 JSONObject jsonObject = JSONObject.parseObject(result);
                 name = jsonObject.getString("name");
                 final Bitmap portrait = getBitmap(jsonObject.getString("portrait"));
-                bmobUser.setPortrait(portrait);
-                bmobUser.setName(name);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
