@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements
 
     Context mContext = MainActivity.this;
     private long exitTime = 0;
-    Boolean bmob_if_hava_book_info = false;
+    Boolean bmob_if_have_book_info = false;
     Toolbar toolbar;
     DrawerLayout drawer;
     View headerLayout;
@@ -103,11 +103,7 @@ public class MainActivity extends AppCompatActivity implements
         headerLayout = navigationView.getHeaderView(0);
         headerLayout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                /*Intent it = new Intent(mContext,UserInfoActivity.class);
-                startActivity(it);
-                overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);*/
-            }
+            public void onClick(View view) { }
 
         });
         nickname = headerLayout.findViewById(R.id.nickname);
@@ -343,8 +339,8 @@ public class MainActivity extends AppCompatActivity implements
                                                 List<BookInfo> list = (List<BookInfo>) msg.obj;
                                                 if (list.size() != 0) {
                                                     Log.i("bmob", "handler传送成功:" + list.get(0).getObjectId());
-                                                    bmob_if_hava_book_info = true;
-                                                    Log.i("bmob", "BookInfo存在状态:" + bmob_if_hava_book_info);
+                                                    bmob_if_have_book_info = true;
+                                                    Log.i("bmob", "BookInfo存在状态:" + bmob_if_have_book_info);
                                                     //如果存在的话就更新
                                                     OperationBookInfo.updateBookInfo(bookInfo);
                                                 } else {

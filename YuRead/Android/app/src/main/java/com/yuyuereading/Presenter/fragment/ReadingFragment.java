@@ -196,8 +196,6 @@ public class ReadingFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-
-
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
