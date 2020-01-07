@@ -12,25 +12,47 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("v1/note-management")
+@RequestMapping("v2/note-management")
 public class NoteController {
     @Autowired
     private NoteServiceImpl noteService;
 
     @RequestMapping(value = "/notes", method = RequestMethod.POST)
     @ResponseBody
-    public int addNote(@RequestParam Long userid, @RequestParam Long bookid, @RequestParam Integer beginpage, @RequestParam Integer endpage, @RequestParam String content) {
+    public Long addNote( @RequestParam Long userid, @RequestParam Long bookid, @RequestParam Integer beginpage, @RequestParam Integer endpage, @RequestParam String content) {
         //noteService =new NoteServiceImpl();
-        int note = noteService.insert(userid, bookid, beginpage, endpage, content);
-        return note;
+        Note note = new Note();
+        note.setBeginPage(beginpage);
+        note.setEndPage(endpage);
+        note.setContent(content);
+        note.setUserId(userid);
+        note.setBookId(bookid);
+        noteService.insert(note);
+        return note.getNoteId();
     }
 
-    @RequestMapping(value = "/lists", method = RequestMethod.GET)
+    @RequestMapping(value = "/notes", method = RequestMethod.GET)
     @ResponseBody
     public List<Note> showNote(@RequestParam Long userid, @RequestParam Long bookid) {
         //noteService =new NoteServiceImpl();
         List<Note> noteList = noteService.select(userid, bookid);
         return noteList;
+    }
+
+    @RequestMapping(value = "/notes", method = RequestMethod.DELETE)
+    @ResponseBody
+    public int deleteNote(@RequestParam Long noteid) {
+        //noteService =new NoteServiceImpl();
+        int note = noteService.delete(noteid);
+        return note;
+    }
+
+    @RequestMapping(value = "/notes", method = RequestMethod.PUT)
+    @ResponseBody
+    public int updateNote(@RequestParam Long noteid, @RequestParam String content) {
+        //noteService =new NoteServiceImpl();
+        int note = noteService.update(noteid, content);
+        return note;
     }
 
 

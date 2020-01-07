@@ -9,15 +9,19 @@ import java.util.List;
 
 @Mapper
 public interface BooklistMapper {
-    int deleteByPrimaryKey(Long id);
+    int delete(@Param("id") Long id);
 
-    int insert(Booklist record);
+    int insert(@Param("id") Long id,@Param("title") String title,@Param("author") String author,@Param("image") String image,@Param("type") Byte type,@Param("summary") String summary,@Param("publisher") String publisher,@Param("ranking") String ranking,@Param("category") String category);
 
     int insertSelective(Booklist record);
+
+    List<Booklist> select();
 
     List<Booklist> selectByPrimaryKey(@Param("type") Byte type);
 
     int updateByPrimaryKeySelective(Booklist record);
 
-    int updateByPrimaryKey(Booklist record);
+    int update(@Param("id") Long id,@Param("title") String title,@Param("author") String author,@Param("image") String image,@Param("type") Byte type,@Param("summary") String summary,@Param("publisher") String publisher,@Param("ranking") String ranking,@Param("category") String category);
+
+
 }

@@ -18,8 +18,23 @@ public class BooklistServiceImpl implements BooklistService {
 
 
     @Override
-    public List<Booklist> getDataByType(Byte type) {
-        return booklistMapper.selectByPrimaryKey(type);
+    public List<Booklist> getDataByType(Byte type) { return booklistMapper.selectByPrimaryKey(type); }
+
+    @Override
+    public int delete(Long id) { return booklistMapper.delete(id); }
+
+    @Override
+    public List<Booklist> select(){ return booklistMapper.select(); }
+
+    @Override
+    public int insert(Long id, String title, String author, String image, Byte type, String summary, String publisher, String ranking, String category){
+        return booklistMapper.insert(id,title,author,image,type,summary,publisher,ranking,category);
     }
+
+    @Override
+    public int update(Long id, String title, String author, String image, Byte type, String summary, String publisher, String ranking, String category){
+        return booklistMapper.insert(id,title,author,image,type,summary,publisher,ranking,category);
+    }
+
 
 }
