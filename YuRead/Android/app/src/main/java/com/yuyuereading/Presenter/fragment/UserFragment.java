@@ -144,15 +144,15 @@ public class UserFragment extends Fragment {
                         return null;
                     }
                 });
-               /* long userID=2;
+                long userID=2;
                 HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/statistic-management/statistics?userid="+userID, new HttpUtils.CallBack(){
                     @Override
                     public void onRequestComplete(String result) {
                         JSONObject jsonObject = JSONObject.parseObject(result);
-                        sum_book = Integer.parseInt(jsonObject.getString("sum_book"));
-                        sum_day = Integer.parseInt(jsonObject.getString("sum_day"));
-                        sum_seen = Integer.parseInt(jsonObject.getString("sum_read"));
-                        sum_record = Integer.parseInt(jsonObject.getString("sum_note"));
+                        sum_book = Integer.parseInt(jsonObject.getString("sumBook"));
+                        sum_day = Integer.parseInt(jsonObject.getString("sumDay"));
+                        sum_seen = Integer.parseInt(jsonObject.getString("sumRead"));
+                        sum_record = Integer.parseInt(jsonObject.getString("sumNote"));
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -164,7 +164,7 @@ public class UserFragment extends Fragment {
                             }
                         });
                     }
-                });*/
+                });
             }
         }).start();
     }
