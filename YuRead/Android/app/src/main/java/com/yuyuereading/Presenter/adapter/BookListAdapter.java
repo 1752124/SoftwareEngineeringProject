@@ -18,6 +18,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.willy.ratingbar.ScaleRatingBar;
 import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.model.bean._User;
 import com.yuyuereading.presenter.activity.BookInfoActivity;
 import com.yuyuereading.presenter.activity.CommentActivity;
 import com.yuyuereading.presenter.activity.ReadingActivity;
@@ -29,6 +30,8 @@ import com.yuyuereading.presenter.utils.HttpUtils;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
+
+import cn.bmob.v3.BmobUser;
 
 public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHolder>{
 
@@ -94,7 +97,8 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
                 holder.button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        final long userID=1;
+                        _User bmobUser= BmobUser.getCurrentUser(_User.class);
+                        final long userID=Long.parseLong(bmobUser.getUsername());
                         final long isbn=Long.parseLong(bookInfo.getBook_isbn13());
                         JSONObject reqjson = new JSONObject(new LinkedHashMap());
                         reqjson.put("userid",userID);
@@ -122,7 +126,8 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
                 holder.button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        final long userID=1;
+                        _User bmobUser= BmobUser.getCurrentUser(_User.class);
+                        final long userID=Long.parseLong(bmobUser.getUsername());
                         final long isbn=Long.parseLong(bookInfo.getBook_isbn13());
                         JSONObject reqjson = new JSONObject(new LinkedHashMap());
                         reqjson.put("userid",userID);

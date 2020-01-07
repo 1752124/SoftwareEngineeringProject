@@ -9,7 +9,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.format.Time;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
@@ -24,10 +23,10 @@ import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.yuyuereading.model.bean.BookComment;
 import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.model.bean._User;
 import com.yuyuereading.presenter.adapter.CommentListAdapter;
 import com.yuyuereading.presenter.utils.HttpUtils;
 import com.yuyuereading.presenter.utils.NoteGetFromDB;
-import com.yuyuereading.presenter.utils.SearchFromDouban;
 import com.yuyuereading.presenter.utils.ShakeListener;
 import com.yuyuereading.R;
 
@@ -36,6 +35,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import cn.bmob.v3.BmobUser;
 
 
 public class BookInfoActivity extends AppCompatActivity {
@@ -169,7 +169,8 @@ public class BookInfoActivity extends AppCompatActivity {
               finish();
             }
         });
-}
+    }
+
     public void onBackPressed() {
         finish();
     }
@@ -195,7 +196,8 @@ public class BookInfoActivity extends AppCompatActivity {
         builder.setPositiveButton("确定",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        final long userID=1;
+                        _User bmobUser= BmobUser.getCurrentUser(_User.class);
+                        final long userID=Long.parseLong(bmobUser.getUsername());
                         String Page = inputServer.getText().toString();
                         String[] pageSplit=Page.split("-");
                         final String beginPage=pageSplit[0],

@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.alibaba.fastjson.JSONArray;
 import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.model.bean._User;
 import com.yuyuereading.presenter.activity.AddBookActivity;
 import com.yuyuereading.presenter.adapter.BookListAdapter;
 import com.yuyuereading.R;
@@ -24,6 +25,8 @@ import com.yuyuereading.presenter.utils.SearchFromDouban;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.bmob.v3.BmobUser;
 
 
 /**
@@ -89,7 +92,8 @@ public class ReadingFragment extends Fragment {
 
     //adapter中添加数据
     private void addDate() {
-        long userID=1;
+        _User bmobUser= BmobUser.getCurrentUser(_User.class);
+        final long userID=Long.parseLong(bmobUser.getUsername());
         int state=2;
         HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/states?userid="+userID+"&state="+state,new HttpUtils.CallBack() {
             @Override
