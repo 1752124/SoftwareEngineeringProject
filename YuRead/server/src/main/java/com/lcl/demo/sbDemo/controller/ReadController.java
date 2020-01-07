@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-@RequestMapping("v1/read-management")
+@RequestMapping("v2/read-management")
 public class ReadController {
     @Autowired
     private ReadServiceImpl readService;
@@ -25,15 +25,15 @@ public class ReadController {
         return book;
     }
 
-    @RequestMapping(value = "/lists", method = RequestMethod.POST)
+    @RequestMapping(value = "/states", method = RequestMethod.POST)
     @ResponseBody
     public int changeBook(@RequestParam Long userid, @RequestParam Long bookid, @RequestParam Integer state) {
-        //        //readingService =new readingServiceImpl();
+        //readingService =new readingServiceImpl();
         int book = readService.update(userid, bookid, state);
         return book;
     }
 
-    @RequestMapping(value = "/shelves", method = RequestMethod.GET)
+    @RequestMapping(value = "/states", method = RequestMethod.GET)
     @ResponseBody
     public List<Read> showBooks(@RequestParam Long userid, @RequestParam Integer state) {
         //readingService =new readingServiceImpl();

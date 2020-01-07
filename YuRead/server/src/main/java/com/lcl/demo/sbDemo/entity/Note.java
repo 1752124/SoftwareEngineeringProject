@@ -3,6 +3,8 @@ package com.lcl.demo.sbDemo.entity;
 import java.util.Date;
 
 public class Note {
+    private Long noteId;
+
     private Long userId;
 
     private Long bookId;
@@ -19,7 +21,8 @@ public class Note {
 
     private Date updateTime;
 
-    public Note(Long userId, Long bookId, Date date, Integer beginPage, Integer endPage, String content, Date createTime, Date updateTime) {
+    public Note(Long noteId, Long userId, Long bookId, Date date, Integer beginPage, Integer endPage, String content, Date createTime, Date updateTime) {
+        this.noteId = noteId;
         this.userId = userId;
         this.bookId = bookId;
         this.date = date;
@@ -34,12 +37,22 @@ public class Note {
         super();
     }
 
+    public Long getNoteId() { return noteId; }
+
     public Long getUserId() {
         return userId;
     }
 
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
     public Long getBookId() {
         return bookId;
+    }
+
+    public void setBookId(Long bookId) {
+        this.bookId = bookId;
     }
 
     public Date getDate() {

@@ -16,13 +16,23 @@ public class NoteServiceImpl implements NoteService {
 
 
     @Override
-    public int insert(Long userId, Long bookId, Integer beginPage, Integer endPage, String content){
-        return noteMapper.insert(userId, bookId, beginPage, endPage, content);
+    public int insert(Note note){
+        return noteMapper.insert(note);
     }
 
     @Override
     public List<Note> select(Long userId, Long bookId){
         return noteMapper.select(userId, bookId);
+    }
+
+    @Override
+    public int delete(Long noteId){
+        return noteMapper.delete(noteId);
+    }
+
+    @Override
+    public int update(Long noteId, String content){
+        return noteMapper.update(noteId, content);
     }
 
 }

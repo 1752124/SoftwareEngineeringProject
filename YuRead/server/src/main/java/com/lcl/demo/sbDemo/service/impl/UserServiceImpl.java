@@ -33,4 +33,9 @@ public class UserServiceImpl implements UserService {
         return userMapper.updatePortraitById(id, url);
     }
 
+    @Override
+    public User selectByPrimaryKey(Long id)  {
+        return userMapper.selectByPrimaryKey(id);
+    }
+
 }

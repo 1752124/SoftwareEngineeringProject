@@ -12,4 +12,6 @@ public interface UserService {
 
 	int updatePortrait(Long id, String url);
 
+	User selectByPrimaryKey(Long id);
+
 }

@@ -6,8 +6,12 @@ import java.util.List;
 
 public interface NoteService {
 
-	int insert(Long userId, Long bookId, Integer beginPage, Integer endPage, String content);
+	int insert(Note note);
 
 	List<Note> select (Long userId, Long bookId);
+
+	int delete(Long noteId);
+
+	int update(Long noteId, String content);
 
 }
