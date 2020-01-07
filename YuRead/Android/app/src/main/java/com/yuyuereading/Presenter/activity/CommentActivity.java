@@ -12,19 +12,23 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONObject;
 import com.yuyuereading.model.bean.BookComment;
 import com.yuyuereading.R;
+import com.yuyuereading.presenter.utils.HttpUtils;
+
+import java.io.IOException;
+import java.util.LinkedHashMap;
 
 public class CommentActivity extends AppCompatActivity {
     private Button returnButton;
     private Button editCom;
     private Button finishEdit;
     private Button delete;
-
-    private TextView title;
+    long noteID;
+    TextView title;
     private TextView finishTime;
     private TextView pageUpdate;
-
     private EditText readReview;
 
     private ScrollView scrollView;
@@ -46,6 +50,7 @@ public class CommentActivity extends AppCompatActivity {
     private void getCommentInfo() {
         Intent intent = this.getIntent();
         BookComment bookComment = (BookComment) intent.getSerializableExtra("bookComment");
+        noteID=bookComment.getNoteID();
         finishTime.setText(bookComment.getFinish_time());
         pageUpdate.setText(bookComment.getPage_update());
         readReview.setText(bookComment.getRead_review());
@@ -92,6 +97,19 @@ public class CommentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //从数据库中删除记录
+                JSONObject reqjson = new JSONObject(new LinkedHashMap());
+                reqjson.put("noteid",noteID);
+                final String request = reqjson.toString();
+                new Thread(new Runnable(){
+                    @Override
+                    public void run() {
+                        try {
+                            HttpUtils.doDelete("http://139.196.36.97:8080/sbDemo/v1/note-management/notes?noteid="+noteID,request);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
                 Toast.makeText(CommentActivity.this, "删除成功", Toast.LENGTH_SHORT).show();
                 finish();
             }
@@ -100,6 +118,22 @@ public class CommentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //保存数据入数据库
+                final String content= readReview.getText().toString();
+                JSONObject reqjson = new JSONObject(new LinkedHashMap());
+                reqjson.put("noteid",noteID);
+                reqjson.put("content",content);
+                final String request = reqjson.toString();
+                new Thread(new Runnable(){
+                    @Override
+                    public void run() {
+                        try {
+                            HttpUtils.doPut("http://139.196.36.97:8080/sbDemo/v1/note-management/notes?noteid="+noteID
+                                    +"&content="+content,request);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
                 Toast.makeText(CommentActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
                 finish();
             }

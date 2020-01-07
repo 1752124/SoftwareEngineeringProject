@@ -15,6 +15,8 @@ public class NoteFromDB {
         String begin=bookItem.getString("beginPage");
         String end=bookItem.getString("endPage");
         bookComment.setPage_update(begin+"-"+end);
+        String noteid=bookItem.getString("noteId");
+        bookComment.setNoteID(Integer.parseInt(noteid));
         String content=bookItem.getString("content");
         if(content == null){content="无";}
         bookComment.setRead_review(content);

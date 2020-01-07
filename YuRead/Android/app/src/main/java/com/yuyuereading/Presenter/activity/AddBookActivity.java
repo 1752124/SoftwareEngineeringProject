@@ -82,17 +82,12 @@ public class AddBookActivity extends AppCompatActivity {
     }
 
     private void addBook(){
-        long userId=1;
-        int state=1;
-        String title= input_book_name.getText().toString();
-        String author=input_author_name.getText().toString();
-        String publicName= input_public_name.getText().toString();
-        long isbn=Long.parseLong(input_isbn.getText().toString());
-//        String title= "12345";
-//        String author="324";
-//        String publicName="24142";
-//        long isbn=12354;
-
+        final long userId=1;
+        final int state=1;
+        final String title= input_book_name.getText().toString();
+        final String author=input_author_name.getText().toString();
+        final String publicName= input_public_name.getText().toString();
+        final long isbn=Long.parseLong(input_isbn.getText().toString());
         JSONObject reqjson = new JSONObject(new LinkedHashMap());
         reqjson.put("userid",userId);
         reqjson.put("bookid",isbn);
@@ -105,7 +100,8 @@ public class AddBookActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/read-management/books",request);
+                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/read-management/books?userid="
+                            +userId+"&bookid="+isbn+"&state="+state+"&title="+title+"&author="+author+"&publisher="+publicName,request);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class BookInfoGetFromDB {
 
-    //解析从豆瓣服务器获取相应的图书信息JSON
+    //解析从服务器获取相应的图书信息JSON
     public static BookInfo parsingBookInfo(final String json) throws IOException {
         //解析从api传回来的json数据
         BookInfo bookInfo = new BookInfo();
@@ -28,8 +28,9 @@ public class BookInfoGetFromDB {
         bookInfo.setBook_summary(summary);
         String publisher = bookItem.getString("publisher");
         bookInfo.setBook_publisher(publisher);
-        //获取豆瓣平均评分
+        //获取平均评分
         String rating =bookItem.getString("ranking");
+        if(rating==null){rating="8.4";}
         bookInfo.setBook_rating(rating);
 
         return bookInfo;

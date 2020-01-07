@@ -20,6 +20,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.yuyuereading.model.bean.BookComment;
 import com.yuyuereading.model.bean.BookInfo;
@@ -32,6 +33,7 @@ import com.yuyuereading.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 
@@ -39,16 +41,11 @@ import java.util.List;
 public class BookInfoActivity extends AppCompatActivity {
 
     private final Context mContext = BookInfoActivity.this;
-
     private RecyclerView recyclerView;
-
     private List<BookComment> bookCommentList = new ArrayList<>();
-
     private String book_ISBN;
-
     private Button returnButton;
     private Button update;
-
     private TextView bookName;
     private TextView bookWriter;
     private TextView bookISBN;
@@ -56,15 +53,10 @@ public class BookInfoActivity extends AppCompatActivity {
     TextView title;
     TextView brief;
     private TextView haveReadDay;
-
     private ImageView bookImage;
-
     private ScrollView scrollView;
-
     private LinearLayoutManager mLayoutManager;
-
     private ProgressBar readProgress;
-
     private CommentListAdapter adapter;
 
     @Override
@@ -155,7 +147,6 @@ public class BookInfoActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-
     //监听事件
     private void onClick() {
         //scrollView从顶部显示
@@ -204,14 +195,31 @@ public class BookInfoActivity extends AppCompatActivity {
         builder.setPositiveButton("确定",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
+                        final long userID=1;
                         String Page = inputServer.getText().toString();
-                        Time t=new Time();
-                        t.setToNow(); // 取得系统时间。
-                        int month = t.month+1;
-                        int day = t.monthDay;
-                        BookComment bookComment=new BookComment(month+"."+day,
-                                Page,"    无");
-                        bookCommentList.add(bookComment);
+                        String[] pageSplit=Page.split("-");
+                        final String beginPage=pageSplit[0],
+                                endPage=pageSplit[1];
+                        JSONObject reqjson = new JSONObject(new LinkedHashMap());
+                        reqjson.put("userid",userID);
+                        reqjson.put("bookid",Long.parseLong(book_ISBN));
+                        reqjson.put("beginpage",Integer.parseInt(beginPage));
+                        reqjson.put("endpage",Integer.parseInt(endPage));
+                        reqjson.put("content","无");
+                        final String request = reqjson.toString();
+                        new Thread(new Runnable(){
+                            @Override
+                            public void run() {
+                                try {
+                                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/note-management/notes?" +
+                                            "&userid="+userID+"&bookid="+book_ISBN+ "&beginpage="+beginPage
+                                            +"&endpage="+endPage+"&content=无",request);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }).start();
+                        finish();
                         Intent intent =new Intent();
                         intent.setClass(mContext, BookInfoActivity.class);
                     }

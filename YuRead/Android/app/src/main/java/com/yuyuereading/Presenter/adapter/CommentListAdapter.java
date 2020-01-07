@@ -40,7 +40,7 @@ public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(CommentListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(CommentListAdapter.ViewHolder holder, final int position) {
         final BookComment bookComment = mBookCommentList.get(position);
         holder.finish_time.setText(bookComment.getFinish_time());
         holder.page_update.setText(bookComment.getPage_update());

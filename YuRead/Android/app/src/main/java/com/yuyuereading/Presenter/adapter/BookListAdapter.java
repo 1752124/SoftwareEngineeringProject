@@ -12,16 +12,22 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.willy.ratingbar.ScaleRatingBar;
 import com.yuyuereading.model.bean.BookInfo;
 import com.yuyuereading.presenter.activity.BookInfoActivity;
+import com.yuyuereading.presenter.activity.CommentActivity;
 import com.yuyuereading.presenter.activity.ReadingActivity;
 import com.yuyuereading.presenter.activity.SeenActivity;
 import com.yuyuereading.presenter.activity.WantReadActivity;
 import com.yuyuereading.R;
+import com.yuyuereading.presenter.utils.HttpUtils;
 
+import java.io.IOException;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHolder>{
@@ -88,11 +94,26 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
                 holder.button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(mContext, ReadingActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putSerializable("bookInfo", bookInfo);
-                        intent.putExtras(bundle);
-                        mContext.startActivity(intent);
+                        final long userID=1;
+                        final long isbn=Long.parseLong(bookInfo.getBook_isbn13());
+                        JSONObject reqjson = new JSONObject(new LinkedHashMap());
+                        reqjson.put("userid",userID);
+                        reqjson.put("bookid",isbn);
+                        reqjson.put("state",2);
+                        final String request = reqjson.toString();
+                        new Thread(new Runnable(){
+                            @Override
+                            public void run() {
+                                try {
+                                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/read-management/states?"
+                                            +"userid="+userID+"&bookid="+isbn+"&state="+2,request);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }).start();
+                        Toast.makeText(mContext,"修改成功",Toast.LENGTH_SHORT).show();
+
                         //overridePendingTransition(R.anim.slide_right_in,R.anim.slide_left_out);
                     }
                 });
@@ -101,8 +122,25 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
                 holder.button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(mContext, SeenActivity.class);
-                        mContext.startActivity(intent);
+                        final long userID=1;
+                        final long isbn=Long.parseLong(bookInfo.getBook_isbn13());
+                        JSONObject reqjson = new JSONObject(new LinkedHashMap());
+                        reqjson.put("userid",userID);
+                        reqjson.put("bookid",isbn);
+                        reqjson.put("state",3);
+                        final String request = reqjson.toString();
+                        new Thread(new Runnable(){
+                            @Override
+                            public void run() {
+                                try {
+                                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/read-management/states?"
+                                            +"userid="+userID+"&bookid="+isbn+"&state="+3,request);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }).start();
+                        Toast.makeText(mContext,"修改成功",Toast.LENGTH_SHORT).show();
                     }
                 });
                 break;

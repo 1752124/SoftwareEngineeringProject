@@ -2,7 +2,6 @@ package com.yuyuereading.presenter.utils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.yuyuereading.model.bean.BookComment;
-import com.yuyuereading.model.bean.BookInfo;
 
 import java.io.IOException;
 import java.util.ArrayList;
