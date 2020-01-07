@@ -3,6 +3,7 @@
 <mapper namespace="com.lcl.demo.sbDemo.dao.NoteMapper" >
   <resultMap id="BaseResultMap" type="com.lcl.demo.sbDemo.entity.Note" >
     <constructor >
+      <idArg column="note_id" jdbcType="BIGINT" javaType="java.lang.Long" />
       <idArg column="user_id" jdbcType="BIGINT" javaType="java.lang.Long" />
       <idArg column="book_id" jdbcType="BIGINT" javaType="java.lang.Long" />
       <arg column="date" jdbcType="DATE" javaType="java.util.Date" />
@@ -14,7 +15,7 @@
     </constructor>
   </resultMap>
   <sql id="Base_Column_List" >
-    user_id, book_id, date, begin_page, end_page, content, create_time, update_time
+    note_id, user_id, book_id, date, begin_page, end_page, content, create_time, update_time
   </sql>
   <select id="select" resultMap="BaseResultMap" >
     select 
@@ -23,15 +24,15 @@
     where user_id = #{userId,jdbcType=BIGINT}
     and book_id = #{bookId,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="delete" parameterType="java.lang.Long" >
     delete from note
     where note_id = #{noteId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" >
-    insert into note (user_id, book_id, begin_page,
+  <insert id="insert" parameterType="com.lcl.demo.sbDemo.entity.Note" useGeneratedKeys="true" keyProperty="noteId">
+    insert into note (note_id, user_id, book_id, begin_page,
       end_page, content)
-    values (#{userId,jdbcType=BIGINT}, #{bookId,jdbcType=BIGINT}, #{beginPage,jdbcType=INTEGER},
-      #{endPage,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR})
+    values (#{noteId}, #{userId}, #{bookId}, #{beginPage},
+      #{endPage}, #{content})
   </insert>
   <insert id="insertSelective" parameterType="com.lcl.demo.sbDemo.entity.Note" >
     insert into note
@@ -106,14 +107,9 @@
     </set>
     where note_id = #{noteId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.lcl.demo.sbDemo.entity.Note" >
+  <update id="update">
     update note
-    set date = #{date,jdbcType=DATE},
-      begin_page = #{beginPage,jdbcType=INTEGER},
-      end_page = #{endPage,jdbcType=INTEGER},
-      content = #{content,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    set content = #{content,jdbcType=VARCHAR}
     where note_id = #{noteId,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lcl.demo.sbDemo.dao.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.lcl.demo.sbDemo.entity.User" >
+<mapper namespace="com.lcl.demo.sbDemo.dao.StatisticMapper" >
+  <resultMap id="BaseResultMap" type="com.lcl.demo.sbDemo.entity.Statistic" >
     <constructor >
       <idArg column="user_id" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="name" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="auth" jdbcType="TINYINT" javaType="java.lang.Byte" />
-      <arg column="portrait" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="sum_book" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="sum_read" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="sum_day" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="sum_note" jdbcType="INTEGER" javaType="java.lang.Integer" />
       <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
       <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
     </constructor>
   </resultMap>
   <sql id="Base_Column_List" >
-    user_id, name, auth, portrait, create_time, update_time
+    user_id, sum_book, sum_read, sum_day, sum_note, create_time, update_time
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="select" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from user
-    where user_id = #{userId,jdbcType=INTEGER}
+    from statistic
+    where user_id = #{userId,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from user
