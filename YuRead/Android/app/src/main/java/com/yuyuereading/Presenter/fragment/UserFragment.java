@@ -161,7 +161,7 @@ public class UserFragment extends Fragment {
                                 sumDay.setText(sum_day+"天");
                                 sumSeen.setText(sum_seen+"本");
                                 sumRecord.setText(sum_record+"条");
-                                annularChartView.setData(new float[]{sum_book, sum_seen});
+                                annularChartView.setData(new float[]{sum_book-sum_seen, sum_seen});
                             }
                         });
                     }
