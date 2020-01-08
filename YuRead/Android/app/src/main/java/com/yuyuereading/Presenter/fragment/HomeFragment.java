@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.text.format.Time;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.bumptech.glide.Glide;
 import com.yuyuereading.model.bean.BookInfo;
 import com.yuyuereading.model.bean._User;
 import com.yuyuereading.presenter.activity.BookListActivity;
@@ -49,10 +51,12 @@ public class HomeFragment extends Fragment {
     private Button Oscarbooklist;
     private Button Maobooklist;
     private Button Nobelbooklist;
-    private List<BookInfo> bookInfos = new ArrayList<>();
+    List<BookInfo> bookInfos = new ArrayList<>();
+    List<BookInfo> bookInfoList=new ArrayList<>();
 
-    private ImageView perRem1,perRem2;
-    private TextView perRem11,perRem22;
+    ImageView perRem1,perRem2;
+    TextView perRem11,perRem22;
+    volatile boolean flag=false;
 
     private String mParam1;
     private String mParam2;
@@ -83,24 +87,24 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
         view = inflater.inflate(R.layout.activity_home, container, false);
-        addRecom();
+
         initView();
         return view;
     }
 
-    private void addRecom(){
-        _User bmobUser= BmobUser.getCurrentUser(_User.class);
+    private void addRec(){_User bmobUser= BmobUser.getCurrentUser(_User.class);
         final long userID=Long.parseLong(bmobUser.getUsername());
         HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/personalization-management/booklists?userid="+userID,new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(String result) {
                 try {
                     JSONArray jsonArray=JSONArray.parseArray(result);
-                    List<BookInfo>bookInfoList = SearchFromDouban.parsingBookInfoPerson(jsonArray);
+                    bookInfoList = SearchFromDouban.parsingBookInfoPerson(jsonArray);
                     Random random = new Random();
                     int index = random.nextInt(bookInfoList.size()-2);
                     bookInfos.add(bookInfoList.get(index));
                     bookInfos.add(bookInfoList.get(index+1));
+                    flag=true;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -115,7 +119,7 @@ public class HomeFragment extends Fragment {
 //        perRem1.setImageBitmap(bm1);
         perRem11=view.findViewById(R.id.perRecom11);
 //        perRem11.setText(bookInfos.get(0).getBook_name());
-//
+
 //        Bitmap bm2 = BitmapFactory.decodeFile(bookInfos.get(1).getBook_image());
         perRem2=view.findViewById(R.id.perRecom2);
 //        perRem2.setImageBitmap(bm2);
@@ -224,7 +228,6 @@ public class HomeFragment extends Fragment {
         });
 
         TextView date=view.findViewById(R.id.date);
-
         Time t=new Time();
         t.setToNow(); // 取得系统时间。
         int year=t.year;
