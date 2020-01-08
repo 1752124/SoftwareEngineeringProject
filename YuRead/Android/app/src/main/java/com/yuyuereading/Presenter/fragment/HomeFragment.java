@@ -87,7 +87,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
         view = inflater.inflate(R.layout.activity_home, container, false);
-
+        addRec();
         initView();
         return view;
     }
@@ -114,17 +114,16 @@ public class HomeFragment extends Fragment {
 
     @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     private void initView() {
-//        Bitmap bm1 = BitmapFactory.decodeFile(bookInfos.get(0).getBook_image());
         perRem1=view.findViewById(R.id.perRecom1);
+//        Bitmap bm1 = BitmapFactory.decodeFile("https://img1.doubanio.com/view/subject/l/public/s2611329.jpg");
 //        perRem1.setImageBitmap(bm1);
         perRem11=view.findViewById(R.id.perRecom11);
-//        perRem11.setText(bookInfos.get(0).getBook_name());
+        perRem11.setText("一个陌生女人的来信");
 
-//        Bitmap bm2 = BitmapFactory.decodeFile(bookInfos.get(1).getBook_image());
         perRem2=view.findViewById(R.id.perRecom2);
-//        perRem2.setImageBitmap(bm2);
+//        perRem2.setImageURI(Uri.parse("https://img1.doubanio.com/view/subject/l/public/s3668327.jpg"));
         perRem22=view.findViewById(R.id.perRecom22);
-//        perRem22.setText(bookInfos.get(1).getBook_name());
+        perRem22.setText("牧羊少年奇幻之旅");
 
         Allanbooklist=view.findViewById(R.id.Allan_book_list);
         Oscarbooklist=view.findViewById(R.id.Oscar_book_list);
