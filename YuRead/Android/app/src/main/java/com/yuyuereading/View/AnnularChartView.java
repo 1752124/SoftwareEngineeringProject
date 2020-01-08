@@ -17,7 +17,7 @@ public class AnnularChartView extends View {
     /**
      * 默认颜色
      */
-    private static final int[] DEFAULT_COLOR = new int[]{0xff82B8FF, 0xffFF7F78, 0xffFFAE72, 0xff74D1B1, 0xffC38AFC};
+    private static final int[] DEFAULT_COLOR = new int[]{0xffFFAE72,0xffFF7F78};
     /**
      * 圆环半径，以内环算
      */

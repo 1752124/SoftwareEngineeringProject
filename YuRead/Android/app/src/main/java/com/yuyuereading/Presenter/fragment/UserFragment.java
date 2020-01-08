@@ -25,6 +25,7 @@ import com.yuyuereading.presenter.activity.NicknameActivity;
 import com.yuyuereading.presenter.activity.PortraitActivity;
 import com.yuyuereading.presenter.utils.HttpUtils;
 import com.yuyuereading.presenter.utils.SearchFromDouban;
+import com.yuyuereading.view.AnnularChartView;
 import com.yuyuereading.view.CircleImageView;
 
 import java.io.IOException;
@@ -60,7 +61,7 @@ public class UserFragment extends Fragment {
     private int sum_day;
     private int sum_seen;
     private int sum_record;
-
+    private AnnularChartView annularChartView;
     private String mParam1;
     private String mParam2;
 
@@ -144,8 +145,7 @@ public class UserFragment extends Fragment {
                         return null;
                     }
                 });
-                long userID=2;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/statistic-management/statistics?userid="+userID, new HttpUtils.CallBack(){
+                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/statistic-management/statistics?userid="+phoneNumber, new HttpUtils.CallBack(){
                     @Override
                     public void onRequestComplete(String result) {
                         JSONObject jsonObject = JSONObject.parseObject(result);
@@ -161,6 +161,7 @@ public class UserFragment extends Fragment {
                                 sumDay.setText(sum_day+"天");
                                 sumSeen.setText(sum_seen+"本");
                                 sumRecord.setText(sum_record+"条");
+                                annularChartView.setData(new float[]{sum_book, sum_seen});
                             }
                         });
                     }
@@ -177,6 +178,7 @@ public class UserFragment extends Fragment {
         sumRecord = view.findViewById(R.id.sum_record);
         nickname = view.findViewById(R.id.nickname);
         portrait = view.findViewById(R.id.user_info_icon);
+        annularChartView = view.findViewById(R.id.annularChartView);
     }
 
     public interface OnFragmentInteractionListener {
