@@ -14,4 +14,6 @@ public interface UserService {
 
 	User selectByPrimaryKey(Long id);
 
+	List<User> select();
+
 }

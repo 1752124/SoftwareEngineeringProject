@@ -19,11 +19,4 @@ public interface NoteMapper {
 
     int delete(@Param("noteId") Long noteId);
 
-    int insertSelective(Note record);
-
-    Note selectByPrimaryKey(Long noteId);
-
-    int updateByPrimaryKeySelective(Note record);
-
-    int updateByPrimaryKey(Note record);
 }

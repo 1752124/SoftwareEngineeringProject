@@ -4,21 +4,19 @@ import com.lcl.demo.sbDemo.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper {
-    int deleteByPrimaryKey(Integer userId);
 
-    int insert(Long userId);
+    int insert(@Param("userId") Long userId);
 
     int updateNameById(@Param("userId") Long id, @Param("name") String name );
 
     int updatePortraitById(@Param("userId") Long id, @Param("portrait") String portrait );
 
-    int insertSelective(User record);
+    User selectByPrimaryKey(@Param("userId") Long userId);
 
-    User selectByPrimaryKey(Long userId);
+    List<User> select();
 
-    int updateByPrimaryKeySelective(User record);
-
-    int updateByPrimaryKey(User record);
 }
