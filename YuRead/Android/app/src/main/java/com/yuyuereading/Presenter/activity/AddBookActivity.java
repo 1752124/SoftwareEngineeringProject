@@ -100,7 +100,7 @@ public class AddBookActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/read-management/books?userid="
+                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v2/read-management/books?userid="
                             +userId+"&bookid="+isbn+"&state="+state+"&title="+title+"&author="+author+"&publisher="+publicName,request);
                 } catch (IOException e) {
                     e.printStackTrace();

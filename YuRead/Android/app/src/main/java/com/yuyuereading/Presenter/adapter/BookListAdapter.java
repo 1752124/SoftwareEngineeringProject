@@ -109,7 +109,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
                             @Override
                             public void run() {
                                 try {
-                                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/read-management/states?"
+                                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v2/read-management/states?"
                                             +"userid="+userID+"&bookid="+isbn+"&state="+2,request);
                                 } catch (IOException e) {
                                     e.printStackTrace();
@@ -138,7 +138,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
                             @Override
                             public void run() {
                                 try {
-                                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/read-management/states?"
+                                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v2/read-management/states?"
                                             +"userid="+userID+"&bookid="+isbn+"&state="+3,request);
                                 } catch (IOException e) {
                                     e.printStackTrace();

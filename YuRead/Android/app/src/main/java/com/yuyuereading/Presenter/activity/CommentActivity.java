@@ -104,7 +104,7 @@ public class CommentActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            HttpUtils.doDelete("http://139.196.36.97:8080/sbDemo/v1/note-management/notes?noteid="+noteID,request);
+                            HttpUtils.doDelete("http://139.196.36.97:8080/sbDemo/v2/note-management/notes?noteid="+noteID,request);
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -127,7 +127,7 @@ public class CommentActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            HttpUtils.doPut("http://139.196.36.97:8080/sbDemo/v1/note-management/notes?noteid="+noteID
+                            HttpUtils.doPut("http://139.196.36.97:8080/sbDemo/v2/note-management/notes?noteid="+noteID
                                     +"&content="+content,request);
                         } catch (IOException e) {
                             e.printStackTrace();

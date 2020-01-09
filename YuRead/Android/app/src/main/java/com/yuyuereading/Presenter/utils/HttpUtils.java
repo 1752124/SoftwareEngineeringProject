@@ -1,4 +1,6 @@
 package com.yuyuereading.presenter.utils;
+import android.os.Handler;
+
 import java.io.IOException;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -39,7 +41,7 @@ public class HttpUtils {
      * @param urlStr    url字符串
      * @param callBack  以接口对象为参数
      */
-    public static void doGetAsy(final String urlStr, final CallBack callBack) {
+    public static void doGetAsy(final Handler handler, final String urlStr, final CallBack callBack) {
 
         new Thread(new Runnable() {
             @Override
@@ -51,7 +53,13 @@ public class HttpUtils {
                     e.printStackTrace();
                 }
                 if (callBack != null) {
-                    callBack.onRequestComplete(result);
+                    final String finalResult = result;
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            callBack.onRequestComplete(finalResult);
+                        }
+                    });
                 }
             }
         }).start();
@@ -101,6 +109,30 @@ public class HttpUtils {
         return response.body().string();
     }
 
+    /**
+     * 异步put请求
+     *
+     * @param urlStr    url字符串
+     * @param json      请求参数
+     * @param callBack  以接口对象为参数
+     */
+    public static void doPutAsy(final String urlStr, final String json, final CallBack callBack) {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String result = null;
+                try {
+                    result = doPut(urlStr,json);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (callBack != null) {
+                    callBack.onRequestComplete(result);
+                }
+            }
+        }).start();
+    }
     /**
      * get请求
      *

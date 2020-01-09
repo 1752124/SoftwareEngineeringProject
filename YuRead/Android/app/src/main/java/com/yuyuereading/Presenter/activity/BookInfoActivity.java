@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -130,9 +132,10 @@ public class BookInfoActivity extends AppCompatActivity {
 
     //向评论adapter中添加数据
     private void addDate() {
-        long userID=1;
+        _User bmobUser= BmobUser.getCurrentUser(_User.class);
+        final long userID=Long.parseLong(bmobUser.getUsername());
         long bookID=Long.parseLong(book_ISBN);
-        HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/note-management/notes?userid="+userID+"&bookid="+bookID,new HttpUtils.CallBack() {
+        HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/note-management/notes?userid="+userID+"&bookid="+bookID,new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(String result) {
                 try {
@@ -213,7 +216,7 @@ public class BookInfoActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 try {
-                                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v1/note-management/notes?" +
+                                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v2/note-management/notes?" +
                                             "&userid="+userID+"&bookid="+book_ISBN+ "&beginpage="+beginPage
                                             +"&endpage="+endPage+"&content=无",request);
                                 } catch (IOException e) {
@@ -228,4 +231,15 @@ public class BookInfoActivity extends AppCompatActivity {
                 });
         builder.show();
     }
+
+
+    /**
+     * 通过handler将数据回调在主线程执行
+     */
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 }

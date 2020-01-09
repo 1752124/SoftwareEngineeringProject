@@ -8,6 +8,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -34,6 +36,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
@@ -57,7 +60,10 @@ import com.yuyuereading.view.CircleImageView;
 
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.Serializable;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,7 +71,8 @@ import cn.bmob.v3.BmobUser;
 
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener, WantFragment.OnFragmentInteractionListener
-        , ReadingFragment.OnFragmentInteractionListener, SeenFragment.OnFragmentInteractionListener {
+        , ReadingFragment.OnFragmentInteractionListener, SeenFragment.OnFragmentInteractionListener
+        ,UserFragment.OnFragmentInteractionListener, HomeFragment.OnFragmentInteractionListener{
 
     Context mContext = MainActivity.this;
     private long exitTime = 0;
@@ -77,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements
     MaterialSearchView searchView;
     CircleImageView favicon;
     TextView nickname;
+    String name;
     private int REQUEST_CODE = 5;
     private ShakeListener mShakeListener;
     @Override
@@ -92,24 +100,64 @@ public class MainActivity extends AppCompatActivity implements
         initView();
         onClick();
         initShake();
-
+        getData();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+    }
+    public void onResume() {
+        super.onResume();
+        getData();
+    }
+
+    private void getData() {
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         headerLayout = navigationView.getHeaderView(0);
         headerLayout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { }
-
+            public void onClick(View view) {
+            }
         });
         nickname = headerLayout.findViewById(R.id.nickname);
-        _User bmobUser = BmobUser.getCurrentUser(_User.class);
-        nickname.setText(bmobUser.getUsername());
         favicon = headerLayout.findViewById(R.id.favicon);
+        final _User bmobUser = BmobUser.getCurrentUser(_User.class);
+        long phoneNumber= Long.parseLong(bmobUser.getUsername());
+        HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/user-management/users?id="+phoneNumber, new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result) {
+                JSONObject jsonObject = JSONObject.parseObject(result);
+                name = jsonObject.getString("name");
+                //final Bitmap portrait = getBitmap(jsonObject.getString("portrait"));
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        nickname.setText(name);
+                        //favicon.setImageBitmap(portrait);
+                    }
+                });
+            }
+
+            /*private Bitmap getBitmap(String path) {
+                try {
+                    URL url = new URL(path);
+                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    conn.setConnectTimeout(5000);
+                    conn.setRequestMethod("GET");
+                    if (conn.getResponseCode() == 200) {
+                        InputStream inputStream = conn.getInputStream();
+                        Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                        return bitmap;
+                    }
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+                return null;
+            }*/
+        });
     }
 
     private void initShake() {
@@ -130,11 +178,12 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public boolean onQueryTextSubmit(String query) {
                 long userID=1;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/titles?userid="+userID+"&keyword=" + query, new HttpUtils.CallBack() {
+                HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/read-management/titles?userid="+userID+"&keyword=" + query, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
+                            //JSONObject jsonObject1 = JSONObject.parseObject(result);
                             List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfo(jsonArray);
                             Intent intent = new Intent();
                             intent.setClass(mContext, BookListActivity.class);
@@ -143,6 +192,7 @@ public class MainActivity extends AppCompatActivity implements
                             bundle.putSerializable("bookInfos", (Serializable)bookInfos);
                             intent.putExtras(bundle);
                             startActivity(intent);
+                            // progress.dismiss();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -167,7 +217,7 @@ public class MainActivity extends AppCompatActivity implements
 
             @Override
             public void onSearchViewClosed() {
-            //Do some magic
+                //Do some magic
             }
         });
 
@@ -262,13 +312,10 @@ public class MainActivity extends AppCompatActivity implements
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_statistic) {
-            Intent intent=new Intent(mContext,StatisticActivity.class);
-            startActivity(intent);
-            // Handle the camera action
-        }else if (id == R.id.nav_plan) {
+        if (id == R.id.nav_plan) {
             Intent intent=new Intent(mContext,PlanActivity.class);
             startActivity(intent);
+            // Handle the camera action
         }else if (id == R.id.nav_update) {
 
         }else if (id == R.id.nav_quit) {
@@ -320,9 +367,8 @@ public class MainActivity extends AppCompatActivity implements
                     progress.setMessage("正在查询...");
                     progress.setCanceledOnTouchOutside(false);
                     progress.show();
-
-
-                    HttpUtils.doGetAsy("https://api.douban.com/v2/book/isbn/" + isbn+"?apikey=0df993c66c0c636e29ecbb5344252a4a", new HttpUtils.CallBack() {
+                    
+                    HttpUtils.doGetAsy(mHandler,"https://api.douban.com/v2/book/isbn/" + isbn+"?apikey=0df993c66c0c636e29ecbb5344252a4a", new HttpUtils.CallBack() {
                         @Override
                         public void onRequestComplete(String result) {
                             try {
@@ -375,6 +421,17 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
+
+    /**
+     * 通过handler将数据回调在主线程执行
+     */
+    @SuppressLint("HandlerLeak")
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 
     @Override
     public void onFragmentInteraction(Uri uri) {

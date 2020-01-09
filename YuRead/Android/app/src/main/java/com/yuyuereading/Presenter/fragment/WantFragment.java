@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -99,7 +101,7 @@ public class WantFragment extends Fragment {
         _User bmobUser= BmobUser.getCurrentUser(_User.class);
         final long userID=Long.parseLong(bmobUser.getUsername());
         int state=1;
-        HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/states?userid="+userID+"&state="+state,new HttpUtils.CallBack() {
+        HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/read-management/states?userid="+userID+"&state="+state,new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(String result) {
                 try {
@@ -211,4 +213,15 @@ public class WantFragment extends Fragment {
             }
         });
     }
+
+
+    /**
+     * 通过handler将数据回调在主线程执行
+     */
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 }

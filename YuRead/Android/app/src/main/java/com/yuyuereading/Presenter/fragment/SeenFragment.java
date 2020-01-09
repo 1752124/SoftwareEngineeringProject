@@ -3,6 +3,8 @@ package com.yuyuereading.presenter.fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -94,7 +96,7 @@ public class SeenFragment extends Fragment {
         _User bmobUser= BmobUser.getCurrentUser(_User.class);
         final long userID=Long.parseLong(bmobUser.getUsername());
         int state=3;
-        HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/states?userid="+userID+"&state="+state,new HttpUtils.CallBack() {
+        HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/read-management/states?userid="+userID+"&state="+state,new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(String result) {
                 try {
@@ -193,4 +195,15 @@ public class SeenFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
+    /**
+     * 通过handler将数据回调在主线程执行
+     */
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 }
