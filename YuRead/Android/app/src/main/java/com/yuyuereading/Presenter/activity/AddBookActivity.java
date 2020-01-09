@@ -10,16 +10,21 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONObject;
 import com.yuyuereading.R;
+import com.yuyuereading.presenter.utils.HttpUtils;
+
+import java.io.IOException;
+import java.util.LinkedHashMap;
 
 public class AddBookActivity extends AppCompatActivity {
     private Button finishEdit;
     private Button returnButton;
-    private TextView book_name;
-    private TextView author_name;
-    private TextView isbn;
-    private TextView public_name;
-    private TextView title;
+    TextView book_name;
+    TextView author_name;
+    TextView isbn;
+    TextView public_name;
+    TextView title;
     private EditText input_book_name;
     private EditText input_author_name;
     private EditText input_isbn;
@@ -64,8 +69,7 @@ public class AddBookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //保存数据入数据库
-
-                Toast.makeText(AddBookActivity.this, "录入成功", Toast.LENGTH_SHORT).show();
+                addBook();
                 finish();
             }
         });
@@ -75,5 +79,33 @@ public class AddBookActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void addBook(){
+        final long userId=1;
+        final int state=1;
+        final String title= input_book_name.getText().toString();
+        final String author=input_author_name.getText().toString();
+        final String publicName= input_public_name.getText().toString();
+        final long isbn=Long.parseLong(input_isbn.getText().toString());
+        JSONObject reqjson = new JSONObject(new LinkedHashMap());
+        reqjson.put("userid",userId);
+        reqjson.put("bookid",isbn);
+        reqjson.put("state",state);
+        reqjson.put("title",title);
+        reqjson.put("author",author);
+        reqjson.put("publisher",publicName);
+        final String request = reqjson.toString();
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                try {
+                    HttpUtils.doPost("http://139.196.36.97:8080/sbDemo/v2/read-management/books?userid="
+                            +userId+"&bookid="+isbn+"&state="+state+"&title="+title+"&author="+author+"&publisher="+publicName,request);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 }

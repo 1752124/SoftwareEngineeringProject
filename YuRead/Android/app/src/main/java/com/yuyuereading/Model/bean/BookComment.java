@@ -9,12 +9,10 @@ public class BookComment implements Serializable {
 
     private String finish_time;
 
-    public BookComment(String finish_time,String page_update,String read_review)
-    {
-       this.read_review=read_review;
-       this.page_update=page_update;
-       this.finish_time=finish_time;
-    }
+    private long noteID;
+
+    public BookComment(){    }
+
     public String getRead_review() {
         return read_review;
     }
@@ -34,4 +32,10 @@ public class BookComment implements Serializable {
     public String getPage_update() {
         return page_update;
     }
+
+    public void setPage_update(String page_update){this.page_update=page_update;}
+
+    public long getNoteID() {return noteID;}
+
+    public void setNoteID(long noteID) {this.noteID = noteID;}
 }

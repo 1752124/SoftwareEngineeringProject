@@ -1,7 +1,7 @@
 package com.yuyuereading.presenter.utils;
+import android.os.Handler;
 
 import java.io.IOException;
-
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -41,7 +41,7 @@ public class HttpUtils {
      * @param urlStr    url字符串
      * @param callBack  以接口对象为参数
      */
-    public static void doGetAsy(final String urlStr, final CallBack callBack) {
+    public static void doGetAsy(final Handler handler, final String urlStr, final CallBack callBack) {
 
         new Thread(new Runnable() {
             @Override
@@ -53,36 +53,18 @@ public class HttpUtils {
                     e.printStackTrace();
                 }
                 if (callBack != null) {
-                    callBack.onRequestComplete(result);
+                    final String finalResult = result;
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            callBack.onRequestComplete(finalResult);
+                        }
+                    });
                 }
             }
         }).start();
     }
 
-    /**
-     * 异步put请求
-     *
-     * @param urlStr    url字符串
-     * @param json      请求参数
-     * @param callBack  以接口对象为参数
-     */
-    public static void doPutAsy(final String urlStr, final String json, final CallBack callBack) {
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String result = null;
-                try {
-                    result = doPut(urlStr,json);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                if (callBack != null) {
-                    callBack.onRequestComplete(result);
-                }
-            }
-        }).start();
-    }
 
     /**
      * 异步post请求
@@ -115,7 +97,7 @@ public class HttpUtils {
      * @param json      请求参数以JSON串的格式传递
      * @return
      */
-    private static String doPost(String urlStr, String json) throws IOException {
+    public static String doPost(String urlStr, String json) throws IOException {
         OkHttpClient client = new OkHttpClient();
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
@@ -123,17 +105,41 @@ public class HttpUtils {
                 .post(body)
                 .build();
         Response response = client.newCall(request).execute();
+        assert response.body() != null;
         return response.body().string();
     }
 
+    /**
+     * 异步put请求
+     *
+     * @param urlStr    url字符串
+     * @param json      请求参数
+     * @param callBack  以接口对象为参数
+     */
+    public static void doPutAsy(final String urlStr, final String json, final CallBack callBack) {
 
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String result = null;
+                try {
+                    result = doPut(urlStr,json);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (callBack != null) {
+                    callBack.onRequestComplete(result);
+                }
+            }
+        }).start();
+    }
     /**
      * get请求
      *
      * @param urlStr    url字符串
      * @return
      */
-    private static String doGet(String urlStr) throws IOException {
+    public static String doGet(String urlStr) throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(urlStr)
@@ -143,14 +149,7 @@ public class HttpUtils {
         return response.body().string();
     }
 
-    /**
-     * 向指定url发送put方式的请求
-     *
-     * @param urlStr    url字符串
-     * @param json      请求参数以JSON串的格式传递
-     * @return
-     */
-    private static String doPut(String urlStr, String json) throws IOException {
+    public static String doPut(String urlStr, String json) throws IOException {
         OkHttpClient client = new OkHttpClient();
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
@@ -158,6 +157,19 @@ public class HttpUtils {
                 .put(body)
                 .build();
         Response response = client.newCall(request).execute();
+        assert response.body() != null;
+        return response.body().string();
+    }
+
+    public static String doDelete(String urlStr,String json)throws IOException{
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(urlStr)
+                .delete(body)
+                .build();
+        Response response = client.newCall(request).execute();
+        assert response.body() != null;
         return response.body().string();
     }
 }

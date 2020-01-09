@@ -40,7 +40,7 @@ public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(CommentListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(CommentListAdapter.ViewHolder holder, final int position) {
         final BookComment bookComment = mBookCommentList.get(position);
         holder.finish_time.setText(bookComment.getFinish_time());
         holder.page_update.setText(bookComment.getPage_update());
@@ -66,9 +66,9 @@ public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.
     class ViewHolder extends RecyclerView.ViewHolder {
         final CardView cardView;
         final View mItemView;
-        final TextView read_review;
-        final TextView page_update;
-        final TextView finish_time;
+        TextView read_review;
+        TextView page_update;
+        TextView finish_time;
         ViewHolder(View itemView) {
             super(itemView);
             mItemView = itemView;

@@ -21,7 +21,7 @@
         android:textColor="#000"
         android:id="@+id/nickname"
         android:textSize="20sp"
-        android:text="悦悦"
+        android:text="暖倾心"
         android:layout_marginStart="20dp"/>
 
 </LinearLayout>

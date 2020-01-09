@@ -1,7 +1,7 @@
 package com.yuyuereading.presenter.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
@@ -66,7 +66,7 @@ public class NicknameActivity extends AppCompatActivity {
                 map.put("name", name);
                 //转成JSON数据
                 final String json = JSON.toJSONString(map,true);
-                HttpUtils.doPutAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/names?id="+userID+"&name="+name, json,new HttpUtils.CallBack() {
+                HttpUtils.doPutAsy("http://139.196.36.97:8080/sbDemo/v2/user-management/names?id="+userID+"&name="+name, json,new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(final String result) {
                         final int sus= Integer.parseInt(result);

@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -28,11 +27,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.TextView;
@@ -54,7 +51,7 @@ import com.yuyuereading.presenter.fragment.ReadingFragment;
 import com.yuyuereading.presenter.fragment.SeenFragment;
 import com.yuyuereading.presenter.fragment.UserFragment;
 import com.yuyuereading.presenter.fragment.WantFragment;
-import com.yuyuereading.presenter.utils.BookInfoGetFromDouban;
+import com.yuyuereading.presenter.utils.BookInfoGetFromDouBan;
 import com.yuyuereading.presenter.utils.HttpUtils;
 import com.yuyuereading.presenter.utils.SearchFromDouban;
 import com.yuyuereading.presenter.utils.ShakeListener;
@@ -72,17 +69,14 @@ import java.util.List;
 
 import cn.bmob.v3.BmobUser;
 
-import static com.yuyuereading.R.layout.activity_user_info;
-
-
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener, WantFragment.OnFragmentInteractionListener
         , ReadingFragment.OnFragmentInteractionListener, SeenFragment.OnFragmentInteractionListener
-        ,UserFragment.OnFragmentInteractionListener{
+        ,UserFragment.OnFragmentInteractionListener, HomeFragment.OnFragmentInteractionListener{
 
     Context mContext = MainActivity.this;
     private long exitTime = 0;
-    Boolean bmob_if_hava_book_info = false;
+    Boolean bmob_if_have_book_info = false;
     Toolbar toolbar;
     DrawerLayout drawer;
     View headerLayout;
@@ -125,32 +119,28 @@ public class MainActivity extends AppCompatActivity implements
         headerLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent it = new Intent(mContext,UserInfoActivity.class);
-                startActivity(it);
-                overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);*/
             }
-
         });
         nickname = headerLayout.findViewById(R.id.nickname);
         favicon = headerLayout.findViewById(R.id.favicon);
         final _User bmobUser = BmobUser.getCurrentUser(_User.class);
         long phoneNumber= Long.parseLong(bmobUser.getUsername());
-        HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/users?id="+phoneNumber, new HttpUtils.CallBack() {
+        HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/user-management/users?id="+phoneNumber, new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(String result) {
                 JSONObject jsonObject = JSONObject.parseObject(result);
                 name = jsonObject.getString("name");
-                final Bitmap portrait = getBitmap(jsonObject.getString("portrait"));
+                //final Bitmap portrait = getBitmap(jsonObject.getString("portrait"));
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         nickname.setText(name);
-                        favicon.setImageBitmap(portrait);
+                        //favicon.setImageBitmap(portrait);
                     }
                 });
             }
 
-            private Bitmap getBitmap(String path) {
+            /*private Bitmap getBitmap(String path) {
                 try {
                     URL url = new URL(path);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -166,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements
                     e.printStackTrace();
                 }
                 return null;
-            }
+            }*/
         });
     }
 
@@ -187,19 +177,14 @@ public class MainActivity extends AppCompatActivity implements
         searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                //final ProgressDialog progress = new ProgressDialog(mContext);
-               // progress.setMessage("正在搜索...");
-               // progress.setCanceledOnTouchOutside(false);
-               // progress.show();
-                //Snackbar.make(findViewById(R.id.container), "Query: " + query, Snackbar.LENGTH_LONG).show();
                 long userID=1;
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/read-management/titles?userid="+userID+"&keyword=" + query, new HttpUtils.CallBack() {
+                HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/read-management/titles?userid="+userID+"&keyword=" + query, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         try {
                             JSONArray jsonArray=JSONArray.parseArray(result);
                             //JSONObject jsonObject1 = JSONObject.parseObject(result);
-                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfos(jsonArray);
+                            List<BookInfo> bookInfos = SearchFromDouban.parsingBookInfo(jsonArray);
                             Intent intent = new Intent();
                             intent.setClass(mContext, BookListActivity.class);
                             intent.putExtra("type","search");
@@ -207,7 +192,7 @@ public class MainActivity extends AppCompatActivity implements
                             bundle.putSerializable("bookInfos", (Serializable)bookInfos);
                             intent.putExtras(bundle);
                             startActivity(intent);
-                           // progress.dismiss();
+                            // progress.dismiss();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -232,7 +217,7 @@ public class MainActivity extends AppCompatActivity implements
 
             @Override
             public void onSearchViewClosed() {
-            //Do some magic
+                //Do some magic
             }
         });
 
@@ -382,14 +367,13 @@ public class MainActivity extends AppCompatActivity implements
                     progress.setMessage("正在查询...");
                     progress.setCanceledOnTouchOutside(false);
                     progress.show();
-
-
-                    HttpUtils.doGetAsy("https://api.douban.com/v2/book/isbn/" + isbn, new HttpUtils.CallBack() {
+                    
+                    HttpUtils.doGetAsy(mHandler,"https://api.douban.com/v2/book/isbn/" + isbn+"?apikey=0df993c66c0c636e29ecbb5344252a4a", new HttpUtils.CallBack() {
                         @Override
                         public void onRequestComplete(String result) {
                             try {
                                 //把豆瓣返回的数据解析成BookInfo类
-                                final BookInfo bookInfo = BookInfoGetFromDouban.parsingBookInfo(result);
+                                final BookInfo bookInfo = BookInfoGetFromDouBan.parsingBookInfo(result);
                                 Looper.prepare();
                                 //定义传给数据库操作类的handler
                                 @SuppressLint("HandlerLeak")
@@ -401,8 +385,8 @@ public class MainActivity extends AppCompatActivity implements
                                                 List<BookInfo> list = (List<BookInfo>) msg.obj;
                                                 if (list.size() != 0) {
                                                     Log.i("bmob", "handler传送成功:" + list.get(0).getObjectId());
-                                                    bmob_if_hava_book_info = true;
-                                                    Log.i("bmob", "BookInfo存在状态:" + bmob_if_hava_book_info);
+                                                    bmob_if_have_book_info = true;
+                                                    Log.i("bmob", "BookInfo存在状态:" + bmob_if_have_book_info);
                                                     //如果存在的话就更新
                                                     OperationBookInfo.updateBookInfo(bookInfo);
                                                 } else {
@@ -436,6 +420,18 @@ public class MainActivity extends AppCompatActivity implements
             }
         }
     }
+
+
+    /**
+     * 通过handler将数据回调在主线程执行
+     */
+    @SuppressLint("HandlerLeak")
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 
     @Override
     public void onFragmentInteraction(Uri uri) {

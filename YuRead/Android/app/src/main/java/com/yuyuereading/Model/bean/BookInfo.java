@@ -120,9 +120,7 @@ public class BookInfo extends BmobObject implements Serializable{
         this.book_isbn10 = book_isbn10;
     }
 
-    public String getBook_isbn13() {
-        return book_isbn13;
-    }
+    public String getBook_isbn13() {return book_isbn13;}
 
     public void setBook_isbn13(String book_isbn13) {
         this.book_isbn13 = book_isbn13;
@@ -136,36 +134,12 @@ public class BookInfo extends BmobObject implements Serializable{
         this.book_publisher = book_publisher;
     }
 
-    public String getBook_publish_date() {
-        return book_publish_date;
-    }
-
-    public void setBook_publish_date(String book_publish_date) {
-        this.book_publish_date = book_publish_date;
-    }
-
     public String getBook_rating() {
         return book_rating;
     }
 
     public void setBook_rating(String book_rating) {
         this.book_rating = book_rating;
-    }
-
-    public String getBook_author_intro() {
-        return book_author_intro;
-    }
-
-    public void setBook_author_intro(String book_author_intro) {
-        this.book_author_intro = book_author_intro;
-    }
-
-    public String getBook_price() {
-        return book_price;
-    }
-
-    public void setBook_price(String book_price) {
-        this.book_price = book_price;
     }
 
     public String getBook_pages() {

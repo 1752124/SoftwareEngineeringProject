@@ -19,31 +19,15 @@ import java.util.Arrays;
 
 public class BookListActivity extends AppCompatActivity {
     private Context mContext = BookListActivity.this;
-    private ShakeListener mShakeListener;
+    ShakeListener mShakeListener;
     private RecyclerView bookListView;
     private Button back;
     private ArrayList<BookInfo> bookInfoList = new ArrayList<>();
-    private BookListAdapter adapter;
-    private String type;
-    private LinearLayoutManager mLayoutManager;
+    BookListAdapter adapter;
+    String type;
+    LinearLayoutManager mLayoutManager;
 
-    private BookInfo[] allanBookList = {new BookInfo("https://img1.doubanio.com/view/subject/l/public/s29636258.jpg","坠落之前","2017-12","7.5","[美] 诺亚·霍利","天津人民出版社","1"),
-            new BookInfo("https://img3.doubanio.com/view/subject/l/public/s29440931.jpg","梅赛德斯先生","2017-5-1","8.5"," [美] 斯蒂芬·金","人民文学出版社","1"),
-            new BookInfo("https://img3.doubanio.com/view/subject/l/public/s29460010.jpg","夜色人生","2016-10-15","8.1","[美] 丹尼斯·勒翰","江苏凤凰文艺出版社","1")};
-
-    private BookInfo[] oscarBookList = {new BookInfo("https://img3.doubanio.com/view/subject/l/public/s28281251.jpg","了不起的盖茨比","2013-9-1","8.5","[美] 弗·司各特·菲茨杰拉德","南海出版公司","1"),
-            new BookInfo("https://img9.doubanio.com/view/subject/l/public/s29350294.jpg","杀死一只知更鸟","2017-2","8.1","[美] 哈珀·李","译林出版社","1"),
-            new BookInfo("https://img3.doubanio.com/view/subject/l/public/s4571103.jpg","傲慢与偏见","2010-6-1","9.0","[英] 简·奥斯汀","译林出版社","1")};
-
-    private BookInfo[] maoBookList = {new BookInfo("https://img1.doubanio.com/view/subject/l/public/s31307038.jpg","繁花","2019-1-1","8.4","金宇澄","人民文学出版社","1"),
-            new BookInfo("https://img3.doubanio.com/view/subject/l/public/s33450235.jpg","额尔古纳河右岸","2019-6-1","8.8"," 迟子建","人民文学出版社","1"),
-            new BookInfo("https://img3.doubanio.com/view/subject/l/public/s31301402.jpg","尘埃落定","2019-1-1","9.1","阿来","人民文学出版社","1")};
-
-    private BookInfo[] nobelBookList = {new BookInfo("https://img3.doubanio.com/view/subject/l/public/s8492855.jpg","切尔诺贝利的回忆","2012-1","8.5","S·A·阿列克谢耶维奇","凤凰出版社","1"),
-            new BookInfo("https://img3.doubanio.com/view/subject/l/public/s29040872.jpg","逃离","2016-10-1","8.5"," [加拿大] 艾丽丝·门罗","北京十月文艺出版社","1"),
-            new BookInfo("https://img3.doubanio.com/view/subject/l/public/s29249760.jpg","红高粱家族","2017-1","8.8","莫言","浙江文艺出版社","1")};
-
-    private ArrayList<BookInfo> searchBookList;
+    ArrayList<BookInfo> searchBookList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,24 +60,8 @@ public class BookListActivity extends AppCompatActivity {
     }
 
     private void getBookInfo(){
-        switch (type){
-            case "allan":
-                bookInfoList.addAll(Arrays.asList(allanBookList));
-                break;
-            case "oscar":
-                bookInfoList.addAll(Arrays.asList(oscarBookList));
-                break;
-            case"mao":
-                bookInfoList.addAll(Arrays.asList(maoBookList));
-                break;
-            case"nobel":
-                bookInfoList.addAll(Arrays.asList(nobelBookList));
-                break;
-            default:
-                searchBookList=(ArrayList<BookInfo>)getIntent().getSerializableExtra("bookInfos");
-                bookInfoList.addAll(searchBookList);
-                break;
-        }
+        searchBookList=(ArrayList<BookInfo>)getIntent().getSerializableExtra("bookInfos");
+        bookInfoList.addAll(searchBookList);
     }
 
     private void initShake(){

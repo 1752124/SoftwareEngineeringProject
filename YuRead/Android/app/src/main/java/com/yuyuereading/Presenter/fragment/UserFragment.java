@@ -6,34 +6,27 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
-import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.yuyuereading.model.bean.BookInfo;
-import com.yuyuereading.model.bean._User;
-import com.yuyuereading.presenter.activity.BookListActivity;
 import com.yuyuereading.R;
+import com.yuyuereading.model.bean._User;
 import com.yuyuereading.presenter.activity.NicknameActivity;
-import com.yuyuereading.presenter.activity.PortraitActivity;
 import com.yuyuereading.presenter.utils.HttpUtils;
-import com.yuyuereading.presenter.utils.SearchFromDouban;
 import com.yuyuereading.view.AnnularChartView;
 import com.yuyuereading.view.CircleImageView;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.List;
 
 import cn.bmob.v3.BmobUser;
 
@@ -112,22 +105,22 @@ public class UserFragment extends Fragment {
                 }
                 final _User bmobUser = BmobUser.getCurrentUser(_User.class);
                 long phoneNumber= Long.parseLong(bmobUser.getUsername());
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/users?id="+phoneNumber, new HttpUtils.CallBack() {
+                HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/user-management/users?id="+phoneNumber, new HttpUtils.CallBack() {
                     @Override
                     public void onRequestComplete(String result) {
                         JSONObject jsonObject = JSONObject.parseObject(result);
                         name = jsonObject.getString("name");
-                        final Bitmap image = getBitmap(jsonObject.getString("portrait"));
+                        //final Bitmap image = getBitmap(jsonObject.getString("portrait"));
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 initView();
                                 nickname.setText(name);
-                                portrait.setImageBitmap(image);
+                                //portrait.setImageBitmap(image);
                             }
                         });
                     }
-                    private Bitmap getBitmap(String path) {
+                    /*private Bitmap getBitmap(String path) {
                         try {
                             URL url = new URL(path);
                             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -143,9 +136,9 @@ public class UserFragment extends Fragment {
                             e.printStackTrace();
                         }
                         return null;
-                    }
+                    }*/
                 });
-                HttpUtils.doGetAsy("http://139.196.36.97:8080/sbDemo/v1/statistic-management/statistics?userid="+phoneNumber, new HttpUtils.CallBack(){
+                HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/statistic-management/statistics?userid="+phoneNumber, new HttpUtils.CallBack(){
                     @Override
                     public void onRequestComplete(String result) {
                         JSONObject jsonObject = JSONObject.parseObject(result);
@@ -203,4 +196,15 @@ public class UserFragment extends Fragment {
             }
         });
     }
+
+
+    /**
+     * 通过handler将数据回调在主线程执行
+     */
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 }

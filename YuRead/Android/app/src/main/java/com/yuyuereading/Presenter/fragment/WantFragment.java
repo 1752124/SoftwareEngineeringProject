@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -13,16 +15,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alibaba.fastjson.JSONArray;
 import com.yuyuereading.model.bean.BookInfo;
+import com.yuyuereading.model.bean._User;
 import com.yuyuereading.presenter.activity.AddBookActivity;
 import com.yuyuereading.presenter.adapter.BookListAdapter;
 import com.yuyuereading.R;
+import com.yuyuereading.presenter.utils.HttpUtils;
+import com.yuyuereading.presenter.utils.SearchFromDouban;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-
+import cn.bmob.v3.BmobUser;
 
 
 /**
@@ -40,11 +46,6 @@ public class WantFragment extends Fragment {
     private RecyclerView recyclerView;
 
     private FloatingActionButton addBook;
-
-    private BookInfo[] bookInfos = {new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie"),
-            new BookInfo("https://img3.doubanio.com/lpic/s29418322.jpg","芳华","2017-4-1","8.1","严歌苓","人民文学出版社","jianjie")};
 
     private List<BookInfo> bookInfoList = new ArrayList<>();
 
@@ -94,21 +95,23 @@ public class WantFragment extends Fragment {
         }
     }
 
-    //获取图书信息
-    private void initList() {
-        bookInfoList.clear();
-        for (int i = 0; i < 10;i++) {
-            Random random = new Random();
-            int index = random.nextInt(bookInfos.length);
-            bookInfoList.add(bookInfos[index]);
-        }
-        /*_User bmobUser = BmobUser.getCurrentUser(_User.class);
-        String state = "0";
-        bookInfoList = OperationReadInfo.queryBookInfoByState(bmobUser,state);*/
-    }
 
     //adapter中添加数据
     private void addDate() {
+        _User bmobUser= BmobUser.getCurrentUser(_User.class);
+        final long userID=Long.parseLong(bmobUser.getUsername());
+        int state=1;
+        HttpUtils.doGetAsy(mHandler,"http://139.196.36.97:8080/sbDemo/v2/read-management/states?userid="+userID+"&state="+state,new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result) {
+                try {
+                    JSONArray jsonArray=JSONArray.parseArray(result);
+                    bookInfoList = SearchFromDouban.parsingBookInfo(jsonArray);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
         adapter = new BookListAdapter(bookInfoList,"want");
         recyclerView.setAdapter(adapter);
     }
@@ -133,8 +136,8 @@ public class WantFragment extends Fragment {
         });
         mLayoutManager = new LinearLayoutManager(this.getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
-        initList();
         addDate();
+        refreshList();
         return view;
     }
 
@@ -151,7 +154,6 @@ public class WantFragment extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        initList();
                         addDate();
                         adapter.notifyDataSetChanged();
                         refresh.setRefreshing(false);
@@ -211,4 +213,15 @@ public class WantFragment extends Fragment {
             }
         });
     }
+
+
+    /**
+     * 通过handler将数据回调在主线程执行
+     */
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 }

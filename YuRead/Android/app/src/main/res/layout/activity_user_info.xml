@@ -42,7 +42,7 @@
                     android:focusable="true"
                     android:id="@+id/nickname"
                     android:textSize="20sp"
-                    android:text="@string/setNickname"
+                    android:text="悦悦"
                     android:layout_marginStart="10dp"/>
                 <ImageView
                     android:layout_width="match_parent"

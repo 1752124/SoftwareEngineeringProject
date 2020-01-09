@@ -180,14 +180,10 @@ public class LoginActivity extends AppCompatActivity {
         map.put("id", phoneNumber);
         //转成JSON数据
         final String json = JSON.toJSONString(map,true);
-        HttpUtils.doPostAsy("http://139.196.36.97:8080/sbDemo/v1/user-management/users?id="+phoneNumber, json, new HttpUtils.CallBack() {
+        HttpUtils.doPostAsy("http://139.196.36.97:8080/sbDemo/v2/user-management/users?id="+phoneNumber, json, new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(final String result) {
-                final int user= Integer.parseInt(result);
-                /*if(user==1){
-                    Intent intent = new Intent(mContext, MainActivity.class);
-                    startActivity(intent);
-                }*/
+
             }
         });
     }
