@@ -22,10 +22,4 @@ public interface ReadMapper {
 
     Read selectByPrimaryKey(@Param("userId") Long userId, @Param("bookId") Long bookId);
 
-    int insertSelective(Read record);
-
-
-    int updateByPrimaryKeySelective(Read record);
-
-    int updateByPrimaryKey(Read record);
 }
