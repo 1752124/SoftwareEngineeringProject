@@ -4,7 +4,7 @@
 		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 	<!--JDBC驱动jar包的位置-->
-	<classPathEntry location="C:\Users\dell\Downloads/mysql-connector-java-8.0.18.jar"/>
+	<classPathEntry location="C:\Users\dell\.m2\repository\mysql\mysql-connector-java\8.0.11\mysql-connector-java-8.0.11.jar"/>
 	<context id="default" targetRuntime="MyBatis3">
 		<!--创建Java类时是否取消生成注释-->
 		<commentGenerator>
@@ -12,10 +12,10 @@
 			<property name="suppressAllComments" value="true"/>
 		</commentGenerator>
 		<!--JDBC数据库连接-->
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-		connectionURL="jdbc:mysql://39.97.175.111:3306/test"
-		userId="root"
-		password="e6FLX8DbJTRKPmAt">
+		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+		connectionURL="jdbc:mysql://ip:3306/database?useSSL=false&amp;serverTimezone=Asia/Shanghai"
+		userId="databaseRoot"
+		password="password">
 	</jdbcConnection>
 	<!--
     Model模型生成器,用来生成含有主键key的类，记录类 以及查询Example类
@@ -47,20 +47,21 @@
         type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
         -->
 <javaClientGenerator type="XMLMAPPER"
-		targetPackage="com.lcl.demo.sbDemo.dao"
-		targetProject="./src/main/java">
+		targetPackage="mapper"
+		targetProject="./src/main/resources/xml">
 <property name="enableSubPackages" value="false"/>
 		</javaClientGenerator>
 		<!--tables-->
-<table tableName="book" domainObjectName="Book"
-		enableCountByExample="false" enableUpdateByExample="false"
-		enableDeleteByExample="false" enableSelectByExample="false"
-		selectByExampleQueryId="false">
-		</table>
+
 <table tableName="booklist" domainObjectName="Booklist"
 		enableCountByExample="false" enableUpdateByExample="false"
 		enableDeleteByExample="false" enableSelectByExample="false"
 		selectByExampleQueryId="false">
+		</table>
+		<table tableName="person" domainObjectName="Person"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
 		</table>
 		<table tableName="note" domainObjectName="Note"
 			   enableCountByExample="false" enableUpdateByExample="false"
