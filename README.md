@@ -20,3 +20,11 @@ Andriod端app开发(springboot)
 2.请遵循Git使用规范，代码规范  
 3.根据项目进度开会，每次开会记录会议纪要，开会提前通知  
 4.以上说明均为参考规范，可就事论事，并非强制要求  
+##项目特色
+1.平台部署：后端部署在阿里云ECS服务器（接口可访问如：http://139.196.36.97:8080/sbDemo/v2/booklist-management/booklistlists）
+          数据库部署在阿里云RDS云服务器
+          前端Android
+2.微服务架构：6个微服务，彼此独立，高内聚低耦合
+3.开发工具：Swaggerui自动生成API文档（http://139.196.36.97:8080/sbDemo/swagger-ui.html）
+                使用DeepCode等代码扫描工具，定期对源码进行扫描与重构
+4.定期迭代开发
